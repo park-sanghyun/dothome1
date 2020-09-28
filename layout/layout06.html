@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout06</title>
+    <style>
+        /* id와 class 선택자의 차이점
+        1. id "#"이라고 표현, class "."이라고 표현
+        2. 아이디는 한번만 사용, 클래스는 여러번(중복) 사용
+        3. 아이디는 하나에 한개씩, 클래스는 하나에 여러개 사용 
+        
+        색상 표현 하는 방법
+        1. 16진수 표기법(헥사코드)
+        (0 1 2 3 4 5 6 7 8 9 a b c d e f)
+        #000000 (R,G,B)
+        
+        2. RGB 또는 RGBA
+        RGB(255,255,255)
+        
+        3. HSL 또는 HSLA
+        색상(Hue), 채도(Saturation), 밝기(Lightness)
+        
+        4. 색상 이름 표기법
+        black, red, purple, silver */
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            font-size: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+        }
+        #header_wrap {width: 100%; height: 150px; background-color: #e1f5fe;}
+        #banner_wrap {width: 100%; height: 400px; background-color: #b3e5fc;}
+        #content_wrap {width: 100%; height: 900px; background-color: #81d4fa;}
+        #footer_wrap {width: 100%; height: 150px; background-color: #4fc3f7;}
+        .header {
+            width: 1200px;
+            height: 150px;
+            line-height: 150px;
+            background: #29b6f6;
+            margin: 0 auto;
+        }
+        .banner {
+            width: 1200px;
+            height: 400px;
+            line-height: 400px;
+            background: #03a9f4;
+            margin: 0 auto;
+        }
+        .content1 {
+            width: 1200px;
+            height: 300px;
+            line-height: 300px;
+            background: #039be5;
+            margin: 0 auto;
+        }
+        .content2 {
+            width: 1200px;
+            height: 300px;
+            line-height: 300px;
+            background: #0288d1;
+            margin: 0 auto;
+        }
+        .content3 {
+            width: 1200px;
+            height: 300px;
+            line-height: 300px;
+            background: #0277bd;
+            margin: 0 auto;
+        }
+        .footer {
+            width: 1200px;
+            height: 150px;
+            line-height: 150px;
+            background: #01579b;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <div id="banner_wrap">
+            <div class="banner">banner</div>
+        </div>
+        <div id="content_wrap">
+            <div class="content1">content1</div>
+            <div class="content2">content2</div>
+            <div class="content3">content3</div>
+        </div>
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>

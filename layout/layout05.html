@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>layout05</title>
+    <style>
+        @font-face {
+            font-family: 'S-CoreDream-8Heavy';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-8Heavy.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+            font-size: 72px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #fff;
+            font-family: 'S-CoreDream-8Heavy';
+
+        }
+        #header_wrap {
+            width: 100%; 
+            height: 150px; 
+            background-color: #c0ca33;
+        }
+        #baaner_wrap {
+            width: 100%; 
+            height: 450px; 
+            background-color: #afb42b;
+        }
+        #contents_wrap {
+            width: 100%; 
+            height: 850px; 
+            background-color: #9e9d24;
+        }
+        #footer_wrap {
+            width: 100%; 
+            height: 150px; 
+            background-color: #827717;
+        }
+
+        .header {
+            width: 1200px;
+            height: 150px;
+            line-height: 150px;
+            background-color: #e6ee9c;
+            margin: 0 auto;
+        }
+        .baaner {
+            width: 1200px;
+            height: 450px;
+            line-height: 450px;
+            background-color: #dce775;
+            margin: 0 auto;
+        }
+        .contents {
+            width: 1200px;
+            height: 850px;
+            line-height: 850px;
+            background-color: #d4e157;
+            margin: 0 auto;
+        }
+        .footer {
+            width: 1200px;
+            height: 150px;
+            line-height: 150px;
+            background-color: #cddc39;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header_wrap">
+            <div class="header">header</div>
+        </div>
+        <div id="baaner_wrap">
+            <div class="baaner">baaner</div>
+        </div>
+        <div id="contents_wrap">
+            <div class="contents">contents</div>
+        </div>
+        <div id="footer_wrap">
+            <div class="footer">footer</div>
+        </div>
+    </div>
+</body>
+</html>
