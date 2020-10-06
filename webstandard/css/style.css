@@ -24,11 +24,11 @@
     /* 속기형 작성법 */
     background: url(../img/header_bg.jpg) repeat-x center top
 }
-#contents {height: 800px; background: #222;}
+#contents {}
 #footer {height: 200px; background: #333;}
 
 /* 컨텐츠 레이아웃 */
-#cont_nav {height: 200px; background: #444;} 
+#cont_nav {background: #f6fdff;} 
 #cont_tit {height: 200px; background: #555;}
 #cont_ban {height: 200px; background: #666;}
 #cont_cont {height: 200px; background: #777;}
@@ -63,11 +63,7 @@
 }
 
 .header .header_icon {text-align: center; margin-top: 40px;}
-.header .header_icon a {
-    width: 60px; height: 60px;
-    display: Inline-block;
-    background-image: url(../img/icon.png);
-}
+.header .header_icon a {width: 60px; height: 60px; display: Inline-block; background-image: url(../img/icon.png);}
 .header .header_icon a.icon1 {background-position: 0 0;}
 .header .header_icon a.icon2 {background-position: 0 -60px;}
 .header .header_icon a.icon3 {background-position: 0 -120px;}
@@ -76,3 +72,14 @@
 .header .header_icon a.icon2:hover {background-position: -60px -60px;}
 .header .header_icon a.icon3:hover {background-position: -60px -120px;}
 .header .header_icon a.icon4:hover {background-position: -60px -180px;}
+
+/* 전체 메뉴 */
+.nav {overflow: hidden; padding: 30px 0;}
+.nav > div {float: left; width: 40%;}
+/* .nav > div.last {width: 20%;} */
+.nav > div:last-child {width: 20%;} /* ie9부터 사용 가능 */
+.nav > div h3 {font-size: 18px; color: #2698cb; margin-bottom: 4px;}
+.nav > div ul {overflow: hidden;}
+.nav > div ul li {float: left; width: 50%;}
+.nav > div:last-child ul li {width: 100%;}
+.nav > div ul li a:hover {text-decoration: underline;}
