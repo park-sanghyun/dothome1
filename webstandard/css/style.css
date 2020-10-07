@@ -39,11 +39,7 @@
 /* header */
 .header {}
 .header .header_menu {text-align: right;}
-.header .header_menu a {
-    color: #fff; 
-    padding: 10px 0 10px 10px; 
-    display: inline-block;
-}
+.header .header_menu a {color: #fff; padding: 10px 0 10px 10px; display: inline-block;}
 .header .header_menu a:hover {color: #666;}
 
 .header .header_tit {text-align: center;}
