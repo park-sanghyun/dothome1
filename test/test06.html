@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #wrap {}
+        #header {height: 200px; background: #000000;}
+        #banner {height: 400px; background: #111111;}
+        #contents {height: 1200px; background: #333333;}
+        #footer {height: 200px; background: #444444;}
+
+        .contanier {width: 1200px; height: inherit; margin: 0 auto; background: rgba(255, 255, 255, 0.3);}
+
+        #con1 {height: 200px; background: #555555;}
+        #con2 {height: 200px; background: #666666;}
+        #con3 {height: 200px; background: #777777;}
+        #con4 {height: 200px; background: #888888;}
+        #con5 {height: 200px; background: #222222;}
+        #con6 { background: #9999;}
+
+        .con6 {overflow: hidden;}
+        .con6 .left {position: relative; width: 560px; height: 160px; padding: 20px; float: left; background: yellow;}
+        .con6 .right {position: relative; width: 560px; height: 160px; padding: 20px; float: left; background: white;}
+        .con6 .left a.more {position: absolute ; right: 20px; top: 40px;}
+        .con6 .right a.more {position: absolute ; right: 20px; top: 40px;}
+
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="contanier">header</div>
+        </div>
+        <div id="banner">
+            <div class="contanier">header</div>
+        </div>
+        <div id="contents">
+            <div id="con1">
+                <div class="contanier">header</div>
+            </div>
+            <div id="con2">
+                <div class="contanier">header</div>
+            </div>
+            <div id="con3">
+                <div class="contanier">header</div>
+            </div>
+            <div id="con4">
+                <div class="contanier">header</div>
+            </div>
+            <div id="con5">
+                <div class="contanier">header</div>
+            </div>
+            <div id="con6">
+                <div class="contanier">
+                    <div class="con6">
+                        <div class="left">
+                            <h3>공지사항</h3>
+                            <p>요로로로로로로</p>
+                            <span>2020.10.08</span>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                        <div class="right">
+                            <h3>공지사항</h3>
+                            <p>요로로로로로로</p>
+                            <span>2020.10.08</span>
+                            <a href="#" class="more">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="contanier">header</div>
+        </div>
+    </div>
+</body>
+</html>
