@@ -86,7 +86,11 @@
 
 /* 타이틀 */
 .tit {text-align: center; position: relative;}
-.tit h2 {font-size: 40px; padding: 5px 0; color: #2c94c4; letter-spacing: 2px; font-family: "Nanum Brush Script";}
+.tit h2 {
+    font-size: 40px; padding: 5px 0; 
+    color: #2c94c4; letter-spacing: 2px; 
+    font-family: "Nanum Brush Script";
+}
 .tit .btn {
     position: absolute; right: 0; top: 5px; 
     background-image: url(../img/icon.png); 
