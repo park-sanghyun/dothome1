@@ -263,3 +263,26 @@
 .notice_hover2 li a span strong {
     font-size: 12px; padding-top: 3px; display: inline-block;
 }
+
+/* 탭 메뉴 */
+.tab_menu {position: relative; border: 1px solid #ccc; padding: 8px; height: 105px;}
+.tab_menu ul {overflow: hidden; border-bottom: 1px solid #ccc;}
+.tab_menu ul li {float: left; border: 1px solid #ccc; margin-right: -1px; margin-bottom: -1px;}
+.tab_menu ul li a {padding: 5px 10px; display: block;}
+.tab_menu ul li ul {position: absolute; left: 0; top: 48px; border: 0;}
+.tab_menu ul li ul li {border: 0; float: none; padding-left: 18px; background: url(../img/dot.gif) no-repeat 9px 8px;  }
+.tab_menu ul li ul li a {padding: 0 0 3px 0;}
+.tab_menu ul li.active {background: #2c94c4;}
+.tab_menu ul li.active a {color: #fff;}
+.tab_menu ul li.active ul li a {color: #333;}
+
+/* 게시판4 */
+.notice4 {border: 1px solid #ccc; margin-top: 15px; position: relative;}
+.notice4 h4 {border-bottom: 1px solid #ccc; padding: 8px 10px; color: #118dc7;}
+.notice4 h4 em {color: #cf3292;}
+.notice4 ul {padding: 10px;}
+.notice4 li {overflow: hidden; padding-left: 8px; background: url(../img/dot.gif) no-repeat 0px 8px;}
+.notice4 li a {float: left; width: 65%; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+.notice4 li span {float: right; width: 30%; text-align: right;}
+.notice4 a.more {position: absolute; right: 9px; top: 9px;}
+
