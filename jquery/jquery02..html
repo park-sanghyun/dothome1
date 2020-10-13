@@ -6,6 +6,7 @@
     <title>jquery02</title>
     <style>
         li {margin: 2px;}
+        a {padding: 0 10px;}
     </style>
 </head>
 <body>
@@ -13,13 +14,13 @@
     <h1>기본 선택자</h1>
     <div id="sample">
         <ul id="list1" class="list">
-            <li class="list1"><a href="#">list1</a></li>
-            <li class="list2"><a href="#">list2</a></li>
-            <li class="list3"><a href="#">list3</a></li>
+            <li class="list1"><a href="https://www.daum.net/">list1</a></li>
+            <li class="list2"><a href="https://www.naver.com">list2</a></li>
+            <li class="list3"><a href="#list2">list3</a></li>
             <li class="list4"><a href="#">list4</a></li>
-            <li class="list5"><a href="#">list5</a></li>
-            <li class="list6"><a href="#">list6</a></li>
-            <li class="list7"><a href="#">list7</a></li>
+            <li class="list5"><a href="#" class="link">list5</a></li>
+            <li class="list6"><a href="#" class="link">list6</a></li>
+            <li class="list7"><a href="https://gitbook.com/">list7</a></li>
             <li class="list8"><a href="#">list8</a></li>
             <li class="list9"><a href="#">list9</a></li>
             <li class="list10"><a href="#">list10</a>
@@ -69,7 +70,7 @@
             </li>
         </ul>
         <ul id="list3" class="list">
-            <li class="list1"><a href="#">list1</a></li>
+            <li class="list1"><a href="#"></a></li>
             <li class="list2"><a href="#">list2</a></li>
             <li class="list3"><a href="#">list3</a></li>
             <li class="list4"><a href="#">list4</a></li>
@@ -120,7 +121,44 @@
         // $(".list5 + li").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"}); //형제 선택자
         // $(".list5 ~ li").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"}); //형제들 선택자
 
+        //속성 선택자
+        // $("li a[href='https://www.naver.com']").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li a[href^='https']").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li a[href$='net/']").css({backgroundColor:"#F44336",border:"1px dashed #303f9f",color: "#fff"});
+        // $("li a[href*='naver']").css({backgroundColor:"#F44336",border:"1px dashed #303f9f",color: "#fff"});
+        // $("li a[href][class]").css({backgroundColor:"#F44336",border:"1px dashed #303f9f",color: "#fff"});
 
+        //기본 필터 선택자
+        // $("li:eq(4)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f",color: "#fff"});
+        // $("li:gt(4)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:lt(4)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $(":header").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:first").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:last").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:odd").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:even").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+
+        //내용 필터 선택자
+        // $("li:contains('list4')").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li a:empty").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:parent").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:has(li)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+
+        //보임 필터 선택자
+        // $("li:hidden").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:visivle").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+
+        //자식 요소 필더 선택자
+        // $("li:first").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:first-child").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:last").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:last-child").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:nth-child(4)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:nth-child(4n)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:nth-child(2n+1)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:nth-child(odd)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:nth-child(even)").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
+        // $("li:only-child").css({backgroundColor:"#bbdefb",border:"1px dashed #303f9f"});
     </script>
 </body>
 </html>
