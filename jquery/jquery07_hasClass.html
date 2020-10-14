@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery07_hasClass</title>
+    <style>
+        @font-face {
+        font-family: 'MapoFlowerIsland';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/MapoFlowerIslandA.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+        }
+        
+        body {font-family: 'MapoFlowerIsland';}
+        li.red {color: #c7254e; background-color: #f9f2f4; border: 1px dashed #a51a3d;}
+
+    </style>
+</head>
+<body>
+
+    <h1>탐색</h1>
+    <ul>
+        <li>addClass() 메서드는 선택한 요소에 클래스를 생성하고, removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다.</li>
+        <li class="select">toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있을 경우에는 삭제합니다.</li>
+        <li>hasClass() 메서드는 선택한 요소에 지정한 클래스가 있으면 true를 반환하고, 없으면 false를 반환합니다.</li>
+    </ul>
+
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        //li를 클릭하면 배경색을 빨간색 변경(red클래스 추가) 
+        // $("li").click(function(){
+        //     $(this).addClass("red")
+        // });
+
+        //li를 클릭하면 배경색을 빨간색 변경(클래스'select'가 있는 요소)
+        $("li").click(function(){
+            if( $("li").hasClass("select") ){
+                $(".select").addClass("red");
+            }
+        });
+    </script>
+</body>
+</html>
