@@ -320,6 +320,4 @@
 .popup ul {overflow: hidden;}
 .popup li {float: left; width: 93px; margin-right: 5px;}
 .popup li:nth-of-type(3) {margin-right: 0;}
-.popup li a {}
-.popup li a span {width: 93px; height: 93px; display: block;}
-.popup li a span img {width: 100%;}
+.popup li img {width: 100%;}
