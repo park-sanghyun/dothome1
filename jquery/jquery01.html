@@ -11,21 +11,7 @@
     <!-- script -->
     <script src="jquery.min_1.12.4.js"></script>
     <script>
-
-        $(".navBtn").click(function(){
-            $("nav").toggleClass("on");
-            
-            if( $("#nav").hasClass("on")){
-                //클래스 on이 있을때
-                $("#nav").animate({"left":"0"},400);
-                $(".navBtn").text("close");
-            } else {
-                //클래스 on이 없을때
-                $("#nav").animate({"left":"-300px"},400);
-                $(".navBtn").text("open");
-            }
-        });
         
-   </script>
+    </script>
 </body>
 </html>
