@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {margin: 0;padding: 0;}
+        ul {list-style: none;}
+        #wrap {}
+        #header {height: 125px; background: #f3e5f5;}
+        #nav {height: 732px; background: #f0def3;}
+        #content_1 {height: 806px; background: #ddc2e6;}
+        #content_2 {height: 526px; background: #dcb3e3;}
+        #content_3 {height: 956px; background: #d198c8;}
+        #content_4 {height: 976px; background: #c485d1;}
+        #footer_1 {height: 62px; background: #b487cb;}
+        #footer_2 {height: 198px; background: #ab85c7;}
+        #footer_3 {height: 64px; background: #9f4b56;}
+
+        .contanier {width: 1200px; height: inherit; margin: 0 auto; background: rgba(0, 0, 0, 0.3);}
+        
+        .contents {padding: 60px 0; background: #ffffff; overflow: hidden;}
+        .contents .left {width: 600px; float: left; background: #ffffff; line-height: 80px; position: relative;}
+        .contents .left h3 {font-size: 20px; margin-top: 30px; padding-left: 30px;}
+        .contents .left ul {}
+        .contents .left li {
+            border: 1px solid #ccc; 
+            font-size: 15px; white-space: nowrap; overflow: hidden; 
+            padding-left: 10px;
+        }
+        .contents .left li:nth-child(2) {border-top: 0;}
+        .contents .left li:nth-child(3) {border-top: 0;}
+        .contents .left li a {width: 65%; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .contents .left li span {float: right; padding-right: 10px;}
+        .contents .left a.more {position: absolute; right: 10px; top: 30px;}
+
+        .contents .right {width: 600px; float: left; background: #ffffff; position: relative; line-height: 80px;}
+        .contents .right h3 {font-size: 20px; margin-top: 30px; padding-left: 30px;}
+        .contents .right ul {}
+        .contents .right li {
+            border: 1px solid #ccc; 
+            font-size: 15px; white-space: nowrap; overflow: hidden; 
+            padding-left: 10px;
+        }
+        .contents .right li:nth-child(2) {border-top: 0;}
+        .contents .right li:nth-child(3) {border-top: 0;}
+        .contents .right li a {width: 65%; float: left; overflow: hidden; text-overflow: ellipsis; white-space: nowrap;}
+        .contents .right li span {float: right; padding-right: 10px;}
+        .contents .right a.more {position: absolute; right: 10px; top: 30px;}
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="contanier">header</div>
+        </div>
+        <div id="nav">
+            <div class="contanier">nav</div>
+        </div>
+        <div id="contents">
+            <div id="content_1">
+                <div class="contanier">content_1</div>
+            </div>
+            <div id="content_2">
+                <div class="contanier">content_2</div>
+            </div>
+            <div id="content_3">
+                <div class="contanier">content_3</div>
+            </div>
+            <div id="content_4">
+                <div class="contanier">content_4</div>
+            </div>
+            <div id="content_5">
+                <div class="contanier">
+                    <div class="contents">
+                        <div class="left">
+                            <h3>펀드공시</h3>
+                            <ul>
+                                <li><a href="#">미래에셋코스피200인덱스증권투자신탁1호(주식-파생형) 유형변경 안내</a><span>2020.10.12</span></li>
+                                <li><a href="#">고유재산 투자펀드의 의무투자기간 종료안내</a><span>2020.10.05</span></li>
+                                <li><a href="#">소규모펀드 공시의 건(2020년 9월)</a><span>2020.10.05</span></li>
+                            </ul>
+                            <a href="#" class="more" title="더보기">더보기</a>
+                        </div>
+                        <div class="right">
+                            <h3>펀드뉴스</h3>
+                            <ul>
+                                <li><a href="#">펀드 기준가격 컷오프제도 시행 안내</a><span>2020.09.28</span></li>
+                                <li><a href="#">주문관리시스템 재구축 프로젝트 입찰 공고</a><span>2020.09.23</span></li>
+                                <li><a href="#">미래에셋 전략배분 TDF는 특별합니다.</a><span>2020.09.02</span></li>
+                            </ul>
+                            <a href="#" class="more" title="더보기">더보기</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="footers">
+            <div id="footer_1">
+                <div class="contanier">footer_1</div>
+            </div>
+            <div id="footer_2">
+                <div class="contanier">footer_2</div>
+            </div>
+            <div id="footer_3">
+                <div class="contanier">footer_3</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
