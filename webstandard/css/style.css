@@ -28,7 +28,7 @@
 #footer {border-top: 1px solid #eee;}
 
 /* 컨텐츠 레이아웃 */
-#cont_nav {background: #f6fdff;} 
+#cont_nav {background: #f6fdff; display: none;}
 #cont_tit {background: #eaf7fd;}
 #cont_ban {background: #dceff7;}
 #cont_cont {background: #f6fdff;}
@@ -97,7 +97,7 @@
     width: 60px; height: 60px;
     background-position: 0 -600px;
 }
-.tit .btn:hover {background-position: -60px -600px;}
+.tit .btn.on {background-position: 0 -660px;}
 
 /* 배너 */
 .ban {position: relative; padding: 24px 0;}
@@ -286,6 +286,28 @@
 .notice4 li span {float: right; width: 30%; text-align: right;}
 .notice4 a.more {position: absolute; right: 9px; top: 9px;}
 
+/* 로그인 */
+#login-wrap {background: #f2f4f5; padding: 15px; margin-bottom: 15px;}
+.login_header {overflow: hidden; font-size: 12px; height: 30px;}
+.login_header .lh_check {float: left; padding-right: 15px;}
+.login_header .lh_check .input_check {vertical-align: -2px;}
+.login_header .lh_ip {float: left;}
+.login_header .lh_ip em {color: #0093bd; text-decoration: underline;}
+.login_contents {position: relative;}
+.login_contents .lc_btn {
+    position: absolute; right: 0; top: 0;
+    width: 61px; height: 47px; background: #ffffff;
+    border: 1px solid #bebebe;
+}
+.login_contents .input_text {
+    width: 182px; height: 16px; 
+    padding: 2px 5px; border: 1px solid #bebebe; 
+    margin-bottom: 3px; background: #ffffff;
+}
+.login_footer {margin-top: 5px;}
+.login_footer li {display: inline;}
+.login_footer li a {font-size: 12px;}
+
 /* 갤러리 */
 .gallery {position: relative; border: 1px solid #ccc; height: 255px; overflow: hidden;}
 .gallery h4 {font-size: 14px; color: #0093bd; padding: 10px 0 8px 11px; border-bottom: 1px solid #ccc;}
@@ -298,7 +320,7 @@
 .gallery .gallery_btn li.gb_icon3 a {background-position: -150px -166px;}
 .gallery .gallery_btn li.gb_icon4 a {background-position: -150px -189px;}
 .gallery .gallery_btn li.gb_icon1 a:hover {background-position: -173px -120px;}
-.gallery .gallery_btn li.gb_icon2 a:hover {background-position: -173px -143px;}
+.gallery .gallery_btn li.gb_icon02 a:hover {background-position: -173px -143px;}
 .gallery .gallery_btn li.gb_icon3 a:hover {background-position: -173px -166px;}
 .gallery .gallery_btn li.gb_icon4 a:hover {background-position: -173px -189px;}
 .gallery .gallery_img img {width: 100%;}
