@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery11</title>
+    <script>
+        const arr1 = [100,200,300,400,500,600,700];
+        //for 출력
+        for( let i = 0; i < arr1.length; i++){
+            document.write(arr1[i],"<br>");
+        }
+        document.write("<br>");
+
+        //forEach 출력
+        arr1.forEach(elem => {
+            document.write(elem);
+        });
+        document.write("<br>");
+
+        //for in 문
+        for(let i in arr1){
+            document.write(arr1[i]);
+        }
+        document.write("<br>");
+
+        //for of 문
+        for( let i of arr1){
+            document.write(i);
+        }
+        document.write("<br>");
+
+        let a = []; //배열 선언
+        for(let i = 1; i<=5; i++){
+            a += [i];   // a = a + [i]
+        }
+        console.log(a)
+        document.write(a[0],"<br>");
+        document.write(a[1],"<br>");
+        document.write(a[2],"<br>");
+        document.write(a[3],"<br>");
+        document.write(a[4],"<br>");
+
+        document.write("<br><br>");
+
+        //배열 비구조화 할당
+
+        let [x, y] = [100, 200];
+
+        document.write(x);
+        document.write(y);
+        document.write("<br><br>");
+
+        [x, y] = [y, x]
+
+        document.write(x);
+        document.write(y);
+        document.write("<br><br>");
+
+        //Array 객체
+        const arr10 = [100, 200, 300, 400, 500]; 
+        const arr20 = [600, 700, 800, 900, 1000];
+
+        document.write(arr10,"<br>");
+        document.write(arr10.join('*'),"<br>");
+        document.write(arr10.reverse(),"<br>");
+        document.write(arr10.sort(function(a, b){return b - a}),"<br>");
+        document.write(arr10.sort(function(a, b){return a - b}),"<br>");
+        document.write(arr10.slice(1,3),"<br>");
+        document.write(arr10.slice(2,3),"<br>");
+        document.write(arr10.concat(arr20),"<br>");
+        document.write(arr10.shift(),"<br>");
+        document.write(arr10,"<br>");
+        document.write(arr10.unshift(100),"<br>");
+        document.write(arr10,"<br>");
+        document.write(arr10.pop(),"<br>");
+        document.write(arr10,"<br>");
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
