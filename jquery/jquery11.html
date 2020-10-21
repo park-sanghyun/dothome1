@@ -5,78 +5,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>jquery11</title>
     <script>
-        const arr1 = [100,200,300,400,500,600,700];
-        //for 출력
-        for( let i = 0; i < arr1.length; i++){
-            document.write(arr1[i],"<br>");
+        //내 이름은 웹쓰이며, 직업은 웹 퍼블리셔입니다.
+        //내 이름은 도하은이며, 내일 자기소개 할겁니다.
+        document.write("내 이름은 웹쓰이며, 직업은 웹 퍼블리셔입니다.","<br>");
+        document.write("내 이름은 웹스토리보이이며, 내일 프론트앤드 개발자 할겁니다.","<br><br>");
+
+        //매개변수가 함수로 출력
+        function func1(name,job){
+            document.write("내 이름은 "+ name + "이며, 내일 "+ job +" 할겁니다.","<br>");
         }
+        func1("웹쓰","웹 퍼블리셔");
+        func1("웹스토리보이","프론트앤드 개발자");
         document.write("<br>");
 
-        //forEach 출력
-        arr1.forEach(elem => {
-            document.write(elem);
-        });
+        //변수를 선언하고 함수로 출력
+        function func2(name,job){
+            document.write("내 이름은 "+ name + "이며, 내일 "+ job +" 할겁니다.","<br>");
+        }
+        let youName1 = "웹쓰";
+        let youJob1 = "웹 퍼블리셔";
+        let youName2 = "웹스토리보이";
+        let youJob2 = "프론트앤드 개발자";
+
+        func2 (youName1,youJob1);
+        func2 (youName2,youJob2);
         document.write("<br>");
 
-        //for in 문
-        for(let i in arr1){
-            document.write(arr1[i]);
+        //객체를 선언하고 함수로 출력
+        function func3(name,job){
+            document.write("내 이름은 "+ name + "이며, 내일 "+ job +" 할겁니다.","<br>");
         }
+        const you = [
+            {
+                name: "웹쓰",
+                job: "웹 퍼블리셔"
+            },
+            {
+                name: "웹스토리보이",
+                job: "프론트앤드 개발자"
+            }
+        ];
+        func3(you[0].name, you[0].job);
+        func3(you[1].name, you[1].job);
         document.write("<br>");
 
-        //for of 문
-        for( let i of arr1){
-            document.write(i);
-        }
+        //객체 + 메서드 합치기
+        const you2 = {
+            name1: "웹쓰",
+            job1: "웹 퍼블리셔",
+            name2: "웹스토리보이",
+            job2: "프론트앤드 개발자",
+            study1 : function(){
+                document.write("내 이름은 "+ this.name1 + "이며, 내일 "+ this.job1 +" 할겁니다.","<br>");
+            },
+            study2 : function(){
+                document.write("내 이름은 "+ this.name2 + "이며, 내일 "+ this.job2 +" 할겁니다.","<br>");
+            }
+        };
+        you2.study1();
+        you2.study2();
         document.write("<br>");
 
-        let a = []; //배열 선언
-        for(let i = 1; i<=5; i++){
-            a += [i];   // a = a + [i]
+        //객체 생성자 함수(함수 + 인스턴스 객체(매개변수))
+        function You3(name, job){
+            this.name = name; 
+            this.job = job;
+            this.study = function(){
+                document.write("내 이름은 "+ this.name + "이며, 내일 "+ this.job +" 할겁니다.","<br>");
+            } 
         }
-        console.log(a)
-        document.write(a[0],"<br>");
-        document.write(a[1],"<br>");
-        document.write(a[2],"<br>");
-        document.write(a[3],"<br>");
-        document.write(a[4],"<br>");
+        let char1 = new You3("웹쓰","웹 퍼블리셔"); 
+        let char2 = new You3("웹스토리보이","프론트앤드 개발자"); 
 
-        document.write("<br><br>");
+        char1.study();
+        char2.study();
+        document.write("<br>");
 
-        //배열 비구조화 할당
+        //프로토타입 메서드
+        function You4(name, job){
+            this.name = name;
+            this.job = job;
+        }
+        You4.prototype.study = function(){
+            document.write("내 이름은 "+ this.name + "이며, 내일 "+ this.job +" 할겁니다.","<br>");
+        }
+        let char3 = new You4("웹쓰","웹 퍼블리셔"); 
+        let char4 = new You4("웹스토리보이","프론트앤드 개발자");
 
-        let [x, y] = [100, 200];
+        char3.study();
+        char4.study();
+        document.write("<br>");
 
-        document.write(x);
-        document.write(y);
-        document.write("<br><br>");
+        //객체 리터럴
+        function You5(name,job){
+            this.name = name;
+            this.job = job;
+        }
+        You5.prototype = {
+            study1 : function(){
+                document.write("내 이름은 "+ this.name + "이며, 내일 "+ this.job +" 할겁니다.","<br>");
+            },
+            study2 : function(){
+                document.write("내 이름은 "+ this.name + "이며, 내일 "+ this.job +" 할겁니다.","<br>");
+            }
+        }
+        let char5 = new You4("웹쓰","웹 퍼블리셔"); 
+        let char6 = new You4("웹스토리보이","프론트앤드 개발자");
 
-        [x, y] = [y, x]
-
-        document.write(x);
-        document.write(y);
-        document.write("<br><br>");
-
-        //Array 객체
-        const arr10 = [100, 200, 300, 400, 500]; 
-        const arr20 = [600, 700, 800, 900, 1000];
-
-        document.write(arr10,"<br>");
-        document.write(arr10.join('*'),"<br>");
-        document.write(arr10.reverse(),"<br>");
-        document.write(arr10.sort(function(a, b){return b - a}),"<br>");
-        document.write(arr10.sort(function(a, b){return a - b}),"<br>");
-        document.write(arr10.slice(1,3),"<br>");
-        document.write(arr10.slice(2,3),"<br>");
-        document.write(arr10.concat(arr20),"<br>");
-        document.write(arr10.shift(),"<br>");
-        document.write(arr10,"<br>");
-        document.write(arr10.unshift(100),"<br>");
-        document.write(arr10,"<br>");
-        document.write(arr10.pop(),"<br>");
-        document.write(arr10,"<br>");
-
-
+        char5.study();
+        char6.study();
     </script>
 </head>
 <body>
