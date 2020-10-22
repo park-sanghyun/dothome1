@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'Malssami815';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.0/Malssami815.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
 /*!
  * Bootstrap Docs (http://getbootstrap.com)
  * Copyright 2011-2014 Twitter,  Inc.
@@ -239,6 +246,7 @@ table em {border: 1px solid #000; font-style: normal; font-size: 80%; padding: 3
 .bs-header h1 {
     margin-top: 0;
     color: #fff;
+    font-family: 'Malssami815';
 }
 .bs-header p {
     margin-bottom: 0;
