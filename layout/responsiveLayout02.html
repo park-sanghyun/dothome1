@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃1</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {width: 100%; margin: 0 auto;}
+        header {width: 100%; height: 100px; background: lightsalmon;}
+        aside {width: 30%; height: 700px; background: lightgreen; float: left;}
+        section {width: 40%; height: 700px; background: lightskyblue; float: left;}
+        article {width: 30%; height: 700px; background: lightpink; float: left;}
+        footer {width: 100%; height: 100px; background: lightcoral; clear: both;}
+
+        @media (max-width: 1280px){
+            section {width: 70%;}
+            article {width: 100%; height: 300px;}
+        }
+        @media (max-width: 900px){
+            aside {width: 100%;}
+            section {width: 100%;}
+        }
+        @media (max-width: 480px){
+            aside {height: 300px;}
+            section {height: 300px;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <aside></aside>
+            <section></section>
+            <article></article>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>

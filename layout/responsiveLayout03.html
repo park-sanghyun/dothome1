@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>반응형 레이아웃2</title>
+    <style>
+        * {margin: 0; padding: 0;}
+        .container {width: 1200px; margin: 0 auto;}
+        header {width: 100%; height: 200px; background: lightcyan;}
+        aside {width: 30%; height: 900px; background: lightgrey; float: left;}
+        article {width: 70%; height: 300px; background: #333333; float: left;}
+        article:nth-of-type(1) {background: lightslategray; float: left;}
+        article:nth-of-type(2) {background: lightsteelblue; float: left;}
+        article:nth-of-type(3) {background: lightskyblue; float: left;}
+        footer {background: lightblue; width: 100%; height: 200px; clear: both;}
+
+        @media (max-width: 1280px){
+            .container {width: 100%;}
+            article:nth-of-type(1) {height: 450px;}
+            article:nth-of-type(2) {height: 450px;}
+            article:nth-of-type(3) {width: 100%; height: 200px;}
+        }
+        @media (max-width: 900px){
+            aside {width: 100%; height: 300px;}
+            article:nth-of-type(1) {width: 50%; height: 450px;}
+            article:nth-of-type(2) {width: 50%; height: 450px;}
+        }
+        @media (max-width: 480px){
+            article:nth-of-type(1) {width: 100%;}
+            article:nth-of-type(2) {width: 100%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header></header>
+            <aside></aside>
+            <article></article>
+            <article></article>
+            <article></article>
+            <footer></footer>
+        </div>
+    </div>
+</body>
+</html>

@@ -4,6 +4,42 @@
   font-weight: normal;
   font-style: normal;
 }
+.sample {
+  box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.07), 0px 41.7776px 33.4221px rgba(0, 0, 0, 0.0503198), 0px 22.3363px 17.869px rgba(0, 0, 0, 0.0417275), 0px 12.5216px 10.0172px rgba(0, 0, 0, 0.035), 0px 6.6501px 5.32008px rgba(0, 0, 0, 0.0282725), 0px 2.76726px 2.21381px rgba(0, 0, 0, 0.0196802);
+  margin-bottom: 40px;
+}
+.sample h3 {height: 40px; background: #f2f2f2; padding-top: 13px; margin-bottom: 0;}
+.sample h3 span {
+  width: 15px; height: 15px; 
+  background-color: #e96e4c;
+  border-radius: 50%; display: block;
+  margin-left: 15px;
+  position: relative;
+}
+.sample h3 span::before {
+  content: '';
+  width: 15px; height: 15px;
+  background-color: #e6a935;
+  border-radius: 50%; position: absolute; left: 23px; top: 0;
+}
+.sample h3 span::after {
+  content: '';
+  width: 15px; height: 15px;
+  background-color: #85c33d;
+  border-radius: 50%; position: absolute; left: 45px; top: 0;
+}
+.sample .boxWrap {
+  padding: 20px;
+  background: #fff;
+  overflow: hidden;
+}
+.sample .boxWrap > div {
+  float: left;
+  margin: 25px; color: #fff;
+  background: #ccc;
+  width: 170px; height: 170px;
+  text-align: center; line-height: 170px;
+}
 
 /*!
  * Bootstrap v3.1.0 (http://getbootstrap.com)
