@@ -70,7 +70,7 @@
     </header>
     <div class="bs-header bgs5" id="content">
         <div class="container">
-            <h1>Game Effect Reference v1.0 &lt;/doc&gt;</h1>
+            <h1>GAME Script Reference v1.0 &lt;/doc&gt;</h1>
             <p><a href="https://pasahu13.dothome.co.kr" target="_blank">pasahu13.dothome.co.kr/</a></p>
         </div>
     </div>
@@ -88,22 +88,106 @@
                 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample02.jpg">
-                            </a>
-                        </div>
-                    </div>
+                    <h2 id="intro2" class="page-header">Quiz1</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>                   
+                    <p class="codepen" data-height="650" data-theme-id="light" data-default-tab="result" data-user="gugukaka" data-slug-hash="GRqWjNL" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Quiz project1">
+                        <span>See the Pen <a href="https://codepen.io/gugukaka/pen/GRqWjNL">
+                        Quiz project1</a> by park sang hyun (<a href="https://codepen.io/gugukaka">@gugukaka</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                    </p>
+                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
+                    <div class="javascriptSource">
+                        <h3 class="btn btn-primary btn-sm">javascript Source</h3>
+<pre class="line-numbers language-javascript"><code>// 문제 정보
+const quizNum = "1";
+const quizAsk = "태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?";
+const quizAnswer = "&lt;a&gt;";
+const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+
+//선택자
+const question = document.querySelector(".question");
+// const question = $(".question");  제이쿼리 방식
+const questionNum = document.querySelector(".num");
+const questionBtn = document.querySelector(".confirm-btn");
+const questionAnswer = document.querySelector(".confirm-answer");
+const questionEx = document.querySelector(".confirm-ex");
+
+// 문제 번호 출력
+questionNum.innerText = quizNum;
+// $(".num").text(quizNum); 제이쿼리 방식
+// $(".num").html(quizNum);
+questionAnswer.innerHTML = quizAnswer;
+question.innerText = quizAsk;
+questionEx.innerHTML = quizEx;
+
+// 정답 숨기기
+questionAnswer.style.display = "none";
+questionEx.style.display = "none";
+
+// 정답 확인
+// 버튼 클릭 -> 버튼 숨기기 -> 정답 보여주기
+questionBtn.addEventListener("click", function(){
+    questionBtn.style.display = "none";
+    questionAnswer.style.display = "block";
+    questionEx.style.display = "block";
+});
+</code></pre>
+                    </div>              
+                    <div class="jquerySource">
+                        <h3 class="btn btn-primary btn-sm">jquery Source</h3>
+<pre class="line-numbers language-javascript"><code>// jQuery
+// 문제 정보
+const quizNum = "1";
+const quizAsk = "태그 중에서 유일하게 블록 구조를 감쌀 수 있는 태그는?";
+const quizAnswer = "&lt;a&gt;";
+const quizEx = "HTML5에서 &lt;a&gt; 태그는 유일하게 블록 구조를 감쌀 수 있습니다.";
+
+//선택자
+const question = $(".question");
+// const question = $(".question");  제이쿼리 방식
+const questionNum = $(".num");
+const questionBtn = $(".confirm-btn");
+const questionAnswer = $(".confirm-answer");
+const questionEx = $(".confirm-ex");
+
+// 문제 출력
+questionNum.text(quizNum);
+question.text(quizAsk);
+questionAnswer.html(quizAnswer);
+questionEx.html(quizEx);
+
+// 정답 숨기기
+questionAnswer.hide();
+questionEx.hide();
+
+// 버튼 클릭 정답 확인
+questionBtn.click(function(){
+questionBtn.hide();
+questionAnswer.show();
+questionEx.show();
+});
+</code></pre>                        
+                    </div>              
                 </div>
-                <!-- //Intro1 -->             
+                <!-- //Intro1 --> 
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Quiz2</h2>
+                    <p class="bs-callout bs-callout-info">주관식 1문제 스타일(자바스크립트/제이쿼리)</p>                   
+                               
+                </div>
+                <!-- //Intro2 --> 
+
+                <!-- 배너 광고 -->
+                <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                    <script>
+                        new PartnersCoupang.G({ id:347698 });
+                    </script>
+                </div>
+                <!-- //배너 광고 -->
+
             </div>
             <!-- //col-md-9 -->
 
@@ -111,7 +195,8 @@
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print" role="complementary">
                     <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
+                        <li><a href="#intro1">Quiz1</a></li>
+                        <li><a href="#intro2">Quiz2</a></li>
                     </ul>
                 </div>
             </div>
