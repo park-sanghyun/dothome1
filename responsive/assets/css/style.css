@@ -1,0 +1,36 @@
+/* 레이아웃 */
+#header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+
+/* 컨테이너 */
+.container {width: 1200px; margin: 0 auto;}
+
+/* 헤더 */
+.header {}
+.header .header_menu {text-align: right;}
+.header .header_menu a {color: #fff; transition: color 0.3s; padding: 8px 0 6px 10px; display: inline-block; font-family: "Abel";}
+.header .header_menu a:hover {color: #ccc;}
+.header .header_tit {
+    text-align: center; font-family: "Abel";
+    margin-top: 55px;
+    text-transform: uppercase;
+}
+.header .header_tit h1 {
+    background: #51b0dc; display: inline-block;
+    letter-spacing: 2px; font-weight: 900;
+    color: #fff; font-size: 30px;
+    padding: 5px 30px; 
+}
+.header .header_tit h1:hover {}
+.header .header_tit a {
+    background: #4a9abf; display: inline-block;
+    color: #fff; font-size: 16px; 
+    padding: 10px 20px;
+    margin-top: -7px;
+}
+.header .header_tit a:hover {}
+.header .header_icon {}
+
+/* 미디어쿼리 */
+@media (max-width: 1220px){
+    .container {width: 100%;}
+}
