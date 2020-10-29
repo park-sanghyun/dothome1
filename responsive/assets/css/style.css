@@ -2,7 +2,7 @@
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto;}
+.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
 
 /* 헤더 */
 .header {}
@@ -39,7 +39,39 @@
     inset -10px 0 10px 10px #217097;
     transform: translateY(-5px);
 }
-.header .header_icon {}
+.header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 40px;} 
+.header .header_icon li {display: inline; margin: 0 2px;}
+.header .header_icon li a {
+    color: #fff; font-size: 35px;
+    background: #3192bf; display: inline-block;
+    width: 60px; height: 60px; line-height: 60px;
+    border-radius: 50%; position: relative;
+    transition: all 0.25s ease-in-out;
+}
+.header .header_icon li a span {
+    font-size: 12px; line-height: 1.6; 
+    position: absolute; left: 50%; top: -45px;
+    transform: translateX(-50%); background: #3192bf;
+    padding: 3px 9px; border-radius: 6px 0;
+    opacity: 0; transition: all 0.3s;
+}
+.header .header_icon li a:hover span {
+    opacity: 1; top: -33px;
+}
+.header .header_icon li a span::before {
+    content: '';
+    border-top: 5px solid #3192bf;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute; left: 50%; bottom: -5px;
+    margin-left: -5px;
+}
+.header .header_icon li a:hover {
+    box-shadow: 
+        0 0 0 3px rgba(75,154,191,0.9) inset,
+        0 0 0 100px rgba(0,0,0,0.1) inset;
+}
+
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
