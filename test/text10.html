@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text10</title>
+    <style>
+        /* Reset */
+        * {margin: 0; padding: 0;}
+
+        /* Latout */
+        .container {width: 1200px; margin: 0 auto;}
+        #header {width: 100%; height: 100px; background: #f9fbe7;}
+        #banner {width: 100%; height: 200px; background: #f0f4c3;}
+        #side {width: 30%; height: 500px; background: #e6ee9c; float: left;}
+
+        #content1 {width: 70%; height: 250px; background: #dce775; float: left; overflow: hidden;}
+        #content1 > article {border-radius: 10px;}
+        #content1 .cont1-articl1 {width: 46%; height: 150px; margin: 2%; margin-top: 6%; background: #827717; float: left;}
+        #content1 .cont1-articl2 {width: 46%; height: 150px; margin: 2%; margin-top: 6%; background: #827717; float: left;}
+        
+        #content2 {width: 70%; height: 250px; background: #d4e157; float: left;}
+        #content3 {width: 33.33333%; height: 200px; background: #cddc39; clear: both; float: left;}
+        #content4 {width: 33.33333%; height: 200px; background: #c0ca33; float: left;}
+        #content5 {width: 33.33333%; height: 200px; background: #afb42b; float: left;}
+
+        #content6 {background: #9e9d24; clear: both; overflow: hidden; padding: 5%;}
+        #content6 > article {border-radius: 10px;}
+        #content6 .cont6-articl1 {width: 23%; height: 150px; margin: 1%; background: #827717; float: left;}
+        #content6 .cont6-articl2 {width: 23%; height: 150px; margin: 1%; background: #827717; float: left;}
+        #content6 .cont6-articl3 {width: 23%; height: 150px; margin: 1%; background: #827717; float: left;}
+        #content6 .cont6-articl4 {width: 23%; height: 150px; margin: 1%; background: #827717; float: left;}
+
+        #footer {width: 100%; height: 100px; background: #827717;}
+
+        /* Media query */
+        /* 화면너비 0 ~ 1280px */
+        @media (max-width:1280px){
+            .container {width: 100%;}
+            #content1 .cont1-articl1 {width: 80%; height: 150px; margin: 10%; margin-top: 6%;}
+            #content1 .cont1-articl2 {display: none;}
+            #content3 {width: 50%;}
+            #content4 {display: none;}
+            #content5 {width: 50%;}
+            #content6 .cont6-articl1 {width: 31.33333%; margin: 1%;}
+            #content6 .cont6-articl2 {width: 31.33333%; margin: 1%;}
+            #content6 .cont6-articl3 {width: 31.33333%; margin: 1%;}
+            #content6 .cont6-articl4 {display: none;}
+        }
+        /* 화면너비 0 ~ 900px */
+        @media (max-width:900px){
+            #content1 .cont1-articl1 {display: none;}
+            #content3 {width: 100%;}
+            #content5 {width: 100%;}
+        }
+        /* 화면너비 0 ~ 480px */
+        @media (max-width:480px){
+            #side {width: 100%; height: 200px;}
+            #content1 {width: 100%;}
+            #content2 {width: 100%;}
+            #content6 .cont6-articl1 {width: 98%; margin: 1%;}
+            #content6 .cont6-articl2 {width: 98%; margin: 1%;}
+            #content6 .cont6-articl3 {width: 98%; margin: 1%;}
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="container">
+            <header id="header"></header>
+            <!-- //header -->
+
+            <aside id="banner"></aside>
+            <!-- //banner -->
+
+            <section id="side"></section>
+            <!-- //side -->
+
+            <section id="content1">
+                <article class="cont1-articl1"></article>
+                <article class="cont1-articl2"></article>
+            </section>
+            <!-- //content1 -->
+
+            <section id="content2"></section>
+            <section id="content3"></section>
+            <section id="content4"></section>
+            <section id="content5"></section>
+            <!-- //content2~5 -->
+
+            <section id="content6">
+                <article class="cont6-articl1"></article>
+                <article class="cont6-articl2"></article>
+                <article class="cont6-articl3"></article>
+                <article class="cont6-articl4"></article>
+            </section>
+            <!-- //content6 -->
+
+            <footer id="footer"></footer>
+            <!-- //footer -->
+        </div>
+        <!-- //container -->
+    </div>
+    <!-- //wrap -->
+</body>
+</html>

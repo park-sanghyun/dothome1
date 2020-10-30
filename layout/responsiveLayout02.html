@@ -5,7 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>반응형 레이아웃1</title>
     <style>
+        /* Reset */
         * {margin: 0; padding: 0;}
+
+        /* Layou */
         .container {width: 100%; margin: 0 auto;}
         header {width: 100%; height: 100px; background: lightsalmon;}
         aside {width: 30%; height: 700px; background: lightgreen; float: left;}
@@ -13,14 +16,18 @@
         article {width: 30%; height: 700px; background: lightpink; float: left;}
         footer {width: 100%; height: 100px; background: lightcoral; clear: both;}
 
+        /* Media query */
+        /* 화면너비 0 ~ 1280px */
         @media (max-width: 1280px){
             section {width: 70%;}
             article {width: 100%; height: 300px;}
         }
+        /* 화면너비 0 ~ 900px */
         @media (max-width: 900px){
             aside {width: 100%;}
             section {width: 100%;}
         }
+        /* 화면너비 0 ~ 480px */
         @media (max-width: 480px){
             aside {height: 300px;}
             section {height: 300px;}
