@@ -1,11 +1,12 @@
 /* 레이아웃 */
 #header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+#nav {background-color: #f6fdff;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; background: rgba(0,0,0,0.3);}
+.container {width: 1200px; margin: 0 auto; /*background: rgba(0,0,0,0.3);*/}
 
 /* 헤더 */
-.header {}
+
 .header .header_menu {text-align: right;}
 .header .header_menu a {color: #fff; transition: color 0.3s; padding: 8px 0 6px 10px; display: inline-block; font-family: "Abel";}
 .header .header_menu a:hover {color: #ccc;}
@@ -71,6 +72,61 @@
         0 0 0 3px rgba(75,154,191,0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;
 }
+
+/* 전체메뉴 */
+.nav {overflow: hidden; padding: 25px 0;}
+.nav > div {float: left; width: 40%;}
+.nav > div:last-child {width: 20%;}
+.nav > div ol {overflow: hidden; text-align: left;}
+.nav > div li {
+    width: 50%; float: left; 
+    position: relative; padding-left: 8px; box-sizing: border-box;
+}
+.nav > div li::before {
+    content: '';
+    width: 3px; height: 3px; background-color: #25a2d0;
+    border-radius: 50%;
+    position: absolute; left: 0px; top: 9px;
+}
+.nav > div:last-child ol li {width: 100%;}
+.nav > div h3 {
+    font-size: 18px; color: #25a2d0; 
+    font-weight: bold; margin-bottom: 4px;
+}
+.nav > div li a {position: relative; transition: all 0.3s ease-out;}
+.nav > div li a::after {
+    content: '';
+    width: 0; height: 1px; background: #25a2d0;
+    position: absolute; left: 0; bottom: 0;
+    transition: all 0.3s ease-out;
+    
+}
+.nav > div li:hover a::after {
+    width: 100%;
+}
+
+/* 타이틀  */
+#nav-tit {text-align: center; position: relative; background: #eaf7fd;}
+#nav-tit h2 {
+    font-size: 40px; padding: 5px 0;
+    color: #2c94c4; letter-spacing: 2px;
+    font-family: "Nanum Brush Script";
+}
+#nav-tit .btn {
+    position: absolute; right: 0; top: 5px;
+    background-image: url(../../../webstandard/img/icon.png);
+    width: 60px; height: 60px;
+    background-position: 0 -600px;
+}
+#nav-tit .btn:hover {
+    box-shadow: 0px 0px 0px 5px #217097 inset;
+    border-radius: 50%;
+}
+
+
+
+
+
 
 
 /* 미디어쿼리 */
