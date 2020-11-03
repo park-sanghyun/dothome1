@@ -108,23 +108,21 @@
 /* 타이틀  */
 #nav_tit {text-align: center; background: #eaf7fd;}
 #nav_tit h2 {
-    text-align: center;
     font-size: 40px; padding: 5px 0;
     color: #2c94c4; letter-spacing: 2px;
     font-family: "Nanum Brush Script";
 }
 .nav_tit {position: relative;}
-.nav_tit .btn {
+.nav_tit a {
     width: 60px; height: 60px;
-    text-align: center;
-    line-height: 30px; font-size: 60px;
+    line-height: 30px; font-size: 50px;
     position: absolute; right: 0; top: 5px;
     background-color: #2A91C1;
     border-radius: 50%;
     color: #fff;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.3s ease-in-out;
 }
-.nav_tit .btn:hover {
+.nav_tit a:hover {
     box-shadow: 
         0 0 0 3px rgba(75,154,191,0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;

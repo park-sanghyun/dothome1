@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        //h1태그를 클릭하면 모든 글씨를 빨간색
+        $("h1").click(function(){
+            $("*").css("color","red");
+        });
+        //h1태그를 클릭하면 클릭한 글씨를 alert 으로 출력해주세요
+        $("h1").click(function(){
+            const txt = $(this).text()
+            alert(txt);
+        });
+        
+    </script>
+</body>
+</html>
