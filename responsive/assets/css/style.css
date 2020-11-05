@@ -1,7 +1,7 @@
 /* 레이아웃 */
+body {background: url(../img/header_bg.jpg) repeat-x center top;}
 #header {
     height: 327px; 
-    background: url(../img/header_bg.jpg) repeat-x center top;
 }
 #nav {background-color: #f6fdff;}
 #title {background-color: #eaf7fd;}
@@ -10,15 +10,15 @@
     border-left: 1px solid #dbdbdb;
 }
 #cont_left {
-    float: left; width: 250px; height: 1000px;
+    float: left; width: 250px;
 }
 #cont_center {
-    overflow: hidden; height: 1000px; 
+    overflow: hidden; min-height: 1200px;
     margin-right: 250px;
     border-right: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
 }
-#cont_right {position: absolute; right: 0; top: 0; width: 250px; height: 1000px;}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px;}
 #footer {border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
@@ -187,18 +187,112 @@
 .column.col8 {}
 .column.col9 {border-bottom: 0;}
 
+/* 메뉴 */
+.menu {}
+.menu li {position: relative;}
+.menu li a {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: #878787; 
+    border-bottom: 1px solid #dbdbdb;
+    padding: 10px; display: block;
+    transition: box-shadow 0.33s ease, background 0.33s ease;
+}
+.menu li a i {
+    position: absolute; right: 10px; top: 12px;
+}
+.menu li a:hover {
+    box-shadow: inset 180px 0 0 0 rgba(36,130,174,0.7);
+    color: #fff;
+    background: rgba(36,130,174,0.9);
+}
 
+/* 게시판 */
+.notice1 {position: relative;}
+.notice1 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
+.notice1 li {
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+    white-space: nowrap;
+    position: relative;
+    padding-left: 5px;
+}
+.notice1 li::before {
+    content: '';
+    width: 3px; height: 3px; background: #2f7fa6;
+    position: absolute; left: 0; top: 8px;
+}
+.notice1 .more {
+    position: absolute; right: 0; top: 3px;
+    text-transform: uppercase; font-size: 10px;
+    color: #878787;
+}
+
+.notice2 {position: relative; margin-top: 15px;}
+.notice2 h5 {font-size: 14px; color: #2f7fa6; padding-bottom: 5px;}
+.notice2 li {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    position: relative;
+    padding-left: 5px;
+}
+.notice2 li::before {
+    content: '';
+    width: 3px; height: 3px; background: #2f7fa6;
+    position: absolute; left: 0; top: 8px;
+}
+.notice2 .more {
+    position: absolute; right: 0; top: 3px;
+    text-transform: uppercase; font-size: 10px;
+    color: #878787;
+}
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
+    .row {padding: 0 15px;}
+
+    #contents .container {border: 0;}
+    .title .btn {right: 5px;}
 }
 
 @media (max-width: 960px){
-    #cont_center {margin-right: 0;}
-    #cont_right {position: static; width: 100%; height: 400px;}
+    #cont_center {margin-right: 0; border-right: 0;}
+    #cont_right {position: static; width: 100%;}
+
+    .nav > div {width: 100%; float: none;}
+    .nav > div:last-child {width: 100%;}
+    .nav > div ol {margin-bottom: 10px;}
+    .nav > div li {width: 33.33333%;}
+    .nav > div:last-child ol li {width: 33.3333%;}
+
 }
 @media (max-width: 768px){
-    #cont_left {float: none; width: 100%; height: 400px;}
-    #cont_center {height: 400px;}
+    #cont_left {float: none; width: 100%;}
+    #cont_center {height: 400px; border-left: 0;}
+}
+@media (max-width: 600px){
+    #header {height: auto;}
+    .header_tit {display: none;}
+    .header_icon {display: none;}
+    .title .btn {display: none;}
+
+    .nav {display: none;}
+    .column.col1 .col_tit {display: none;}
+    .column.col1 .col_desc {display: none;}
+    .column.col1 {padding: 0; border-bottom: 0;}
+    .column.col1 .menu ul {overflow: hidden;}
+    .column.col1 .menu li {
+        float: left; width: 33.33333%; 
+        text-align: center;
+        border-right: 1px solid #dbdbdb; 
+        box-sizing: border-box;
+    }
+    .column.col1 .menu li:nth-child(3n) {border-right: 0;}
+    .column.col1 .menu li a {color: #fff; text-shadow: 0 0 5px rgba(0, 0, 0, 0.5);}
+    .column.col1 .menu li a:hover {box-shadow: none; background: rgba(36,130,174,0.3);}
+    .column.col1 .menu li a i {display: none;}
+    .column.col2 {background: #ffffff;}
 }
