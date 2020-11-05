@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery01</title>
+</head>
+<body>
+
+    <h1>탐색 선택자</h1>
+    <ul id="menu1">
+        <li>내용 1-1</li>
+        <li>내용 1-2</li>
+        <li>내용 1-3</li>
+    </ul>
+    <ul id="menu2">
+        <li>내용 2-1</li>
+        <li>내용 2-2</li>
+        <li>내용 2-3</li>
+    </ul>
+
+    <!-- script -->
+    <script src="jquery.min_1.12.4.js"></script>
+    <script>
+        $(function(){
+            let obj = [{
+                "area" : "서울"
+            },{
+                "area" : "부산"
+            },{
+                "area" : "전주"
+            }]
+
+            $(obj).each(function(i, o){
+                console.log(i + ":", o);
+            });
+            console.log("====The End1====");
+
+            $.each($("#menu2 li"),function(i, o){
+                console.log(i + ":", o);
+            });
+            console.log("====The End2====");
+
+            $.each($("#menu2 li"),function(i){
+                console.log(i + ":", $(this));
+            });
+        });
+    </script>
+
+    
+</body>
+</html>

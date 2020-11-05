@@ -16,6 +16,7 @@
 
     <!-- webfonts -->
     <link href="https://fonts.googleapis.com/css2?family=Abel&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Brush+Script&display=swap" rel="stylesheet">
 
     <!-- favicon -->
     <link rel="shortcut icon" href="assets/icon/favico.ico">
@@ -37,41 +38,6 @@
 </head>
 <body>
     
-    <!--
-    <nav>
-        <h2>반응형 사이트 전체 메뉴</h2>
-    </nav>
-    <article>
-        <h2>반응형 사이트 서브 타이틀</h2>
-    </article>
-    <main>
-        <section>
-            <h2>반응형 사이트 컨텐츠</h2>
-            <section>
-                <h3>반응형 사이트 왼쪽 컨텐츠</h3>
-                <article><h4>반응형 사이트 왼쪽 컨텐츠1</h4></article>
-                <article><h4>반응형 사이트 왼쪽 컨텐츠2</h4></article>
-                <article><h4>반응형 사이트 왼쪽 컨텐츠3</h4></article>
-            </section>
-            <section>
-                <h3>반응형 사이트 가운데 컨텐츠</h3>
-                <article><h4>반응형 사이트 가운데 컨텐츠1</h4></article>
-                <article><h4>반응형 사이트 가운데 컨텐츠2</h4></article>
-                <article><h4>반응형 사이트 가운데 컨텐츠3</h4></article>
-            </section>
-            <section>
-                <h3>반응형 사이트 오른쪽 컨텐츠</h3>
-                <article><h4>반응형 사이트 오른쪽 컨텐츠1</h4></article>
-                <article><h4>반응형 사이트 오른쪽 컨텐츠2</h4></article>
-                <article><h4>반응형 사이트 오른쪽 컨텐츠3</h4></article>
-            </section>
-        </section>
-    </main>
-    <footer>
-        <h2>반응형 사이트 푸터</h2>
-    </footer> -->
-
-
 
     <header id="header">
         <div class="container">
@@ -149,7 +115,7 @@
                         <li><a href="#">hide()</a></li>
                         <li><a href="#">toggle()</a></li>
                         <li><a href="#">eq()</a></li>
-                        <li><a href="#">find()</a></li>
+                        <li><a href="#">find()</a></li> 
                         <li><a href="#">offset()</a></li>
                         <li><a href="#">scrollTop()</a></li>
                     </ol>
@@ -157,16 +123,105 @@
             </div>
         </div>
     </nav>
+    <!-- //nav -->
 
-    <article id="nav_tit">
-        <h2 class="ir_so">반응형 사이트 서브 타이틀</h2>
+    <article id="title">
         <div class="container">
-            <div class="nav_tit">
+            <div class="title">
                 <h2>"나는 퍼블리셔다"</h2>
-                <a href="#" ><i class="fa fa-angle-up" aria-hidden="true"></i><span class="ir_so">전체 메뉴</span></a>
+                <a href="#" class="btn" >
+                    <i class="fa fa-angle-down" aria-hidden="true"></i>
+                    <span class="ir_so">전체메뉴보기</span>
+                </a>
             </div>
         </div>
     </article>
+    <!-- //tilte -->
+
+    <main>
+        <section id="contents">
+            <div class="container">
+                <h2 class="ir_so">반응형 사이트 컨텐츠</h2>
+                <section id="cont_left">
+                    <h3 class="ir_so">반응형 사이트 왼쪽 컨텐츠</h3>
+                    <article class="column col1">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col2">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col3">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                </section>
+                <!-- //cont_left -->
+
+                <section id="cont_center">
+                    <h3 class="ir_so">반응형 사이트 가운데 컨텐츠</h3>
+                    <article class="column col4">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col5">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col6">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                </section>
+                <!-- //cont_center -->
+
+                <section id="cont_right">
+                    <h3 class="ir_so">반응형 사이트 오른쪽 컨텐츠</h3>
+                    <article class="column col7">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col8">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                    <article class="column col9">
+                        <h4 class="col_tit">Title</h4>
+                        <p class="col_desc">이곳은 타이틀 영역입니다. 타이틀과 관련된 부분입니다.</p>
+                        <!--  -->
+                        <!-- // -->
+                    </article>
+                </section>
+                <!-- //cont_right -->
+                
+            </div> 
+        </section>
+    </main>
+    <!-- //main contents -->
+
+    <footer id="footer">
+        <div class="container">
+            <h2>반응형 사이트 푸터</h2>
+        </div>
+    </footer>
+    <!-- //footer -->
 
     <!-- Javascript Libraries -->
     <script src="assets/js/jquery.min_1.12.4"></script>

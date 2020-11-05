@@ -22,6 +22,151 @@
             alert(txt);
         });
         
+
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height()/2;
+
+            // 출력용
+            $(".scrollTop").text(parseInt(scrollTop));
+            $(".s1OffsetTop").text(parseInt($("#section1").offset().top));
+            $(".s2OffsetTop").text(parseInt($("#section2").offset().top));
+            $(".s3OffsetTop").text(parseInt($("#section3").offset().top));
+            $(".s4OffsetTop").text(parseInt($("#section4").offset().top));
+            $(".s5OffsetTop").text(parseInt($("#section5").offset().top));
+            $(".s6OffsetTop").text(parseInt($("#section6").offset().top));
+            $(".s7OffsetTop").text(parseInt($("#section7").offset().top));
+            $(".s8OffsetTop").text(parseInt($("#section8").offset().top));
+            $(".s9OffsetTop").text(parseInt($("#section9").offset().top));
+
+            // 글씨 색 출력용
+            if(scrollTop > $("#section1").offset().top ){
+                $(".s1OffsetTop").css("color","red");
+            } else {
+                $(".s1OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section2").offset().top ){
+                $(".s2OffsetTop").css("color","red");
+            } else {
+                $(".s2OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section3").offset().top ){
+                $(".s3OffsetTop").css("color","red");
+            } else {
+                $(".s3OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section4").offset().top ){
+                $(".s4OffsetTop").css("color","red");
+            } else {
+                $(".s4OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section5").offset().top ){
+                $(".s5OffsetTop").css("color","red");
+            } else {
+                $(".s5OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section6").offset().top ){
+                $(".s6OffsetTop").css("color","red");
+            } else {
+                $(".s6OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section7").offset().top ){
+                $(".s7OffsetTop").css("color","red");
+            } else {
+                $(".s7OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section8").offset().top ){
+                $(".s8OffsetTop").css("color","red");
+            } else {
+                $(".s8OffsetTop").css("color","white");
+            }
+            if(scrollTop > $("#section9").offset().top ){
+                $(".s9OffsetTop").css("color","red");
+            } else {
+                $(".s9OffsetTop").css("color","white");
+            }
+            
+            // 나타내기
+            if( scrollTop > $("#section1").offset().top ){
+                $("#section1").addClass("show");
+            } else {
+                $("#section1").removeClass("show");
+            }
+            if( scrollTop > $("#section2").offset().top ){
+                $("#section2").addClass("show");
+            } else {
+                $("#section2").removeClass("show");
+            }
+            if( scrollTop > $("#section3").offset().top ){
+                $("#section3").addClass("show");
+            } else {
+                $("#section3").removeClass("show");
+            }
+            if( scrollTop > $("#section4").offset().top ){
+                $("#section4").addClass("show");
+            } else {
+                $("#section4").removeClass("show");
+            }
+            if( scrollTop > $("#section5").offset().top ){
+                $("#section5").addClass("show");
+            } else {
+                $("#section5").removeClass("show");
+            }
+            if( scrollTop > $("#section6").offset().top ){
+                $("#section6").addClass("show");
+            } else {
+                $("#section6").removeClass("show");
+            }
+            if( scrollTop > $("#section7").offset().top ){
+                $("#section7").addClass("show");
+            } else {
+                $("#section7").removeClass("show");
+            }
+            if( scrollTop > $("#section8").offset().top ){
+                $("#section8").addClass("show");
+            } else {
+                $("#section8").removeClass("show");
+            }
+            if( scrollTop > $("#section9").offset().top ){
+                $("#section9").addClass("show");
+            } else {
+                $("#section9").removeClass("show");
+            }
+        });
+        //for문
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height()/2;
+            $(".scrollTop").text(parseInt(scrollTop));
+            for(let i = 1; i <= $(".content-item").length; i++){
+                // 출력용
+                $(".s"+i+"OffsetTop").text(parseInt($("#section"+i).offset().top));
+                // 글씨 색, 나타내기 출력
+                if(scrollTop > $("#section"+i).offset().top ){
+                    $(".s"+i+"OffsetTop").css("color","red");
+                    $("#section"+i).addClass("show");
+                } else {
+                    $(".s"+i+"OffsetTop").css("color","white");
+                    $("#section"+i).removeClass("show");
+                }
+            }
+        });
+
+        //each문
+
+        $(window).scroll(function(){
+            const scrollTop = $(window).scrollTop() + $(window).height()/2;
+            $(".scrollTop").text(parseInt(scrollTop));
+            $(".content-item").each(function(num){
+                $(".s"+(num+1)+"OffsetTop").text(parseInt($(this).offset().top));
+                if(scrollTop > $(this).offset().top ){
+                    $(".s"+(num+1)+"OffsetTop").css("color","red");
+                    $(this).addClass("show");
+                } else {
+                    $(".s"+(num+1)+"OffsetTop").css("color","white");
+                    $(this).removeClass("show");
+                }
+            });
+        });
+        
     </script>
 </body>
 </html>

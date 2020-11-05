@@ -1,14 +1,42 @@
 /* 레이아웃 */
-#header {height: 327px; background: url(../img/header_bg.jpg) repeat-x center top;}
+#header {
+    height: 327px; 
+    background: url(../img/header_bg.jpg) repeat-x center top;
+}
 #nav {background-color: #f6fdff;}
+#title {background-color: #eaf7fd;}
+#contents .container {
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+}
+#cont_left {
+    float: left; width: 250px; height: 1000px;
+}
+#cont_center {
+    overflow: hidden; height: 1000px; 
+    margin-right: 250px;
+    border-right: 1px solid #dbdbdb;
+    border-left: 1px solid #dbdbdb;
+}
+#cont_right {position: absolute; right: 0; top: 0; width: 250px; height: 1000px;}
+#footer {border-top: 1px solid #dbdbdb;}
 
 /* 컨테이너 */
-.container {width: 1200px; margin: 0 auto; /*background: rgba(0,0,0,0.3);*/}
+.container {
+    position: relative; 
+    width: 1200px; 
+    margin: 0 auto; /*background: rgba(0,0,0,0.3);*/
+}
 
 /* 헤더 */
 
 .header .header_menu {text-align: right;}
-.header .header_menu a {color: #fff; transition: color 0.3s; padding: 8px 0 6px 10px; display: inline-block; font-family: "Abel";}
+.header .header_menu a {
+    color: #fff; transition: color 0.3s; 
+    padding: 8px 0 6px 10px; 
+    display: inline-block; 
+    font-family: "Abel";
+}
 .header .header_menu a:hover {color: #ccc;}
 .header .header_tit {
     text-align: center; font-family: "Abel";
@@ -40,8 +68,14 @@
     inset -10px 0 10px 10px #217097;
     transform: translateY(-5px);
 }
-.header .header_icon {text-align: center; margin-top: 40px; padding-bottom: 40px;} 
-.header .header_icon li {display: inline; margin: 0 2px;}
+.header .header_icon {
+    text-align: center; 
+    margin-top: 40px; 
+    padding-bottom: 40px;
+} 
+.header .header_icon li {
+    display: inline; margin: 0 2px;
+}
 .header .header_icon li a {
     color: #fff; font-size: 35px;
     background: #3192bf; display: inline-block;
@@ -80,7 +114,8 @@
 .nav > div ol {overflow: hidden; text-align: left;}
 .nav > div li {
     width: 50%; float: left; 
-    position: relative; padding-left: 8px; box-sizing: border-box;
+    position: relative; padding-left: 8px; 
+    box-sizing: border-box;
 }
 .nav > div li::before {
     content: '';
@@ -93,7 +128,10 @@
     font-size: 18px; color: #25a2d0; 
     font-weight: bold; margin-bottom: 4px;
 }
-.nav > div li a {position: relative; transition: all 0.3s ease-out;}
+.nav > div li a {
+    position: relative; 
+    transition: all 0.3s ease-out;
+}
 .nav > div li a::after {
     content: '';
     width: 0; height: 1px; background: #25a2d0;
@@ -106,33 +144,61 @@
 }
 
 /* 타이틀  */
-#nav_tit {text-align: center; background: #eaf7fd;}
-#nav_tit h2 {
-    font-size: 40px; padding: 5px 0;
-    color: #2c94c4; letter-spacing: 2px;
+.title {text-align: center; position: relative;}
+.title h2 {
+    font-size: 39px; padding: 5px 0;
+    color: #0093bd;
     font-family: "Nanum Brush Script";
 }
-.nav_tit {position: relative;}
-.nav_tit a {
-    width: 60px; height: 60px;
-    line-height: 30px; font-size: 50px;
+.title .btn {
     position: absolute; right: 0; top: 5px;
-    background-color: #2A91C1;
+    width: 60px; height: 60px;
+    line-height: 60px; font-size: 35px;
+    background: #3192bf;
     border-radius: 50%;
     color: #fff;
     transition: all 0.3s ease-in-out;
 }
-.nav_tit a:hover {
+.title .btn:hover {
     box-shadow: 
         0 0 0 3px rgba(75,154,191,0.9) inset,
         0 0 0 100px rgba(0,0,0,0.1) inset;
 }
 
-
+/* 컨텐츠 영역 */
+.column {padding: 15px; border-bottom: 1px solid #dbdbdb;}
+.column .col_tit {
+    font-size: 20px; 
+    color: #2f7fa6; 
+    padding-bottom: 5px;
+}
+.column .col_desc {
+    border-bottom: 1px solid #dbdbdb;
+    padding-bottom: 15px; margin-bottom: 15px; 
+    color: #878787; line-height: 18px;
+}
+.column.col1 {}
+.column.col2 {}
+.column.col3 {border-bottom: 0;}
+.column.col4 {}
+.column.col5 {}
+.column.col6 {border-bottom: 0;}
+.column.col7 {}
+.column.col8 {}
+.column.col9 {border-bottom: 0;}
 
 
 
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
+}
+
+@media (max-width: 960px){
+    #cont_center {margin-right: 0;}
+    #cont_right {position: static; width: 100%; height: 400px;}
+}
+@media (max-width: 768px){
+    #cont_left {float: none; width: 100%; height: 400px;}
+    #cont_center {height: 400px;}
 }
