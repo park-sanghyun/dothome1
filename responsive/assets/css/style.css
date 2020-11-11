@@ -13,7 +13,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     float: left; width: 250px;
 }
 #cont_center {
-    overflow: hidden; min-height: 1200px;
+    overflow: hidden; min-height: 1320px;
     margin-right: 250px;
     border-right: 1px solid #dbdbdb;
     border-left: 1px solid #dbdbdb;
@@ -215,11 +215,11 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     text-overflow: ellipsis; 
     white-space: nowrap;
     position: relative;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 .notice1 li::before {
     content: '';
-    width: 3px; height: 3px; background: #2f7fa6;
+    width: 3px; height: 3px; background: #449ce2;
     position: absolute; left: 0; top: 8px;
 }
 .notice1 .more {
@@ -236,11 +236,11 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     -webkit-line-clamp: 2;
     overflow: hidden;
     position: relative;
-    padding-left: 5px;
+    padding-left: 8px;
 }
 .notice2 li::before {
     content: '';
-    width: 3px; height: 3px; background: #2f7fa6;
+    width: 3px; height: 3px; background: #449ce2;
     position: absolute; left: 0; top: 8px;
 }
 .notice2 .more {
@@ -249,6 +249,130 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     color: #878787;
 }
 
+/* 블로그 */
+.blog1 figcaption {margin-top: 5px;}
+
+.blog2 {margin-top: 15px;}
+.blog2 h5 {
+    color: #fff; text-align: center; padding: 30px;
+}
+.blog2 .img-retina {
+    /* background-image: url(../img/blog4_@1.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover; */
+
+    background: url(../img/blog4_@1.jpg) no-repeat center center / cover; /* 속기법 */
+}
+
+/* 이미지 슬라이드 */
+.slider {}
+.slider figure {position: relative;}
+.slider figcaption {
+    position: absolute; bottom: 0; left: 0;
+    width: 100%; padding: 20px;
+    box-sizing: border-box;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 18px;
+}
+.slider figcaption em {
+    display: block;
+    font-weight: bold;
+    font-size: 28px; 
+    text-transform: uppercase;
+    font-family: 'Abel';
+    opacity: 0;
+    transition: all .84s ease;
+    transform: translateX(50px);
+}
+.slider figcaption span {
+    display: block;
+    text-overflow: ellipsis; overflow: hidden; 
+    white-space: nowrap;
+    opacity: 0;
+    transition: all .84s .2s ease;
+    transform: translateX(50px);
+}
+
+.slider .slick-active figcaption em {
+    opacity: 1; 
+    transform: translateX(0);
+}
+.slider .slick-active figcaption span {
+    opacity: 1; 
+    transform: translateX(0);
+}
+
+.slider .slick-prev {
+    position: absolute; left: 0; bottom: 0;
+    width: 30px; height: 30px;
+    display: inline-block; text-indent: -9999px;
+    border-color: #5dbfeb;
+}
+.slider .slick-prev::before {
+    content: '<'; 
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute; left: 9px; top: 3px;
+}
+.slider .slick-next {
+    position: absolute; right: 0; bottom: 0;
+    width: 30px; height: 30px;
+    display: inline-block; text-indent: -9999px;
+    border-color: #5dbfeb;
+}
+.slider .slick-next::before {
+    content: '>'; 
+    color: #5dbfeb;
+    text-indent: 0;
+    position: absolute; right: 9px; top: 3px;
+}
+.slider .slick-dots {
+    width: 100%;
+    text-align: center;
+}
+.slider .slick-dots li {
+    display: inline-block;
+    width: 15px; height: 15px; margin: 5px;
+}
+.slider .slick-dots li button {
+    width: 15px; height: 15px;
+    background: #5dbfeb;
+    border-radius: 50%; 
+    text-indent: -9999px;
+    border-width: 0;
+}
+.slider .slick-dots li.slick-active button {
+    background: #2b91c8;
+}
+
+/* 라이트 박스 */
+.square {}
+.square a {float: left; width: 19%; margin: 0.5%;}
+
+/* 비디오 */
+.video {position: relative; width: 100%; padding-bottom: 56.25%;}
+.video iframe {position: absolute; width: 100%; height: 100%;}
+
+/* 푸터 */
+.footer {text-align: center; padding: 30px 50px;}
+.footer li {
+    position: relative; 
+    display: inline; 
+    padding: 0 7px 0 10px;
+    word-break: keep-all;
+}
+.footer li::before {
+    content:'';
+    width: 1px; height: 12px;
+    background: #dbdbdb;
+    position: absolute; left: 0; top: 2px;
+}
+.footer li:first-child::before{
+    width: 0; height: 0;
+}
+.footer address {padding-top: 15px;}
 /* 미디어쿼리 */
 @media (max-width: 1220px){
     .container {width: 100%;}
@@ -256,8 +380,14 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
     #contents .container {border: 0;}
     .title .btn {right: 5px;}
+    .square a {width: 24%; margin: 0.5%;}
+    .square a:nth-child(5n) {display: none;}
 }
+@media (max-width: 1024px){
+    .square a {width: 32.333333%;}
+    .square a:nth-child(5) {display: block;}
 
+}
 @media (max-width: 960px){
     #cont_center {margin-right: 0; border-right: 0;}
     #cont_right {position: static; width: 100%;}
@@ -268,10 +398,15 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .nav > div li {width: 33.33333%;}
     .nav > div:last-child ol li {width: 33.3333%;}
 
+    #cont_right {overflow: hidden; border-top: 1px solid #dbdbdb;}
+    #cont_right .column {float: left; width: 33.33333%; box-sizing: border-box;}
+    #cont_right .column.col7 {border-bottom: 0; border-right: 1px solid #dbdbdb;}
+    #cont_right .column.col8 {border-bottom: 0; border-right: 1px solid #dbdbdb;}
+
 }
 @media (max-width: 768px){
     #cont_left {float: none; width: 100%;}
-    #cont_center {height: 400px; border-left: 0;}
+    #cont_center {border-left: 0;}
 }
 @media (max-width: 600px){
     #header {height: auto;}
@@ -295,4 +430,16 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .column.col1 .menu li a:hover {box-shadow: none; background: rgba(36,130,174,0.3);}
     .column.col1 .menu li a i {display: none;}
     .column.col2 {background: #ffffff;}
+
+    .square a {width: 49%;}
+    .square a:nth-child(5) {display: none;}
+
+    #cont_right .column {width: 50%;}
+    #cont_right .column.col8 {display: none;}
+}
+@media (max-width: 320px){
+    .square a {width: 100%; margin: 1% 0%;}
+
+    #cont_right .column {width: 100%;}
+    #cont_right .column.col7 {border-right: 0;}
 }

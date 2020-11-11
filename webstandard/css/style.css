@@ -338,7 +338,16 @@
 
 /* 팝업 */
 .popup h4 {font-size: 14px; color: #0093bd; padding-bottom: 3px; font-weight: bold;}
-.popup ul {overflow: hidden;}
-.popup li {float: left; width: 93px; margin-right: 5px;}
-.popup li:nth-of-type(3) {margin-right: 0;}
-.popup li img {width: 100%;}
+.popup {overflow: hidden;}
+.popup a {float: left; width: 93px; margin-right: 5px;}
+.popup a:nth-of-type(3) {margin-right: 0;}
+.popup img {width: 100%;}
+
+
+/* 이미지 슬라이드 */
+.slider {}
+.slider figure {}
+.slider figure img {}
+.slider {}
+.slider {}
+
