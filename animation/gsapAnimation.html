@@ -71,51 +71,189 @@
     <div class="bs-header bgs5" id="content">
         <div class="container">
             <h1>Gsap Animation Reference v1.0 &lt;/doc&gt;</h1>
-            <p><a href="https://pasahu13.dothome.co.kr" target="_blank">pasahu13.dothome.co.kr/</a></p>
+            <p><a href="http://pasahu13.dothome.co.kr/" target="_blank">pasahu13.dothme.co.kr</a></p>
         </div>
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
-                <!-- 배너 광고 -->
+            <div class="col-md-12" role="main">
+                <!-- 배너 광고 1140 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
                     <script>
-                        new PartnersCoupang.G({ id:347698 });
+                        new PartnersCoupang.G({ id:348408 });
                     </script>
                 </div>
-                <!-- //배너 광고 -->
+                <!-- //배너 광고 1140 -->
                 
-                <!-- Intro1 -->
+                <!-- Intro0 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">클리핑 마스크</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다.</p>
-                    <div class="row">
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample01.jpg">
-                            </a>
-                        </div>
-                        <div class="col-xs-12 col-md-12">
-                            <a href="#" class="thumbnail">
-                                <img src="img/sample02.jpg">
-                            </a>
-                        </div>
+                    <h2 id="intro0" class="page-header">GSAP Animation</h2>
+                    <p class="bs-callout bs-callout-info">
+                        GSAP는 웹 브라우저에서 애니메이션을 구현하기 위한 자바스크립트 라이브러리입니다.
+                        기존 CSS Animation이나 jQuery 애니메이션보다 탁원한 퍼포먼스를 발휘할 수 있도록 최적화
+                        된 애니메이션 전용 라이브러리입니다.
+                    </p>
+                    <div class="table-responsive">
+                        <table class="table table-bordered table-striped table-hover">
+                            <thead>
+                                <tr>
+                                    <th>유형</th>
+                                    <th>메서드</th>
+                                    <th>설명</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="ce va" rowspan="3">Methods</td>
+                                    <td>gsap.to()</td>
+                                    <td>일반적인 유형의 애니메이션을 정의합니다.</td>
+                                </tr>
+                                <tr>
+                                    <td>gsap.from()</td>
+                                    <td>일반적인 유형의 애니메이션의 방향을 반대로 정의합니다.</td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!-- //Intro1 -->             
-            </div>
-            <!-- //col-md-9 -->
+                <!-- //Intro0 -->
 
-            <!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">레이어 마스크</a></li>
-                    </ul>
+                <style>
+                    .timing {height: 360px; overflow: hidden;}
+                    .timing > div {
+                        width: 80px; height: 80px;
+                        border-radius: 50%;
+                        color: #fff;
+                        text-align: center;
+                        line-height: 80px;
+                        margin: 20px;
+                        position: relative;
+                        overflow: hidden;
+                        background-image: linear-gradient(to right, #00e1ff 0%, #f9a323 100%);
+                    }
+                </style>
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Animation01 - 이동하기 : gsap.to()
+                        <button type="button" class="btn btn-danger btn1-0">reset</button>
+                        <button type="button" class="btn btn-warning btn1-1">Start1</button>
+                        <button type="button" class="btn btn-warning btn1-2">Start2</button>
+                        <button type="button" class="btn btn-warning btn1-3">Start3</button>
+                        <button type="button" class="btn btn-warning btn1-4">Start4</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg1">
+                            <div class="animation01"><span>01</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn1-0").click(function(){
+    gsap.to(".animation01",{x: 0, borderRadius: "50%", rotation: 0, scale: 1});
+});
+$(".btn1-1").click(function(){
+    gsap.to(".animation01",{x: leftWidth});
+});
+$(".btn1-2").click(function(){
+    gsap.to(".animation01",{x: leftWidth, rotation: 360, borderRadius: 5, duration: 1.5});
+});
+$(".btn1-3").click(function(){
+    gsap.to(".animation01",{x: leftWidth, rotation: 360, borderRadius: 5, scale: 2, duration: 1.5});
+});
+$(".btn1-4").click(function(){
+    var tl = gsap.timeline();
+    tl.to(".animation01", {x: leftWidth, duration: 1})
+      .to(".animation01", {y: leftHeight, duration: 1})
+      .to(".animation01", {x: 0, duration: 1})
+      .to(".animation01", {y: 0, duration: 1})
+});
+</code></pre>
                 </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Animation02 - 이동하기 : gsap.from()
+                        <button type="button" class="btn btn-warning btn2-1">Start1</button>
+                        <button type="button" class="btn btn-warning btn2-2">Start2</button>
+                        <button type="button" class="btn btn-warning btn2-3">Start3</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg2">
+                            <div class="animation02"><span>02</span></div>
+                            <div class="animation02"><span>03</span></div>
+                            <div class="animation02"><span>04</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn2-1").click(function(){
+    gsap.from(".animation02",{duration: 1, x: leftWidth});
+});
+$(".btn2-2").click(function(){
+    gsap.from(".animation02",{duration: 1, y: 100, opacity: 0});
+});
+$(".btn2-3").click(function(){
+    gsap.from(".animation02",{duration: 1, x: 500, opacity: 0});
+});
+</code></pre>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Animation03 - 이동하기 : gsap.fromTO()
+                        <button type="button" class="btn btn-warning btn3-1">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg3">
+                            <div class="animation03"><span>03</span></div>
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn3-1").click(function(){
+    gsap.fromTo(".animation03",
+        {opacity: 0, x: 0, y: 0, borderRadius: 0},
+        {opacity: 1, x: 500, y: 100, borderRadius: "50%", duration: 1.5});
+});
+</code></pre>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Animation04 - 움직임 효과
+                        <button type="button" class="btn btn-warning btn4-1">Start</button>
+                    </h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">animation</em></h3>
+                        <div class="timing bg4" style="height: 730px;">
+                            <div class="animation04-1"><span>04</span></div>
+                            <div class="animation04-2"><span>04</span></div>
+                            <div class="animation04-3"><span>04</span></div>
+                            <div class="animation04-4"><span>04</span></div>
+                            <div class="animation04-5"><span>04</span></div>
+                            <div class="animation04-6"><span>04</span></div>
+                            <div class="animation04-7"><span>04</span></div>
+                            
+                        </div>
+                    </div>
+<pre class="line-numbers language-js"><code>$(".btn4-1").click(function(){
+    gsap.to(".animation04-1",{duration: 2, left: leftWidth, rotation: 360, ease: "power1.out"});
+    gsap.to(".animation04-2",{duration: 2, left: leftWidth, rotation: 360, ease: "power2.out"});
+    gsap.to(".animation04-3",{duration: 2, left: leftWidth, rotation: 360, ease: "power3.out"});
+    gsap.to(".animation04-4",{duration: 2, left: leftWidth, rotation: 360, ease: "power4.out"});
+    gsap.to(".animation04-5",{duration: 2, left: leftWidth, rotation: 360, ease: "back.out(1.7)"});
+    gsap.to(".animation04-6",{duration: 2, left: leftWidth, rotation: 360, ease: "bounce.out"});
+    gsap.to(".animation04-7",{duration: 2, left: leftWidth, rotation: 360, ease: "elastic.out(1, 0.3)"});
+});
+</code></pre>
+                </div>
+                <!-- //Intro4 -->
+                
+                           
             </div>
-            <!--//col-md-3 -->
+            <!-- //col-md-12 -->
+
         </div>
         <!-- //row -->
     </div>
@@ -142,5 +280,60 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <script src="../assets/js/docs.min.js"></script>
     <script src="../assets/js/prism.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        const leftWidth = $(".sample").width() - 120;
+        const leftHeight = $(".sample").height() - 160;
+        
+        //intro1
+        $(".btn1-0").click(function(){
+            gsap.to(".animation01",{x: 0, borderRadius: "50%", rotation: 0, scale: 1});
+        });
+        $(".btn1-1").click(function(){
+            gsap.to(".animation01",{x: leftWidth});
+        });
+        $(".btn1-2").click(function(){
+            gsap.to(".animation01",{x: leftWidth, rotation: 360, borderRadius: 5, duration: 1.5});
+        });
+        $(".btn1-3").click(function(){
+            gsap.to(".animation01",{x: leftWidth, rotation: 360, borderRadius: 5, scale: 2, duration: 1.5});
+        });
+        $(".btn1-4").click(function(){
+            var tl = gsap.timeline();
+            tl.to(".animation01", {x: leftWidth, duration: 1})
+              .to(".animation01", {y: leftHeight, duration: 1})
+              .to(".animation01", {x: 0, duration: 1})
+              .to(".animation01", {y: 0, duration: 1})
+        });
+
+        //intro2
+        $(".btn2-1").click(function(){
+            gsap.from(".animation02",{duration: 1, x: leftWidth});
+        });
+        $(".btn2-2").click(function(){
+            gsap.from(".animation02",{duration: 1, y: 100, opacity: 0});
+        });
+        $(".btn2-3").click(function(){
+            gsap.from(".animation02",{duration: 1, x: 500, opacity: 0});
+        });
+
+        //intro3
+        $(".btn3-1").click(function(){
+            gsap.fromTo(".animation03",
+                {opacity: 0, x: 0, y: 0, borderRadius: 0},
+                {opacity: 1, x: 500, y: 100, borderRadius: "50%", duration: 1.5});
+        });
+
+        //intro4
+        $(".btn4-1").click(function(){
+            gsap.to(".animation04-1",{duration: 2, left: leftWidth, rotation: 360, ease: "power1.out"});
+            gsap.to(".animation04-2",{duration: 2, left: leftWidth, rotation: 360, ease: "power2.out"});
+            gsap.to(".animation04-3",{duration: 2, left: leftWidth, rotation: 360, ease: "power3.out"});
+            gsap.to(".animation04-4",{duration: 2, left: leftWidth, rotation: 360, ease: "power4.out"});
+            gsap.to(".animation04-5",{duration: 2, left: leftWidth, rotation: 360, ease: "back.out(1.7)"});
+            gsap.to(".animation04-6",{duration: 2, left: leftWidth, rotation: 360, ease: "bounce.out"});
+            gsap.to(".animation04-7",{duration: 2, left: leftWidth, rotation: 360, ease: "elastic.out(1, 0.3)"});
+        });
+    </script>
 </body>
 </html>
