@@ -264,6 +264,16 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 
     background: url(../img/blog4_@1.jpg) no-repeat center center / cover; /* 속기법 */
 }
+@media only screen and (-webkit-min-device-pixel-ratio: 2),
+            only screen and (min-device-pixel-ratio: 2),
+            only screen and (min-resolution: 2dppx) {
+                .blog2 .img-retina {background-image: url(../img/blog4_@2.jpg);}
+        }
+@media only screen and (-webkit-min-device-pixel-ratio: 3),
+    only screen and (min-device-pixel-ratio: 3),
+    only screen and (min-resolution: 3dppx) {
+        .blog2 .img-retina {background-image: url(../img/blog4_@3.jpg);}
+}
 
 /* 이미지 슬라이드 */
 .slider {}

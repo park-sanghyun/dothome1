@@ -111,7 +111,7 @@
     <div class="quiz-wrap">
         <div class="info">
             <ul>
-                <li>시험 유형 : <span>주관식 퀴즈(한문제)</span></li>
+                <li>시험 유형 : <span>주관식 퀴즈(세문제)</span></li>
                 <li>시험 과목 : <span>제이쿼리</span></li>
                 <li>시험 과목 : <span>응용 SW기초 기술 활용</span></li>
             </ul>
@@ -199,7 +199,7 @@
         //     questionEx.eq(i).html(quizInfo[i].quizEx);
         // };
 
-        // each()
+        // each() = 문제 출력
         $(".quiz-wrap .quiz").each(function(i){
             $(this).find(questionNum).html(quizInfo[i].quizNum)
             $(this).find(questionAsk).html(quizInfo[i].quizAsk)
@@ -216,6 +216,7 @@
             $(this).hide()
             $(this).nextAll().show();
         });
+
     </script>
 </body>
 </html>
