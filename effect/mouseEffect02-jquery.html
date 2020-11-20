@@ -158,6 +158,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
+
         // 출력용
         $(document).mousemove(function(e){
             $(".pageX").text(e.pageX);
@@ -168,11 +169,14 @@
         $(document).mousemove(function(e){
             let cursorWidth = $(".cursor").width() / 2;
             let cursorFWidth = $(".cursor-follower").width() / 2;
-
-            // $(".cursor").css({left: e.pageX - 5, top: e.pageY - 5})
-            // $(".cursor-follower").css({left: e.pageX - 15, top: e.pageY - 15})
-            gsap.to(".cursor", {duration: .3, left: e.pageX - cursorWidth, top: e.pageY - cursorWidth, ease: "power1.out"});
-            gsap.to(".cursor-follower", {duration: .8, left: e.pageX - cursorFWidth, top: e.pageY - cursorFWidth, ease: "power1.out"});
+            gsap.to(".cursor", {
+                duration: .3, left: e.pageX - cursorWidth, 
+                top: e.pageY - cursorWidth, ease: "power1.out"
+            });
+            gsap.to(".cursor-follower", {
+                duration: .8, left: e.pageX - cursorFWidth, 
+                top: e.pageY - cursorFWidth, ease: "power1.out"
+            });
         });
 
         // 마우스 오버효과
@@ -183,6 +187,7 @@
             $(".cursor").removeClass("active");
             $(".cursor-follower").removeClass("active");;
         });
+        
     </script>
 </body>
 </html>
