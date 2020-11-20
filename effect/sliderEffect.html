@@ -76,48 +76,69 @@
     </div>
     <div class="container bs-docs-container">
         <div class="row">
-            <div class="col-md-9" role="main">
-                <!-- 배너 광고 -->
+            <div class="col-md-12" role="main">
+                <!-- 배너 광고 1140 -->
                 <div class="ad">
                     <script src="https://ads-partners.coupang.com/g.js"></script>
                     <script>
-                        new PartnersCoupang.G({ id:347698 });
+                        new PartnersCoupang.G({ id:348408 });
                     </script>
                 </div>
-                <!-- //배너 광고 -->
+                <!-- //배너 광고 1140 -->
                 
                 <!-- Intro1 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro1" class="page-header">Slider Effect01 - jQuery</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다.</p>
-                    <p><a class="btn btn-primary btn-lg" href="sliderEffect01-jquery.html" role="button">확인하기</a></p>
-<pre class="line-numbers language-js"><code>
+                    <h2 id="intro1" class="page-header">Slider Effect01</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 기본 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+                    <h3>jQuert</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;              //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length;   //이미지 갯수
+
+
+//3초에 한번씩 함수를 실행
+setInterval(function(){
+    let nextIndex = (currentIndex + 1) % sliderCount;  //이미지 갯수만큼 반복
+
+    slider.eq(currentIndex).fadeOut(); //첫 번째 이미지 사라지기
+    slider.eq(nextIndex).fadeIn();     //두 번째 이미지 보이기
+    
+    // currentIndex++;
+    currentIndex = nextIndex;
+
+},3000);
+</code></pre>
+                    <h3>Javscript</h3>
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap")
+const sliderImg = document.querySelector(".slider-img")
+const slider = document.querySelectorAll(".slider")
+
+let currentIndex = 0;              //현재 보이는 첫 번째 이미지
+let sliderCount = slider.length;   //이미지 갯수
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+
+    // slider[currentIndex].style.display = "none";
+    // slider[nextIndex].style.display = "block";
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1";
+
+    currentIndex = nextIndex;
+},3000);
 </code></pre>
                 </div>
                 <!-- //Intro1 -->
                 
-                <!-- Intro2 -->
-                <div class="bs-docs-section">
-                    <h2 id="intro2" class="page-header">Slider Effect01 - Javascript</h2>
-                    <p class="bs-callout bs-callout-info">클리핑 마스크는 레이어 마스크와 달리 상위 레이어의 이미지를 하위 레이어에 클리핑하여 레이어의 모양으로 잘라낸 것처럼 나타내는 기능입니다.</p>
-                    <p><a class="btn btn-primary btn-lg" href="sliderEffect01-Javascript.html" role="button">확인하기</a></p>
-<pre class="line-numbers language-js"><code>
-</code></pre>
-                </div>
-                <!-- //Intro2 -->
+               
             </div>
             <!-- //col-md-9 -->
 
-            <!-- col-md-3 -->
-            <div class="col-md-3">
-                <div class="bs-sidebar hidden-print" role="complementary">
-                    <ul class="nav bs-sidenav">
-                        <li><a href="#intro1">Slider Effect01 - jQuery</a></li>
-                        <li><a href="#intro2">Slider Effect01 - Javascript</a></li>
-                    </ul>
-                </div>
-            </div>
-            <!--//col-md-3 -->
         </div>
         <!-- //row -->
     </div>
