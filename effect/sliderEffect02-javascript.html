@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Slider Effect01 - Javascript</title>
+    <title>Slider Effect02 - Javascript</title>
 
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
 
@@ -67,41 +67,40 @@
             color : var(--color-tilte);
             font-family: var(--font-cafe);
             font-size: 16px;
-            background: url(img/images08@2.jpg);
+            background: url(img/images08@2.jpg) no-repeat center center;
             background-size: cover;
+            height: 100vh;
         }
         body::before {
             content: '';
             position: absolute; left: 0; top: 0;
             width: 100%; height: 100vh;
             background: rgba(211, 210, 255, 0.1);
+
         }
 
         /* slider */
         .slider-wrap {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .slider-img {
-            position: relative;
             width: 800px; height: 480px;
             overflow: hidden;
-            box-shadow: 4px 4px 20px rgba(0,0,0,0.5);
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 100;
+        }
+        .slider-img {
+            overflow: hidden;
+            width: 4000px; height: 480px;
+            position: relative;
         }
         .slider-img .slider {
-            position: absolute; left: 0; top: 0;
-            transition: all 1s;
+            width: 800px; height: 480px;
+            float: left;
+            position: relative;
         }
-        .slider-img .slider span {
+        .slider-img  .slider span {
             position: absolute; left: 5px; top: 5px;
         }
-        .slider-img .slider:nth-child(1) {z-index: 5;}
-        .slider-img .slider:nth-child(2) {z-index: 4;}
-        .slider-img .slider:nth-child(3) {z-index: 3;}
-        .slider-img .slider:nth-child(4) {z-index: 2;}
-        .slider-img .slider:nth-child(5) {z-index: 1;}
+        
 
     </style>
 </head>
@@ -109,13 +108,13 @@
 
     <!-- info -->
     <div class="info left">
-        <h1>Slider Effect01 - javascript</h1>
-        <p>이미지 슬라이드 - 3초에 한번씩 변경하기</p>
+        <h1>Slider Effect02 - Javascript</h1>
+        <p>이미지 슬라이드 - 가로로 이동하기</p>
     </div>
     <div class="info right">
         <ul>
-            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html" class="active">1</a></li>
-            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html">2</a></li>
+            <li><a href="sliderEffect01-jquery.html">1</a><a href="sliderEffect01-javascript.html">1</a></li>
+            <li><a href="sliderEffect02-jquery.html">2</a><a href="sliderEffect02-javascript.html" class="active">2</a></li>
             <li><a href="sliderEffect03-jquery.html">3</a><a href="sliderEffect03-javascript.html">3</a></li>
             <li><a href="sliderEffect04-jquery.html">4</a><a href="sliderEffect04-javascript.html">4</a></li>
             <li><a href="sliderEffect05-jquery.html">5</a><a href="sliderEffect05-javascript.html">5</a></li>
@@ -131,35 +130,42 @@
     <main>
         <div class="slider-wrap">
             <div class="slider-img">
-                <div class="slider"><img src="img/images09.jpg" alt="이미지"><span>이미지1</span></div>
-                <div class="slider"><img src="img/images07.jpg" alt="이미지"><span>이미지2</span></div>
-                <div class="slider"><img src="img/images06.jpg" alt="이미지"><span>이미지3</span></div>
-                <div class="slider"><img src="img/images05.jpg" alt="이미지"><span>이미지4</span></div>
-                <div class="slider"><img src="img/images04.jpg" alt="이미지"><span>이미지5</span></div>
+                <div class="slider"><img src="img/images10.jpg" alt="이미지"><span>이미지1</span></div>
+                <div class="slider"><img src="img/images15.jpg" alt="이미지"><span>이미지2</span></div>
+                <div class="slider"><img src="img/images16.jpg" alt="이미지"><span>이미지3</span></div>
+                <div class="slider"><img src="img/images17.jpg" alt="이미지"><span>이미지4</span></div>
+                <div class="slider"><img src="img/images18.jpg" alt="이미지"><span>이미지5</span></div>
             </div>
         </div>
     </main>
     <!-- //main -->
 
     <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
         const sliderWrap = document.querySelector(".slider-wrap")
         const sliderImg = document.querySelector(".slider-img")
         const slider = document.querySelectorAll(".slider")
 
-        let currentIndex = 0;              //현재 보이는 첫 번째 이미지
-        let sliderCount = slider.length;   //이미지 갯수
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderWidth = sliderWrap.clientWidth;
+        
+        setInterval(function(){
+            // if (currentIndex < sliderCount - 1){
+            //     currentIndex++;
+            // } else {
+            //     currentIndex = 0;
+            // }
+            currentIndex < sliderCount - 1 ? currentIndex++ : currentIndex = 0;
 
-        setInterval(() => {
-            let nextIndex = (currentIndex + 1) % sliderCount;
+            let sliderPosition = currentIndex * -sliderWidth;
 
-            // slider[currentIndex].style.display = "none";
-            // slider[nextIndex].style.display = "block";
+            // sliderImg.style.left = sliderPosition;
+            // sliderImg.style.transition = "all .6s";
 
-            slider[currentIndex].style.opacity = "0";
-            slider[nextIndex].style.opacity = "1";
+            gsap.to(sliderImg, {duration: 1, left: sliderPosition, ease: "expo.out"});
 
-            currentIndex = nextIndex;
         },3000);
     </script>
 </body>
