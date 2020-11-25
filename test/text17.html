@@ -1,0 +1,594 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>text15</title>
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/moonspam/NanumSquare/master/nanumsquare.css">
+
+    <style>
+        * {margin: 0; padding: 0;}
+        a {text-decoration: none;}
+        button {
+            border: none;
+            background: 0 0;
+            cursor: pointer;
+        }
+        body {background: #191919;}
+        #wrap {font-family: 'NanumSquare', sans-serif !important; text-align: center;}
+        #header {width: 100%;  z-index: 10; background: #fff;}
+        #banner {
+            width: 100%; position: relative;
+            height: 670px; 
+        }
+        #banner::before {
+            width: 100%; height: 670px;
+            background: #000; background: rgba(0,0,0,.4);
+            z-index: 10;
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            left: 0;
+            content: '';
+        }
+        #contents {background: #fff;}
+        #footer {width: 100%; height: 200px; background: #191919; position: relative;}
+
+
+        .container {width: 1180px; height: inherit; margin: 0 auto; position: relative;}
+
+
+        /* 헤더 */
+        .header {position: relative; background-color: #fff;}
+        .header .logo {
+            position: absolute; left: 0; top: 33px; background: url(./img/sp_svg_icon.png);
+            width: 146px; height: 22px;
+            background-position: -4px -62px;
+        }
+        .header .menu {text-align: center;}
+        .header .menu li {display: inline-block; padding: 34px 36px;}
+        .header .menu li a { color: #000; font-size: 18px; font-weight: bold;}
+
+        .header .ask {position: absolute; right: 0; top: 25px;}
+        .header .ask li {
+            display: inline-block; padding: 8px 13px;
+            border: 1px solid rgba(0,0,0,.4);
+            border-radius: 3px;
+        }
+        .header .ask li a {color: #000; font-size: 14px; font-weight: bold;} 
+
+        /* 배너 */
+
+        .banner {
+            
+        }
+        .banner .slider {
+            
+        }
+        #banner .bg1 {
+            width: 100%; height: 670px;
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_1.png) 50% 0 no-repeat; 
+            background-size: cover;
+            position: absolute; left: 0; top: 0; z-index: -1;
+            opacity: 0;
+            animation: change 15s ease-in-out 0s infinite;
+        }
+        #banner .bg2 {
+            width: 100%; height: 670px;
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_2.png) 50% 0 no-repeat; 
+            background-size: cover;
+            position: absolute; left: 0; top: 0;  z-index: -1;
+            opacity: 0;
+            animation: change 15s ease-in-out 5s infinite;
+        }
+        #banner .bg3 {
+            width: 100%; height: 670px;
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/research/research_intro_career_3.png) 50% 0 no-repeat; 
+            background-size: cover;
+            position: absolute; left: 0; top: 0;  z-index: -1;
+            opacity: 0;
+            animation: change 15s ease-in-out 10s infinite;
+        }
+        @keyframes change {
+            0% {opacity: 0;}
+            15% {opacity: 1;}
+            30% {opacity: 1;}
+            50% {opacity: 1;}
+            100% {opacity: 0;}
+        }
+
+        .banner .banner_text {
+            position: relative;
+            width: 1060px;
+            margin: 0 auto;
+            padding: 183px 0 0 105px;
+            z-index: 20;
+            text-align: left;
+        }
+        .banner .banner_text h2 {
+            font-size: 52px;
+            line-height: 54px;
+            letter-spacing: -1px;
+            font-weight: 300;
+            color: #fff;
+        } 
+        .banner .banner_text p {
+            margin-top: 15px;
+            font-size: 18px;
+            line-height: 32px;
+            letter-spacing: -.3px;
+            font-weight: 300;
+            color: #dfdfdf;
+        } 
+        .banner .banner_text a {
+            position: relative;
+            display: inline-block;
+            height: 60px;
+            line-height: 58px;
+            padding: 0 43px 0 65px;
+            margin-top: 70px;
+            border: 1px solid rgba(255,255,255,.3);
+            border-radius: 4px;
+            font-size: 18px;
+            color: #fff;
+            box-sizing: border-box;
+        }
+        .banner .banner_text a::before {
+            background: url(https://static-clova.pstatic.net/static/70fd2ea/img/sprite/sp_research.png);
+            background-position: -1089px -119px;
+            background-repeat: no-repeat;
+            width: 16px;
+            height: 19px;
+            position: absolute;
+            top: 19px;
+            left: 40px;
+            content: '';
+        }
+
+        /* 컨텐츠 */
+        .contents {width: 1060px; margin: 0 auto; text-align: left;}
+        .contents .cont1 {height: 34px; padding-top: 40px; display: block; position: relative;}
+        .contents .cont1 .cont1_text {
+            position: absolute;
+            top: 40px;
+            right: 0;
+            height: 32px;
+            border: 1px solid #dbdbdb;
+            border-radius: 2px;
+            background: #ededed;
+            
+        }
+        .contents .cont1 .cont1_text .btn1 {
+            float: left;
+            width: 76px;
+            height: 32px;
+            margin: -1px;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            font-size: 13px;
+            line-height: 34px;
+            text-align: center;
+            color: #888;
+        }
+        .contents .cont1 .cont1_text .btn2 {
+            float: left;
+            width: 76px;
+            height: 32px;
+            margin: -1px;
+            border: 1px solid #dbdbdb;
+            border-radius: 2px;
+            font-size: 13px;
+            line-height: 34px;
+            text-align: center;
+            color: #2ebc76;
+            background: #fff;
+        }
+        .cont2 {
+            padding-bottom: 70px;
+        }
+
+        .cont2 button {}
+        .cont2 .career_item {
+            border-bottom: 1px solid #e8e8e8;
+            width: 100%;
+            height: 94px;
+            background: 0 0;
+            font-size: 20px;
+            line-height: 27px;
+            letter-spacing: .7px;
+            text-align: left;
+            color: #000;
+            outline: 0;
+        }
+        .career_item[aria-expanded=true] .career_detail {
+            display: block;
+        }
+        .cont2 .career_item .career_detail {
+            
+        }
+        .cont2 .career_title {
+            font-size: 19px;
+            position: relative;
+            width: 100%;
+            height: 94px;
+            background: 0 0;
+            border: 0;
+            line-height: 27px;
+            letter-spacing: .7px;
+            text-align: left;
+            color: #000;
+            outline: 0;
+            
+        }
+        .cont2 .career_title::before {
+            background: url(https://static-clova.pstatic.net/static/4b722fb/img/sprite/sp_icon.png);
+            background-position: -654px -256px;
+            background-repeat: no-repeat;
+            width: 20px;
+            height: 12px;
+            position: absolute;
+            top: 50%;
+            right: 20px;
+            margin-top: -6px;
+            content: '';
+        }
+        
+
+       
+        /* 푸터 */
+        .footer {color: #666666; overflow: hidden; position: relative;}
+
+        .footer .logo {
+            position: absolute; left: -30px; top: 20px; background: url(./img/sp_svg_icon.png);
+            background-position: -4px -34px;
+            width: 150px; height: 30px; margin-top: 23px; margin-left: 30px;
+        }
+        .footer .info {overflow: hidden; padding-top: 60px; }
+        .footer .left {font-size: 13px; float: left;}
+        .footer .left li {float: left; padding-right: 20px;}
+        .footer .center {font-size: 13px; float: left; padding-left: 180px;}
+        .footer .center li {float: left;}
+        .footer .right {font-size: 13px; float: right; overflow: hidden;}
+        .footer .right li {float: left; padding-right: 20px;}
+
+        .footer .info .blog {
+            background: url(./img/sp_svg_icon.png); position: absolute; right: 155px; top: 50px;
+            background-position: -128px -92px; width: 21px; height: 18px;
+            margin-top: 1px;
+        }
+        .footer .info .face {
+            background: url(./img/sp_svg_icon.png); position: absolute; right: 110px; top: 50px;
+            background-position: -164px -218px; width: 18px; height: 18px;
+            margin-top: 1px;
+        }
+        .footer .info .camar {
+            background: url(./img/sp_svg_icon.png); position: absolute; right: 65px; top: 50px;
+            background-position: -138px -218px; width: 18px; height: 18px;
+            margin-top: 1px;
+        }
+        .footer .info .you {
+            background: url(./img/sp_svg_icon.png); position: absolute; right: 20px; top: 50px;
+            background-position: -200px -172px; width: 20px; height: 14px;
+            margin-top: 1px;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header">
+            <div class="container">
+                <div class="header">
+                    <h2 class="logo"></h2>
+                    <ul class="menu">
+                        <li><a href="#">기술·솔루션</a></li>
+                        <li><a href="#">제품</a></li>
+                        <li><a href="#">플랫폼</a></li>
+                        <li><a href="#">파트너</a></li>
+                        <li><a href="#">리서치</a></li>
+                    </ul>
+                    <ul class="ask">
+                        <li><a href="#">Biz Start</a></li>
+                        <li><a href="#">비즈니스 문의</a></li>
+                    </ul>
+                </div>
+            </div>
+        </header>
+        <!-- //header -->
+
+        <section id="banner">
+            <div class="slider">
+                <div class="bg1"></div>
+                <div class="bg2"></div>
+                <div class="bg3"></div>
+            </div>
+            <div class="container">
+                <div class="banner">
+                    <div class="banner_text">
+                        <h2>Careers</h2>
+                        <p>클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해<br>
+                            우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //banner -->
+
+        <section id="contents">
+            <div class="container">
+                <div class="contents">
+                    <div class="cont1">
+                        <div class="cont1_text">
+                            <a href="#" class="btn1">English</a>
+                            <a href="#" class="btn2">korean</a>
+                        </div>
+                    </div>
+                    <div class="cont2">
+                        <div class="career_item" aria-expanded="false" id="fulltime">
+                            <button type="button" class="career_title">상시채용</button>
+                            <div class="career_detail" aria-hidden="true">
+                                <h3 class="crtitle">소개</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                    <li class="critem_type1">CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                    <li class="critem_type1">글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                                </ul>
+                                <h3 class="crtitle">지원자격</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">
+                                        CLOVA의 성능향상을 위한 AI 선행 기술 연구가 가능한 인력<br>(자연어처리, 컴퓨터비전, 추천 등을 포함한 기계학습기반 AI기술 전 분야)
+                                        <h4 class="crtitle">선행기술 연구 전문가 (Research Scientist)</h4>
+                                        <ul class="crlist_type2">
+                                            <li class="critem_type2">최신 AI 연구 기술에 대한 이해 , 우수한 연구 역량 및 실적</li>
+                                            <li class="critem_type2">프로젝트를 리딩하고 연구방향을 제시할 수 있는 강력한 연구개발 리더십</li>
+                                        </ul>
+                                        <h4 class="crtitle">AI SW 엔지니어</h4>
+                                        <ul class="crlist_type2">
+                                            <li class="critem_type2">Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                            <li class="critem_type2">멀티 GPU 및 고성능 컴퓨팅관련 업무 경험</li>
+                                            <li class="critem_type2">머신러닝/딥러닝 모델 설계 및 구축 경험</li>
+                                            <li class="critem_type2">최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 class="crtitle">우대</h3>
+                                <ul class="crlist_type1">
+                                    <li style="padding: 0 0 8px 15px;">
+                                        <h4 class="crtitle" style="margin-top: -19px;">선행기술 연구 전문가</h4>
+                                        <ul class="crlist_type2">
+                                            <li class="critem_type2">AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자 혹은 이에 준하는 역량/경력 소유자</li>
+                                            <li class="critem_type2">AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                            <li class="critem_type2">우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                        </ul>
+                                        <h4 class="crtitle">AI SW 엔지니어</h4>
+                                        <ul class="crlist_type2">
+                                            <li class="critem_type2">CUDA기반 GPU 프로그래밍 혹은 Hadoop /Spark 등 분산처리 프로그래밍 경험자</li>
+                                            <li class="critem_type2">우수한 시각화 및 Front-end 개발 경험 보유자</li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <h3 class="crtitle">채용하고 싶은 사람</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                    <li class="critem_type1">오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                    <li class="critem_type1">국적은 무관함</li>
+                                </ul>
+                                <div class="crbox">
+                                    <h5 class="crtitle">전형절차 및 기타사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">서류전형 &gt; 1차면접 &gt; 2차면접 &gt; 입사</li>
+                                        <li class="critem_type3">전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                        <li class="critem_type3">진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                    </ul>
+                                    <h5 class="crtitle">안내사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                        <li class="critem_type3">국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                        <li class="critem_type3">문의사항은 NAVER 채용 홈페이지 &gt; 지원문의로 접수해주시기 바랍니다.</li>
+                                        <li class="critem_type3">본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="career_apply">
+                                    <a href="http://recruit.navercorp.com/naver/job/detail/contents?annoId=20000597&classId=&jobId=&entTypeCd=&searchTxt=" target="_blank" class="apply_link">지원하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career_item" aria-expanded="false" id="internship">
+                            <button type="button" class="career_title">인턴십</button>
+                            <div class="career_detail" aria-hidden="true">
+                                <h3 class="crtitle">소개</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                    <li class="critem_type1">CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                    <li class="critem_type1">글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">지원자격</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 전공자 및 이에 준하는 역량/경력 소유자</li>
+                                    <li class="critem_type1">Tensorflow, PyTorch, MXNet, Caffe2 등 오픈소스 프레임워크 기반 개발역량</li>
+                                    <li class="critem_type1">적극적이고 자기주도적 연구 수행 능력</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">우대</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">영어 커뮤니케이션 역량 보유자</li>
+                                    <li class="critem_type1">최신 AI 논문에 대한 빠르고 정확한 구현 능력(1~2주 이내)</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">채용하고 싶은 사람</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                    <li class="critem_type1">오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                    <li class="critem_type1">국적은 무관함</li>
+                                </ul>
+                    
+                                <div class="crbox">
+                                    <h5 class="crtitle">전형절차 및 기타사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">서류전형 &gt; 1차면접 &gt; 2차면접 &gt; 입사</li>
+                                        <li class="critem_type3">전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                        <li class="critem_type3">진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                    </ul>
+                    
+                                    <h5 class="crtitle">안내사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                        <li class="critem_type3">국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                        <li class="critem_type3">문의사항은 NAVER 채용 홈페이지 &gt; 지원문의로 접수해주시기 바랍니다.</li>
+                                        <li class="critem_type3">본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="career_apply">
+                                    <a href="http://recruit.navercorp.com/naver/job/detail/contents?annoId=20000597&classId=&jobId=&entTypeCd=&searchTxt=" target="_blank" class="apply_link">지원하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career_item" aria-expanded="false" id="postdoctoral">
+                            <button type="button" class="career_title">박사 후 연구원</button>
+                            <div class="career_detail" aria-hidden="true">
+                                <h3 class="crtitle">소개</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">CLOVA AI Research는 클로바에 필요한 선행 AI기술 연구개발 위한 글로벌 팀입니다. 클로바를 글로벌 수준의 AI 플랫폼으로 만들기 위해 우수한 역량을 보유한 AI 연구자 및 엔지니어분들을 찾고 있습니다.</li>
+                                    <li class="critem_type1">CLOVA AI Research는 클로바 내부 뿐 아니라 네이버 내의 타 조직들과 매우 강력하고 열린 협업체계를 구축하고 있습니다.</li>
+                                    <li class="critem_type1">글로벌 팀이므로 공용언어는 영어를 사용합니다.</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">지원자격</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1"> AI관련분야(기계학습, 자연어처리, 컴퓨터비전, 응용수학 등) 박사학위 소지자</li>
+                                    <li class="critem_type1">최신 AI 연구 기술에 대한 이해, 우수한 연구 역량 및 실적</li>
+                                    <li class="critem_type1">적극적이고 자기주도적 연구 주제 발굴 및 수행능력</li>
+                                    <li class="critem_type1">최신 AI 논문에 대한 빠르고 정확한 구현 능력</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">우대</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">AI관련 분야 Top-tier 학회 논문의 저자(NIPS, ICML, ICLR, CVPR, ACL, EMNLP, ICCV, AAAI, IJCAI, KDD 등)</li>
+                                    <li class="critem_type1">CUDA기반 GPU 프로그래밍 혹은 Hadoop /Spark 등 분산처리 프로그래밍 경험자</li>
+                                    <li class="critem_type1">우수한 시각화 및 Front-end 개발 경험 보유자</li>
+                                    <li class="critem_type1">우수한 영어작문 및 커뮤니케이션 역량 보유자</li>
+                                </ul>
+                    
+                                <h3 class="crtitle">채용하고 싶은 사람</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">열정을 갖고 자기주도적으로 업무를 수행하시는 분</li>
+                                    <li class="critem_type1">오픈 마인드를 갖고 적극적으로 커뮤니케이션 하고 협력하시는 분</li>
+                                    <li class="critem_type1">국적은 무관함</li>
+                                </ul>
+                    
+                                <div class="crbox">
+                                    <h5 class="crtitle">전형절차 및 기타사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">서류전형 &gt; 1차면접 &gt; 2차면접 &gt; 입사</li>
+                                        <li class="critem_type3">전형절차는 일정 및 상황에 따라 변동될 수 있습니다.</li>
+                                        <li class="critem_type3">진행일정은 확정되는 대로 지원자 분들에게 개별 안내 예정입니다.</li>
+                                    </ul>
+                                    <h5 class="crtitle">안내사항</h5>
+                                    <ul class="crlist_type3">
+                                        <li class="critem_type3">지원서 내용 중 허위사실이 있는 경우에는 합격이 취소될 수 있습니다.</li>
+                                        <li class="critem_type3">국가유공자 및 장애인 등 취업보호대상자는 관계법령에 따라 우대합니다.</li>
+                                        <li class="critem_type3">문의사항은 NAVER 채용 홈페이지 &gt; 지원문의로 접수해주시기 바랍니다.</li>
+                                        <li class="critem_type3">본 채용은 상시모집 채용으로 인재 선발 완료 시 공고가 조기 마감 될 수 있습니다.</li>
+                                    </ul>
+                                </div>
+                                <div class="career_apply">
+                                    <a href="http://recruit.navercorp.com/naver/job/detail/contents?annoId=20000597&classId=&jobId=&entTypeCd=&searchTxt=" target="_blank" class="apply_link">지원하기</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="career_item" aria-expanded="false" id="residency">
+                            <button type="button" class="career_title">글로벌 레지던시</button>
+                            <div class="career_detail" aria-hidden="true">
+                                <h3 class="crtitle">2019 Spring NAVER CLOVA AI Research Global Residency Program</h3>
+                                <p class="crparagraph">
+                        딥러닝/AI 기술은 이미 우리 생활 속에 가까이 들어와 있습니다.
+                        이 기술을 통해 우리 말을 알아 듣고, 음악을 추천해주고, 우리가 즐겨 읽는 뉴스들이 추천되고, 그 요약이 제공되고, 우리가 모르는 꽃의 종류를 사진 찍으면 알려주고, 외국어로 적힌 메뉴나 간판을 찍으면 번역해서 알려주고, 외국 문서도 이제 큰 어려움 없이 자동번역으로 읽을 수 있게 되었습니다. 이러한 기술은 더욱 더 우리 삶 속 넓고 깊게 들어올 것이고 더 많은 부분을 변화시킬 것입니다.
+                        이러한 새로운 시대의 출발점에서, 연구를 수행하며 딥러닝/AI 기술을 개발할 수 있다는 것은, 이 흥미로운 미래가 가져올 수 있는 것을 진정으로 이해하려는 모든 사람들에게 필수가 되었습니다. 다행히도 지금의 딥러닝/AI 기술들은 기본적인 수학과 프로그래밍의 백그라운드가 있다면 6개월에서 1년 정도 연구/개발하면 그리 어렵지 않게 익힐수 있습니다. 심지어는 새로운 모델과 알고리즘을 만들어 내는 연구진행도 가능합니다.
+                        정말 집중하여 6개월정도 <strong>올인</strong> 할 수 있다면 말이죠.
+                        <br><br>
+                        그런 6개월, 딥러닝/AI 연구개발에 올인할 수 있는 환경을 네이버 CLOVA AI Research 에서 제공해 드립니다. CLOVA AI Research팀 딥러닝/AI 연구 개발자들을 비롯해 조경현 교수님 (NYU), Dr. Jun-Yan Zhu (MIT, CycleGAN의 저자), Hannaneh Hajishirzi 교수님 (UW) 등 이 분야 대가들의 멘토링을 받으며, 다양한 현실 데이터를 가지고, 충분한 GPU를 사용해서 오직 딥러닝/AI 연구 개발에만 몰두할 수 있습니다. 나아가 개발된 기술은 서비스에 바로 적용될수 있고 이는 전 세계 수억 명의 네이버/라인 사용자들에게 새로운 가치를 제공할 수 있습니다.
+                        많은 분들의 지원과 참여로 우리 모두를 행복하게 할 수 있는 멋진 딥러닝/AI 기술들이 많이 만들어지기를 기대합니다.
+                    </p>
+                                <h3 class="crtitle">프로그램 개요</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">기간: 2019 1월 1일 - 6월 30일 (6개월) *일정 일부 조정 가능</li>
+                                    <li class="critem_type1">장소: 네이버 그린팩토리 CLOVA AI Research 팀</li>
+                                    <li class="critem_type1">지원접수 이메일: clair-reg@navercorp.com</li>
+                                    <li class="critem_type1">지원기간: 2018년 11월 15일 11:59 (AOE) 까지<br> * 지원접수시 즉시 인터뷰등 프로세스 진행되며 마감까지 기다리실 필요는 없습니다. </li>
+                                    <li class="critem_type1">인터뷰 일정 : 2018년 9월 15일부터 (인터뷰 절차는 일정 및 상황에 따라 변동 될 수 있습니다)</li>
+                                </ul>
+                                <h3 class="crtitle">참가자 혜택</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">6개월간 네이버 그린팩토리 CLOVA AI Research 팀 근무</li>
+                                    <li class="critem_type1">CLOVA AI Research 팀 연구/개발자 및 조경현 교수님 (NYU), Dr. Jun-Yan Zhu (MIT, CycleGAN의 저자), Hannaneh Hajishirzi 교수님 (UW) 멘토링</li>
+                                    <li class="critem_type1">Compatible 한 급여 (네이버 정직원 수준의 급여지급)</li>
+                                    <li class="critem_type1">네이버 데이터 사용가능</li>
+                                    <li class="critem_type1">NSML 등을 이용한 충분한 GPU 클라우드 리소스 지원 (<a href="https://deview.kr/2017/schedule/186" target="_blank" class="crlink">https://deview.kr/2017/schedule/186</a> 참조)</li>
+                                </ul>
+                                <h3 class="crtitle">지원자격</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">컴퓨터, 전자, 수학 관련 학과 학사 (또는 2020년 이전 졸업 예정) 이상의 학력</li>
+                                    <li class="critem_type1">기본적인 확률, 정보이론, 선형대수 관련 지식과 프로그래밍 능력</li>
+                                    <li class="critem_type1">모두를위한머신러닝딥러닝 강의 연습문제 이해/구현 능력 <br> (
+                                        <a href="https://hunkim.github.io/ml" target="_blank" class="crlink">https://hunkim.github.io/ml/</a>, <a href="http://bit.ly/PyTorchZeroAll" target="_blank" class="crlink">http://bit.ly/PyTorchZeroAll</a> 전체 연습문제 참조)</li>
+                                    <li class="critem_type1">딥러닝/AI 관련 최근 논문 (2016 ~ 2018) 구현 능력</li>
+                                    <li class="critem_type1">편안한 영어 커뮤니케이션 (읽기, 쓰기, 말하기) 능력</li>
+                                    <li class="critem_type1">(우대) 머신러닝 관련 연구/개발 경력, 논문 출판 경력</li>
+                                    <li class="critem_type1">(우대) 프로그래밍, 수학 관련 대회 입상</li>
+                                </ul>
+                                <h3 class="crtitle">지원서류 (전체 영문): 다음을 포함한 간단 이력서 pdf 파일</h3>
+                                <ul class="crlist_type1">
+                                    <li class="critem_type1">본인이 참여한 프로젝트 소개및 개인 github 정보</li>
+                                    <li class="critem_type1">추천서 작성 가능한 reference 2명 이상 (지도교수, 이전 직장상사 등) 이름과 연락처</li>
+                                    <li class="critem_type1">이 프로그램에 참여자로 본인이 선택되어야 하는 이유 (A4 1장 이내)</li>
+                                    <li class="critem_type1">프로그램에 선발될 경우 진행 하고자 프로젝트 아이디어 (문제와 데이터 중심으로 A4 1장 이내)</li>
+                                    <li class="critem_type1">기타 본인의 장점을 나타낼 수 있는 내용</li>
+                                </ul>
+                                <div class="career_apply">
+                                    <a href="mailto:clair-reg@navercorp.com" target="_top" class="apply_link">지원하기</a>
+                                </div>
+                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //contents -->
+
+        <footer id="footer">
+            <div class="container">
+                <div class="footer">
+                    <div class="info">
+                        <h2 class="logo"></h2>
+                        <a class="blog" href="#"></a>
+                        <a class="face" href="#"></a>
+                        <a class="camar" href="#"></a>
+                        <a class="you" href="#"></a>
+                    </div>
+                    <div class="info">
+                        <ul class="left">
+                            <li>고객센터 1833-5387</li>
+                            <li>09:00-18:00(주말, 공휴일 휴무)</li>
+                        </ul>
+                        <ul class="center">
+                            <li>Powered by <strong>NAVER·LINE</strong></li>
+                        </ul>
+                        <ul class="right">
+                            <li>공지사항</li>
+                            <li>이용약관</li>
+                            <li>CLOVA 채용안내</li>
+                            <li>CLOVA JP</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- //footer -->
+
+    </div>
+</body>
+</html>
