@@ -559,7 +559,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
     .square a:nth-child(5) {display: none;}
 
     #cont_right .column {width: 50%;}
-    #cont_right .column.col8 {display: none;}
+    #cont_right .column.col9 {display: none;}
 }
 @media (max-width: 320px){
     .square a {width: 100%; margin: 1% 0%;}
