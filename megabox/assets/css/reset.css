@@ -67,6 +67,12 @@ input:checked[type=checkbox] {
     -webkit-appearance: checkbox
 }
 
+/* 셀렉트 메뉴 로그인 스타일 */
+.ui_select1 { 
+    background: #F8F8F8; height: 26px; border: 1px solid #d9d9d9;
+    padding: 0 5px; border-radius: 0;
+}
+
 /* 셀렉트 메뉴 메인 스타일 */
 .ui_select2 {
     width: 100%; box-sizing: border-box;
@@ -81,6 +87,19 @@ input:checked[type=checkbox] {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
+}
+
+/* 로그인 텍스트 박스 스타일1 */
+.ui_input1 { 
+    border: 1px solid #d9d9d9; width: 200px; height: 26px;
+    font-size: 13px; text-indent: 14px; background: #f8f8f8;
+    vertical-align: middle;
+}
+/* 로그인 텍스트 박스 스타일1 */
+.ui_input2 { 
+    border: 1px solid #d9d9d9; width: 100px; height: 26px;
+    font-size: 13px; text-indent: 14px; background: #f8f8f8;
+    vertical-align: middle;
 }
 
 /* 메인 텍스트 박스 스타일1 */
