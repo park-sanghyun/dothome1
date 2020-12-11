@@ -47,6 +47,15 @@
    <![endif]-->
 </head>
 <body>
+    <!-- 스킵 메뉴 -->
+    <div id="skip">
+        <a rel="bookmark" href="#movie">최신 영화 소식</a>
+        <a rel="bookmark" href="#evnet">새로운 이벤트</a>
+        <a rel="bookmark" href="#new">새로운 영화</a>
+    </div>
+    <!-- //스킵 메뉴 -->
+
+
     <header id="header">
         <div class="container">
             <div class="row">
@@ -821,53 +830,53 @@
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.28</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.24</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.28</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.28</em></dt>
-                                                <dd>[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[무대인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
                                 </li>
                                 <li><a href="#">영화관 공지</a>
-                                    <ul style="display: none">
+                                    <ul>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">안양</strong> <em>2019.05.28</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">인덕원</strong> <em>2019.05.24</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">서울</strong> <em>2019.05.28</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                         <li>
                                             <dl>
                                                 <dt><strong class="bar">전체</strong> <em>2019.05.28</em></dt>
-                                                <dd>[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</dd>
+                                                <dd><a href="#">[영화인사] 터미네이터6 시즌 발표 및 영상 제작 10주년 기념 라이브 쇼</a></dd>
                                             </dl>
                                         </li>
                                     </ul>
@@ -1452,7 +1461,7 @@
         tabMenu.find("li.active > ul").show();
         
         function tabList(e){
-            e.preventDefault();     
+            e.preventDefault();  // #의 기능을 차단   
             var target = $(this);
             target.next().show().parent("li").addClass("active").siblings("li").removeClass("active").find("ul").hide();
         }
