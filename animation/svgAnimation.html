@@ -589,6 +589,32 @@
                 </div>
                 <!-- //Intro7 -->
 
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">마스크</h2>
+                    <div class="sample">
+                        <h3><span></span><em class="sr-only">SVG</em></h3>
+                        <div class="svgBox svg8">
+                            <svg viewBox="-10 -10 120 120">
+                                <mask id="myMask">
+                                  <rect x="0" y="0" width="100" height="100" fill="white" />
+                                  <path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+                                </mask>
+                                <circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+                            </svg>
+                        </div>
+                    </div>
+<pre class="line-numbers language-css"><code>&lt;svg viewBox="-10 -10 120 120">
+    &lt;mask id="myMask">
+      &lt;rect x="0" y="0" width="100" height="100" fill="white" />
+      &lt;path d="M10,35 A20,20,0,0,1,50,35 A20,20,0,0,1,90,35 Q90,65,50,95 Q10,65,10,35 Z" fill="black" />
+    &lt;/mask>
+    &lt;circle cx="50" cy="50" r="50" mask="url(#myMask)" />
+&lt;/svg>
+</code></pre>
+                </div>
+                <!-- //Intro8 -->
+
                 <style>
                     .ani1 {
                         width: 100px; height: 100px;
@@ -664,12 +690,12 @@
                         100% {stroke-dashoffset: 0;}
                     }
                 </style>
-                <!-- Intro8 -->
+                <!-- Intro9 -->
                 <div class="bs-docs-section">
-                    <h2 id="intro8" class="page-header">애니메이션</h2>
+                    <h2 id="intro9" class="page-header">애니메이션</h2>
                     <div class="sample">
                         <h3><span></span><em class="sr-only">SVG</em></h3>
-                        <div class="svgBox svg8">
+                        <div class="svgBox svg9">
                             <svg>
                                 <rect class="ani1"></rect>
                             </svg>
@@ -765,7 +791,7 @@
 }
 </code></pre>
                 </div>
-                <!-- //Intro8 -->
+                <!-- //Intro9 -->
 
                 <!-- sample01 -->
                 <div class="bs-docs-section">
@@ -802,6 +828,18 @@
                     <script async src="https://cpwebassets.sfo2.cdn.digitaloceanspaces.com/assets/embed/ei.js"></script>
                 </div>
                 <!-- //sample03 -->
+
+                <!-- sample04 -->
+                <div class="bs-docs-section">
+                    <h2 id="sample04" class="page-header">sample04</h2>
+                    <p class="codepen" data-height="600" data-theme-id="light" data-default-tab="result" data-user="gugukaka" data-slug-hash="qBarwKB" style="height: 265px; box-sizing: border-box; display: flex; align-items: center; justify-content: center; border: 2px solid; margin: 1em 0; padding: 1em;" data-pen-title="Svg Wave Mask">
+                        <span>See the Pen <a href="https://codepen.io/gugukaka/pen/qBarwKB">
+                        Svg Wave Mask</a> by park sang hyun (<a href="https://codepen.io/gugukaka">@gugukaka</a>)
+                        on <a href="https://codepen.io">CodePen</a>.</span>
+                      </p>
+                      <script async src="https://cpwebassets.codepen.io/assets/embed/ei.js"></script>
+                </div>
+                <!-- //sample04 -->
 
 
 
