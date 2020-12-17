@@ -4,26 +4,174 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <style>
-        * {margin: 0; padding: 0; box-sizing: border-box;}
-        #contents > section {height: 100vh; width: 100%;}
-        #section1 {background: #111;}
-        #section2 {background: #222;}
-        #section3 {background: #333;}
-        #section4 {background: #444;}
-        #section5 {background: #555;}
-        #section6 {background: #666;}
+        @font-face {
+            font-family: 'NEXON Lv2 Gothic';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@2.1/NEXON Lv2 Gothic.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        * {
+            margin: 0; padding: 0; box-sizing: border-box; 
+        }
+        #contents > section .num {
+            position: absolute; left: 70%; top: 0%;
+            font-size: 20vw;
+            color: #fff;
+            z-index: 90;
+            font-weight: 100;
+            letter-spacing: -1vw;
+            opacity: 0.082;
+            font-family: 'Poppins', sans-serif;
+        }
+        #contents > section .imgWrap {
+            position: absolute; left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+            width: 50vw; height: 50vh;
+            z-index: 100;
+        }
+        #contents > section .imgWrap .img {
+            width: 100%; height: 100%;
+        }
+        #contents > section .title {
+            position: absolute; left: 20%; top: 60%;
+            width: 50vw;
+            z-index: 110;
+            color: #fff;
+            font-size: 4vw;
+            word-break: keep-all;
+            font-family: 'NEXON Lv2 Gothic';
+            line-height: 1.4;
+        }
+        #section1 .imgWrap .img {background: url(img/images07@2.jpg); background-size: cover;}
+        #section2 .imgWrap .img {background: url(img/images08@2.jpg); background-size: cover;}
+        #section3 .imgWrap .img {background: url(img/images09@2.jpg); background-size: cover;}
+        #section4 .imgWrap .img {background: url(img/images01@2.jpg); background-size: cover;}
+        #section5 .imgWrap .img {background: url(img/images02@2.jpg); background-size: cover;}
+        #section6 .imgWrap .img {background: url(img/images03@2.jpg); background-size: cover;}
+
+        /* set */
+        #section1 {position: relative; z-index: 6000; background: #111;}
+        #section2 {position: relative; z-index: 5000; background: #ccc;}
+        #section3 {position: relative; z-index: 4000; background: #111; height: 900vh;}
+        #section4 {position: relative; z-index: 5000; background: #000;}
+        #section5 {position: relative; z-index: 5000; background: #111;}
+        #section6 {position: relative; z-index: 5000; background: #000;}
+
+        .sec1 {position: relative; width: 100%; height: 100vh;}
+        .sec2 {position: relative; width: 100%; height: 100vh;}
+        .sec3 {position: fixed; left: 0;top: 0;  width: 100%; height: 600vh;}
+        .sec4 {position: relative; width: 100%; height: 100vh;}
+        .sec5 {position: relative; width: 100%; height: 100vh;}
+        .sec6 {position: relative; width: 100%; height: 100vh;}
+        
+        .sec3-wrap {
+            overflow: hidden;
+            width: 500vw;
+        }
+        .sec3-wrap > div {
+            float: left;
+            width: 100vw; height: 100vh;
+        }
+        .sec3-wrap > div:nth-child(1) {background: #999;}
+        .sec3-wrap > div:nth-child(2) {background: #888;}
+        .sec3-wrap > div:nth-child(3) {background: #777;}
+        .sec3-wrap > div:nth-child(4) {background: #666;}
+        .sec3-wrap > div:nth-child(5) {background: #555;}
+
     </style>
 </head>
 <body>
     <div id="contents">
-        <section id="section1"></section> <!-- //section1 -->
-        <section id="section2"></section> <!-- //section2 -->
-        <section id="section3"></section> <!-- //section3 -->
-        <section id="section4"></section> <!-- //section4 -->
-        <section id="section5"></section> <!-- //section5 -->
-        <section id="section6"></section> <!-- //section6 -->
+        <section id="section1">
+            <div class="sec1">
+                <span class="num">01</span>
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>    
+            </div>
+        </section> 
+        <!-- //section1 -->
+        <section id="section2">
+            <div class="sec2">
+                <span class="num">02</span>
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>    
+            </div>
+        </section> 
+        <!-- //section2 -->
+        <section id="section3">
+            <div class="sec3">
+                <div class="sec3-wrap">
+                    <div>11</div>
+                    <div>22</div>
+                    <div>33</div>
+                    <div>44</div>
+                    <div>55</div>
+                </div>    
+            </div>
+        </section> 
+        <!-- //section3 -->
+        <section id="section4">
+            <div class="sec4">
+                <span class="num">04</span>
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>    
+            </div>
+        </section> 
+        <!-- //section4 -->
+        <section id="section5">
+            <div class="sec5">
+                <span class="num">05</span>
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>    
+            </div>
+        </section> 
+        <!-- //section5 -->
+        <section id="section6">
+            <div class="sec6">
+                <span class="num">06</span>
+                <div class="imgWrap">
+                    <div class="img"></div>
+                </div>
+                <div class="title">결과도 중요하지만, 과정을 더 중요하게 생각한다.</div>    
+            </div>
+        </section> 
+        <!-- //section6 -->
     </div>
     <!-- //contents -->
+
+    <!-- script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            if( scrollTop > $("#section2").offset().top ){
+                $("#section2").css("background", "red")
+            }
+            // 3번째 섹션에 도착 했을 때 scrollTop 0 으로 초기화
+            let offset = scrollTop - $("#section3").offset().top;
+
+            if( scrollTop > $("#section3").offset().top ){
+                // $("#section3 .sec3-wrap > div:nth-child(1)").css("background", "red")
+                $("#section3 .sec3").css("left", -offset);
+            }
+            if( scrollTop > $("#section4").offset().top ){
+                $("#section4").css("background", "blue")
+            }
+        });
+    </script>
 </body>
 </html>
