@@ -224,20 +224,10 @@
         }
 
         @keyframes scroll {
-            0% {
-                transform: translate(0, 0);
-                opacity: 0;
-            }
-            40% {
-                opacity: 1;
-            }
-            80% {
-                transform: translate(0, 20px);
-                opacity: 0;
-            }
-            100% {
-                opacity: 0;
-            }
+            0% {transform: translate(0, 0); opacity: 0;}
+            40% {opacity: 1;}
+            80% {transform: translate(0, 20px); opacity: 0;}
+            100% {opacity: 0;}
         }
 
     </style>
@@ -365,12 +355,14 @@
     <script src="jquery.min_1.12.4.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script>
+
         $("a[href^='#']").click(function(e){
             e.preventDefault();
             let target = $( $(this).attr("href") );
             
             $("html,body").animate({ scrollTop : target.offset().top}, 1000, "easeOutCubic");
         });
+
     </script>
 
 </body>

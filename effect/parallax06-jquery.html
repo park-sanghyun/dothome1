@@ -184,7 +184,6 @@
         }
 
         /* reveal - imgWrap */
-        
         .reveal > div, 
         .reveal > span {
             opacity: 0;
@@ -232,6 +231,7 @@
             z-index: 100;
             background: #fff;
         }
+
         /* 한가지 */
         .reveal.show::before {
             animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
@@ -410,12 +410,13 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script src="jquery.min_1.12.4.js"></script>
     <script>
+        
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
-
-            // if ( scrollTop > $("#section2").offset().top ) {
+            // if( scrollTop > $("section2").offset().top) {
             //     $("#section2").addClass("show");
             // }
+
 
             $(".reveal").each(function(){
                 if( scrollTop + $(window).height()/2 > $(this).offset().top ){

@@ -498,6 +498,7 @@ body {background: url(../img/header_bg.jpg) repeat-x center top;}
 .footer address {padding-top: 15px;}
 
 /* 미디어쿼리 */
+
 @media (max-width: 1220px){
     .container {width: 100%;}
     .row {padding: 0 15px;}
