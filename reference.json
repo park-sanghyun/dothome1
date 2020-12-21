@@ -4,299 +4,877 @@
     "data": {
       "refer": [
         {
-            "type": "hrml",
+            "type": "html",
             "id": 1,
-            "link": "https://webzz.tistory.com/229",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<a>",
-            "desc": "<a> 태그는 하이퍼 링크를 정의합니다.",
-            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<a> ~ </a>)",
-            "version" : "HTML4",
-            "view" : "밑줄과 파란색으로 표시",
-            "definition" : [
-                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
-                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
-                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
-                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
-                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
-            ]
+            "title": "a",
+            "name": "<address>",
+            "desc": "<address> 태그는  문서 나 문서의 저자 / 소유자의 연락처 정보를 정의합니다. "
         },{
-            "type": "hrml",
+            "type": "html",
             "id": 2,
-            "link": "https://webzz.tistory.com/229",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<address>",
-            "desc": "<address> 태그는  문서 나 문서의 저자 / 소유자의 연락처 정보를 정의합니다. ",
-            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<a> ~ </a>)",
-            "version" : "HTML4",
-            "view" : "밑줄과 파란색으로 표시",
-            "definition" : [
-                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
-                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
-                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
-                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
-                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
-            ]
+            "title": "b",
+            "name": "<button>",
+            "desc": "< button > 태그는  행과 열로 이루어진 표를 나타냅니다."
         },{
-            "type": "hrml",
             "id": 3,
-            "link": "https://webzz.tistory.com/229",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<abbr>",
-            "desc": "<abbr> 태그는 생략된 글자나 머리글자를 표시하는데 사용합니다.",
-            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<abbr> ~ </abbr>)",
-            "version" : "HTML4",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "d",
+            "name": "<div>",
+            "desc": "<div> 태그는 문서의 영역의 나누거나 그룹화할 때 사용합니다. "
         },{
-            "type": "hrml",
             "id": 4,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<dl>",
+            "desc": "<dl> 태그는 설명 목록을 정의합니다."
         },{
-            "type": "hrml",
             "id": 5,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<dt>",
+            "desc": "<dt> 태그는 설명 목록의 용어를 정의합니다."
         },{
-            "type": "hrml",
             "id": 6,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<dd>",
+            "desc": "<dd> 태그는 설명 목록의 용어를 설명합니다."
         },{
-            "type": "hrml",
             "id": 7,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "E",
+            "name": "<em>",
+            "desc": "<em> 태그는 강조 텍스트를 정의하는 데 사용됩니다. 내부 콘텐츠는 일반적으로 기울임 꼴로 표시됩니다 ."
         },{
-            "type": "hrml",
             "id": 8,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "F",
+            "name": "<figure>",
+            "desc": "<figure> 태그는 사진, 도표, 삽화, 오디오, 비디오, 코드 등을 담는 컨테이너 역할을 하는 태그"
         },{
-            "type": "hrml",
             "id": 9,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<figcaption> ",
+            "desc": "<figcaption> 태그는 이에 대한 설명하는 문구를 담는 태그입니다."
         },{
-            "type": "hrml",
             "id": 10,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<form>",
+            "desc": "<form> 태그는 정보를 제출하기 위한 대화형 컨트롤을 포함하는 문서 구획을 나타냅니다."
         },{
-            "type": "hrml",
             "id": 11,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<fieldset> ",
+            "desc": "<fieldset> 태그는 웹 양식의 여러 컨트롤과 레이블(<label>)을 묶을 때 사용합니다."
         },{
-            "type": "hrml",
             "id": 12,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "H",
+            "name": "<h1>~<h6>",
+            "desc": "<h1>~<h6> 태그는 제목 영역을 나타낼 때 사용합니다."
         },{
-            "type": "hrml",
             "id": 13,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "I",
+            "name": "<img>",
+            "desc": "<img> 태그는 HTML 페이지에 포함 된 이미지에 사용됩니다."
         },{
-            "type": "hrml",
             "id": 14,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<i>",
+            "desc": "<i> 태그는 텍스트에서 어떤 이유로 주위와 구분해야 하는 부분을 나타냅니다."
         },{
-            "type": "hrml",
             "id": 15,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<input>",
+            "desc": "<input> 태그는 사용자가 데이터를 입력 할 수있는 입력 필드를 지정한다."
         },{
-            "type": "hrml",
             "id": 16,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "L",
+            "name": "<li>",
+            "desc": "<li> 태그는  목록 항목을 정의합니다."
         },{
-            "type": "hrml",
             "id": 17,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<legend>",
+            "desc": "<legend> 태그는  부모 <fieldset> 콘텐츠의 설명을 나타냅니다."
         },{
-            "type": "hrml",
             "id": 18,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "",
+            "name": "<label>",
+            "desc": "<label> 태그는  사용자 인터페이스 항목의 설명을 나타냅니다."
         },{
-            "type": "hrml",
             "id": 19,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "M",
+            "name": "<meta>",
+            "desc": "<meta>태그는 HTML 문서에 대한 메타 데이터를 정의합니다."
         },{
-            "type": "hrml",
             "id": 20,
-            "link": "https://webzz.tistory.com/231",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<acronym>",
-            "desc": "<acronym> 태그는 생략된 글자나 약어를 표시하는데 사용합니다.",
-            "category": "-",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<acronym> ~ </acronym>)",
-            "version" : "HTML4(HTML5에서 지원되지 않습니다.)",
-            "view" : "점선(브라우저마다 틀림) 및 툴팁"
+            "title": "N",
+            "name": "<nav>",
+            "desc": "<nav> 태그는  탐색 링크의 집합을 정의합니다."
         },{
-            "type": "css",
-            "id": 1,
-            "link": "https://webzz.tistory.com/229",
-            "image": "https://i1.daumcdn.net/thumb/T650x650/?fname=https://t1.daumcdn.net/cfile/tistory/99BECF3C5BB02F501B",
-            "title": "<a>",
-            "desc": "<a> 태그는 하이퍼 링크를 정의합니다.",
-            "category": "플로우 콘텐츠(Flow Content), 프레이징 콘텐츠(Phrasing content), 인터렉티브 콘텐츠 (Interactive content)",
-            "property": "글로벌 속성 적용(Global Attributes), 이벤트 속성 적용(Event Attributes)",
-            "element": "인라인 구조(Inline Element)",
-            "tag": "닫는 태그 사용(<a> ~ </a>)",
-            "version" : "HTML4",
-            "view" : "밑줄과 파란색으로 표시",
-            "definition" : [
-                "하이퍼 링크란 현재 페이지에서 다른 페이지의 이동을 말합니다.",
-                "방문하지 않는 링크는 밑줄과 파란색으로 표시됩니다.",
-                "방문한 링크는 밑줄과 보라색으로 표시됩니다.",
-                "활성화된 링크는 밑줄과 빨간색으로 표시됩니다.",
-                "HTML5에서는 <a> 태그는 블록 요소를 포함할 수 있습니다."
-            ]
+            "id": 21,
+            "title": "O",
+            "name": "<ol>",
+            "desc": "<ol> 태그는 정렬 된 목록을 정의합니다."
+        },{
+            "id": 22,
+            "title": "P",
+            "name": "<p>",
+            "desc": "<p> 태그는  문단을 정의합니다."
+        },{
+            "id": 23,
+            "title": "",
+            "name": "<pre>",
+            "desc": "<pre> 태그는  미리 서식을 지정한 텍스트를 나타내며, HTML에 작성한 내용 그대로 표현합니다."
+        },{
+            "id": 24,
+            "title": "",
+            "name": "<picture>",
+            "desc": "<picture> 태그는 <img> 요소의 다중 이미지 리소스를 위한 컨테이너를 정의할 때 사용합니다."
+        },{
+            "id": 25,
+            "title": "S",
+            "name": "<source>",
+            "desc": "<source> 태그는 다중 미디어 자원을 정의할 때 사용합니다."
+        },{
+            "id": 26,
+            "title": "",
+            "name": "<span>",
+            "desc": "<span> 태그는 HTML 문서에서 인라인 요소(inline-element)들을 하나로 묶을 때 사용합니다."
+        },{
+            "id": 27,
+            "title": "",
+            "name": "<strong>",
+            "desc": "<strong>태그는  강한 중요성 텍스트를 정의하는 데 사용됩니다. 내부 콘텐츠는 일반적으로 굵게 표시됩니다 ."
+        },{
+            "id": 28,
+            "title": "T",
+            "name": "<table>",
+            "desc": "<table> 태그는  행과 열로 이루어진 표를 나타냅니다."
+        },{
+            "id": 29,
+            "title": "U",
+            "name": "<ul>",
+            "desc": "<ul> 태그는   정렬되지 않은 목록을 정의합니다."
+        },{
+            "id": 30,
+            "title": "ETC",
+            "name": "aria",
+            "desc": "장애를 가진 사용자가 웹 콘텐츠와 웹 어플리케이션에 더 쉽게 접근할 수 있는 방법을 정의하는 여러 특성을 말합니다."
+        },{
+            "id": 31,
+            "title": "",
+            "name": "semantic tag",
+            "desc": "semantic tag 문서의 구조와 의미를 브라우저와 개발자 모두에게 명확하게 설명해준다."
+        },{
+            "id": 32,
+            "title": "",
+            "name": "",
+            "desc": ""
+        },{
+            "id": 33,
+            "title": "A",
+            "name": "align-content",
+            "desc": "콘텐츠 사이와 콘텐츠 주위 빈 공간을 플렉스박스의 교차축, 그리드의 블록 축을 따라 배치하는 방식을 결정합니다"
+        },{
+            "id": 34,
+            "title": "",
+            "name": "animation-delay",
+            "desc": "애니메이션이 시작할 시점을 지정합니다. 시작 즉시, 잠시 후에, 또는 애니메이션이 일부 진행한 시점부터 시작할 수 있습니다."
+        },{
+            "id": 35,
+            "title": "",
+            "name": "animation-direction",
+            "desc": "애니메이션이 앞으로, 뒤로 또는 앞뒤로 번갈아 재생되어야하는지 여부를 지정합니다."
+        },{
+            "id": 36,
+            "title": "",
+            "name": "animation-duration",
+            "desc": "애니메이션이 한 사이클을 완료하는 데 걸리는 시간을 지정합니다."
+        },{
+            "id": 37,
+            "title": "B",
+            "name": "border",
+            "desc": "border 속성은 태그의 테두리를 설정하는 속성으로, background 속성과 비슷하게 세부적인 속성들을 한번에 쓸 수 있다."
+        },{
+            "id": 38,
+            "title": "",
+            "name": "block",
+            "desc": "block 속성은 무조건 한줄을 점유하고 있고, 다음 태그는 무조건 줄바꿈이 적용된다.대표적인 예시로 div 태그가 있다."
+        },{
+            "id": 39,
+            "title": "",
+            "name": "backgroud",
+            "desc": "background 속성은 배경과 관련된 속성을 설정한다."
+        },{
+            "id": 40,
+            "title": "",
+            "name": "background-color",
+            "desc": "요소의 배경 색을 지정합니다."
+        },{
+            "id": 41,
+            "title": "",
+            "name": "background-image",
+            "desc": "요소의 배경 이미지를 한 개나 여러 개 지정합니다."
+        },{
+            "id": 42,
+            "title": "",
+            "name": "background-size",
+            "desc": "요소 배경 이미지의 크기를 설정합니다. 그대로 두거나, 늘리고 줄이거나, 공간에 맞출 수 있습니다."
+        },{
+            "id": 43,
+            "title": "",
+            "name": "::before",
+            "desc": "선택한 요소의 첫 자식으로 의사 요소를 하나 생성합니다. content 속성과 함께 짝지어, 요소에 장식용 콘텐츠를 추가할 때 사용합니다."
+        },{
+            "id": 44,
+            "title": "",
+            "name": "border",
+            "desc": "요소의 테두리를 설정합니다. border-width, border-style, border-color의 값을 설정합니다."
+        },{
+            "id": 45,
+            "title": "",
+            "name": "box-shadow",
+            "desc": "요소의 테두리를 감싼 그림자 효과를 추가합니다. 쉼표로 구문해서 여러 그림자 효과를 입힐 수 있습니다."
+        },{
+            "id": 46,
+            "title": "",
+            "name": "box-sizing",
+            "desc": "요소의 너비와 높이를 계산하는 방법을 지정합니다."
+        },{
+            "id": 47,
+            "title": "C",
+            "name": "calc()",
+            "desc": "CSS 함수를 사용하면 CSS 속성의 값으로 계산식을 지정할 수 있습니다."
+        },{
+            "id": 48,
+            "title": "",
+            "name": "clear",
+            "desc": "요소가 선행 부동(floating) 요소 다음일 수 있는지 또는 그 아래로 내려가(해제되어(cleared))야 하는 지를 지정합니다."
+        },{
+            "id": 49,
+            "title": "",
+            "name": "color",
+            "desc": "요소의 글씨 및 글씨 장식의 전경색과 currentcolor의 값을 설정합니다."
+        },{
+            "id": 50,
+            "title": "",
+            "name": "cursor",
+            "desc": "요소 위에 마우스 커서가 올라갔을 때 보여줄 모양을 지정합니다."
+        },{
+            "id": 51,
+            "title": "D",
+            "name": "display",
+            "desc": "요소를 블록과 인라인 요소 중 어느 쪽으로 처리할지와 함께, 플로우, 그리드, 플렉스처럼 자식 요소를 배치할 때 사용할 레이아웃을 설정."
+        },{
+            "id": 52,
+            "title": "E",
+            "name": "em",
+            "desc": "요소 font-size의 계산값. 요소의 font-size 속성에 사용한다면 상속받는 font-size 값을 나타냅니다."
+        },{
+            "id": 53,
+            "title": "F",
+            "name": "flex",
+            "desc": "하나의 플렉스 아이템이 자신의 컨테이너가 차지하는 공간에 맞추기 위해 크기를 키우거나 줄이는 방법을 설정하는 속성입니다."
+        },{
+            "id": 54,
+            "title": "",
+            "name": "float",
+            "desc": "텍스트 및 인라인(inline) 요소가 그 주위를 감싸는 자기 컨테이너의 좌우측을 따라 배치되어야 함을 지정합니다."
+        },{
+            "id": 55,
+            "title": "",
+            "name": "font-family",
+            "desc": "선택된 요소에 우선 순위가 지정된 font family 이름과 generic family 이름을  지정할 수 있게 해줍니다. "
+        },{
+            "id": 56,
+            "title": "",
+            "name": "font-size",
+            "desc": "폰트의 크기(대문자 'M'의 크기)를 지정합니다. 폰트 크기를 바꾸면 em 과 ex <length> 단위로 계산된 다른 항목들의 크기를 바꿉니다."
+        },{
+            "id": 57,
+            "title": "G",
+            "name": "grid",
+            "desc": "2차원(행과 열)의 레이아웃 시스템을 제공합니다."
+        },{
+            "id": 58,
+            "title": "H",
+            "name": "height",
+            "desc": "요소의 높이를 지정합니다. 기본값은 콘텐츠 영역의 높이지만, box-sizing이 border-box라면 테두리 영역의 높이를 설정합니다."
+        },{
+            "id": 59,
+            "title": "",
+            "name": ":hover",
+            "desc": "CSS 의사 클래스는 사용자가 포인팅 장치를 사용해 상호작용 중인 요소를 선택합니다."
+        },{
+            "id": 60,
+            "title": "K",
+            "name": "@keyframes",
+            "desc": "애니메이션 중간중간의 특정 지점들을 거칠 수 있는 키프레임들을 설정하여 CSS 애니메이션 과정의 중간 절차를 제어할 수 있게 합니다."
+        },{
+            "id": 61,
+            "title": "L",
+            "name": "letter-spacing",
+            "desc": "글자 사이의 간격을 조절합니다."
+        },{
+            "id": 62,
+            "title": "",
+            "name": "linear-gradient()",
+            "desc": "두 개 이상의 색이 직선을 따라 점진적으로 변화하는 이미지를 생성합니다. "
+        },{
+            "id": 63,
+            "title": "M",
+            "name": "margin",
+            "desc": "요소의 네 방향 바깥 여백 영역을 설정합니다. margin-top, margin-right, margin-bottom, margin-left의 단축 속성입니다."
+        },{
+            "id": 64,
+            "title": "",
+            "name": "max-height",
+            "desc": "요소의 최대 높이를 설정합니다. max-height는 height 속성의 사용값이 자신의 값보다 커지는걸 방지합니다."
+        },{
+            "id": 65,
+            "title": "",
+            "name": "min-width",
+            "desc": "요소의 최소 너비를 설정합니다. min-width는 width 속성의 사용값이 자신의 값보다 작아지는걸 방지합니다."
+        },{
+            "id": 66,
+            "title": "",
+            "name": "@media",
+            "desc": "스타일 시트의 일부를 하나 이상의 미디어 쿼리 결과에 따라 적용할 때 사용할 수 있습니다."
+        },{
+            "id": 67,
+            "title": "",
+            "name": "mix-blend-mode",
+            "desc": "어느 요소의 콘텐츠가 자신의 배경 및 부모와 어떻게 혼합되어야 하는지 지정합니다."
+        },{
+            "id": 68,
+            "title": "O",
+            "name": "opacity",
+            "desc": "요소의 불투명도를 설정합니다. 불투명도는 요소 뒤쪽 콘텐츠가 숨겨지는 정도로, 투명도의 반대입니다."
+        },{
+            "id": 69,
+            "title": "",
+            "name": "overflow",
+            "desc": "요소의 콘텐츠가 너무 커서 요소의 블록 서식 맥락에 맞출 수 없을 때의 처리법을 지정합니다. overflow-x, overflow-y의 값을 설정합니다."
+        },{
+            "id": 70,
+            "title": "P",
+            "name": "paddingP",
+            "desc": "요소의 네 방향 안쪽 여백 영역을 설정합니다. padding-top, padding-right, padding-bottom, padding-left의 단축 속성입니다."
+        },{
+            "id": 71,
+            "title": "",
+            "name": "position",
+            "desc": "문서 상에 요소를 배치하는 방법을 지정합니다. top, right, bottom, left 속성이 요소를 배치할 최종 위치를 결정합니다."
+        },{
+            "id": 72,
+            "title": "R",
+            "name": "rgba()",
+            "desc": "R(빨강), G(초록), B(파랑)은 <integer>나 <percentage>이며 숫자 255가 100%와 동일. A(알파)는 숫자 1이 100%(불투명)와 동일."
+        },{
+            "id": 73,
+            "title": "T",
+            "name": "text-align",
+            "desc": "블록 요소나 표의 칸 상자의 가로 정렬을 설정합니다. 즉 vertical-align과 동일하나 세로가 아닌 가로 방향으로 동작합니다."
+        },{
+            "id": 74,
+            "title": "",
+            "name": "text-decoration",
+            "desc": "글씨의 장식(선) 색을 지정합니다."
+        },{
+            "id": 75,
+            "title": "",
+            "name": "transform",
+            "desc": "요소에 회전, 크기 조절, 기울이기, 이동 효과를 부여할 수 있습니다. transform은 CSS 시각적 서식 모델의 좌표 공간을 변경합니다."
+        },{
+            "id": 76,
+            "title": "",
+            "name": "transition",
+            "desc": "transition-property, transition-duration, transition-timing-function 과 transition-delay를 위한 단축 속성입니다. "
+        },{
+            "id": 77,
+            "title": "V",
+            "name": "vertical-align",
+            "desc": "inline 또는 table-cell box에서의 수직 정렬을 지정합니다."
+        },{
+            "id": 78,
+            "title": "",
+            "name": "visibility",
+            "desc": "문서의 레이아웃을 변경하지 않고 요소를 보이거나 숨깁니다. visibility로 <table>의 행이나 열을 숨길 수도 있습니다."
+        },{
+            "id": 79,
+            "title": "W",
+            "name": "white-space",
+            "desc": "요소가 공백 문자를 처리하는 법을 지정합니다."
+        },{
+            "id": 80,
+            "title": "",
+            "name": "width",
+            "desc": "요소의 너비를 설정합니다. "
+        },{
+            "id": 81,
+            "title": "",
+            "name": "word-spacing",
+            "desc": "단어와 단어 사이, 태그와 태그 사이의 거리를 설정합니다."
+        },{
+            "id": 82,
+            "title": "Z",
+            "name": "z-index",
+            "desc": "위치 지정 요소와, 그 자손 또는 하위 플렉스 아이템의 Z축 순서를 지정합니다. "
+        },{
+            "id": 83,
+            "title": "",
+            "name": "",
+            "desc": ""
+        },{
+            "id": 84,
+            "title": "가",
+            "name": "객체 생성자 함수",
+            "desc": "내장 객체룰 생성할 때는 이미 자바스크립트 엔진에 내장되어 있는 객체 생성자 함수를 사용하여 객체를 생성합니다."
+        },{
+            "id": 85,
+            "title": "나",
+            "name": "논리 연산자",
+            "desc": "논리 연산자에는 ||(or), &&(and), !(not)이 있으며, 논리 연산자는 피연산자가 논리형 데이터인 true 또는 false로 결괏값을 반환합니다. "
+        },{
+            "id": 86,
+            "title": "",
+            "name": "내부함수(스코프)",
+            "desc": "자바스크립트에서 스코프란 어떤 변수들에 접근할 수 있는지를 정의합니다."
+        },{
+            "id": 87,
+            "title": "다",
+            "name": "대입 연산자",
+            "desc": "대입 연산자(=)는 연산된 데이터를 변수에 저장할 때 사용합니다. "
+        },{
+            "id": 88,
+            "title": "",
+            "name": "다중 if문",
+            "desc": "다중 if문은 두가지 이상의 조건식과 정해 놓은 조건을 만족하지 않았을 때 실행되는 코드로 이루어져 있습니다."
+        },{
+            "id": 89,
+            "title": "라",
+            "name": "리턴값이 있는 함수",
+            "desc": "return 문은 함수에서 결괏값을 반환할 때 사용합니다."
+        },{
+            "id": 90,
+            "title": "마",
+            "name": "문자형",
+            "desc": "문자형(String) 데이터는 다음과 같이 문자나 숫자를 큰 따옴표( “ “) 또는 작은 따옴표(‘ ‘)로 감싸고 있습니다,"
+        },{
+            "id": 91,
+            "title": "",
+            "name": "매개변수가 있는 함수",
+            "desc": "매개변수가 있는 함수 정의문은 함수를 호출할 때 전달하고자 하는 값을 입력하여 호출할 수 있습니다. "
+        },{
+            "id": 92,
+            "title": "바",
+            "name": "변수",
+            "desc": "변수(Variavles)는 변하는 데이터(값)을 정장할 수 있는 메모리 공간입니다."
+        },{
+            "id": 93,
+            "title": "",
+            "name": "비교연산자",
+            "desc": "비교연산자는 두데이터를 '크다, 작다, 같다'와 같이 비교할 때 사용하는 연산자입니다. "
+        },{
+            "id": 94,
+            "title": "",
+            "name": "배열",
+            "desc": "배열은 여러개의 데이터를 순차적으로 저장하는 저장소 입니다"
+        },{
+            "id": 95,
+            "title": "",
+            "name": "배열 비구조화 할당",
+            "desc": "'비구조화 할당 구문은 배열이나 객체의 속성을 해체하여 그 값을 개별 변수에 담을 수 있게 하는 자바스크립트 표현식’입니다."
+        },{
+            "id": 96,
+            "title": "사",
+            "name": "산술 연산자",
+            "desc": "산술연산자는 더하기(+),빼기(-),곱하기(*),나누기(/),나머지(%)가 있습니다."
+        },{
+            "id": 97,
+            "title": "",
+            "name": "선언적 함수",
+            "desc": "가장 기본적으로 사용하는 함수의 형태입니다."
+        },{
+            "id": 98,
+            "title": "",
+            "name": "삼항 연산자",
+            "desc": "삼항 연산자는 조건식의 결과에 따라 실행 결과가 달라지는 연산자입니다."
+        },{
+            "id": 99,
+            "title": "",
+            "name": "숫자형",
+            "desc": "숫자형(Number) 데이터는 단어 의미 그대로 숫자를 의미합니다."
+        },{
+            "id": 100,
+            "title": "아",
+            "name": "익명함수",
+            "desc": "익명 함수는 함수에 이름이 없기 때문에 변수에 넣어서 사용하는 함수입니다. "
+        },{
+            "id": 101,
+            "title": "자",
+            "name": "재귀함수",
+            "desc": "함수 정의문 내에서 작성한 코드로 함수를 다시 호출하는 것을 재귀함수 호출이라 합니다."
+        },{
+            "id": 102,
+            "title": "",
+            "name": "증감연산자",
+            "desc": "증감 연산자에는 숫자형 데이터를1씩 증가시키는 증가 연산자(++)와 반대로 1씩 감소시키는 감소 연산자(--)가 있습니다."
+        },{
+            "id": 103,
+            "title": "",
+            "name": "중첩 if문",
+            "desc": "중첩 if문은 if문 안에 if문이 오는 구조입니다."
+        },{
+            "id": 104,
+            "title": "",
+            "name": "중첩for문",
+            "desc": "for문 안에 for문을 사용한 것을 중첩 for문이라고 합니다"
+        },{
+            "id": 105,
+            "title": "카",
+            "name": "콜백 함수",
+            "desc": "콜백함수는 다른코드(함수 또는 메서드)에게 인자로 넘겨줌으로써 그 제어권도 함께 위임한 함수입니다."
+        },{
+            "id": 106,
+            "title": "파",
+            "name": "프로토 타입 함수",
+            "desc": "JS에서 '원형'은 객체 생성자 함수를 의미합니다. 프로토타입을 사용하여 등록한 함수는 원형에서 생성된 객체를 공유할 수 있습니다."
+        },{
+            "id": 107,
+            "title": "하",
+            "name": "화살표 함수",
+            "desc": "화살표 함수(Arrow function)는 function 키워드 대신 화살표(=>)를 사용하는 함수입니다."
+        },{
+            "id": 108,
+            "title": "A",
+            "name": "Arguments",
+            "desc": "함수 정의문에서 Arguments를 사용하면 매개변수를 사용하는 것처럼 함수 호출문의 값을 받아올 수 있습니다."
+        },{
+            "id": 109,
+            "title": "",
+            "name": "addEventListener",
+            "desc": "특정 이벤트가 발생했을 시 특정 함수를 실행할 수 있게 해주는 addEventListener라는 기능이 존재합니다. "
+        },{
+            "id": 110,
+            "title": "C",
+            "name": "continue문",
+            "desc": "continue문은 반복문에서만 사용할 수 있습니다."
+        },{
+            "id": 111,
+            "title": "",
+            "name": "classList",
+            "desc": "classList는 여러 메서드를 이용해 클래스를 정의합니다."
+        },{
+            "id": 112,
+            "title": "D",
+            "name": "do while문",
+            "desc": "do while 문은 반드시 한번은 코드를 실행하고 조건식을 검사합니다."
+        },{
+            "id": 113,
+            "title": "F",
+            "name": "for문",
+            "desc": "for문은 조건식을 만족할 때까지 특정 코드를 반복하여 실행합니다."
+        },{
+            "id": 114,
+            "title": "",
+            "name": "forEach()문",
+            "desc": "forEach() 메서드는 주어진 함수를 배열 요소 각각에 대해 실행합니다."
+        },{
+            "id": 115,
+            "title": "",
+            "name": "forIn()문",
+            "desc": "for in 반복문은 객체의 속성들을 반복하여 작업을 수행할 수 있습니다"
+        },{
+            "id": 116,
+            "title": "",
+            "name": "forOf()문",
+            "desc": "반복가능한 객체에 대해서 반복하고 각 개별 속성값에 대해 실행되는 문이 있는 사용자 정의 반복 후크를 호출하는 루프를 생성합니다."
+        },{
+            "id": 117,
+            "title": "G",
+            "name": "getElementById",
+            "desc": "id의 값으로 특정한 값을 가진 요소를 가져옵니다. 하나의 값은 하나의 요소만 사용할 수 있습니다."
+        },{
+            "id": 118,
+            "title": "I",
+            "name": "if문",
+            "desc": "if문은 조건식을 만족(true)할 경우에만 코드를 실행합니다."
+        },{
+            "id": 119,
+            "title": "",
+            "name": "if~else문",
+            "desc": "else문은 조건식을 만족할(true) 경우와 만족하지 않은(false)경우에 따라 실행되는 코드가 달라집니다"
+        },{
+            "id": 120,
+            "title": "",
+            "name": "innerText",
+            "desc": "innerText는 태그를 포함한 문자열이 그대로 출력됩니다."
+        },{
+            "id": 121,
+            "title": "",
+            "name": "innerHTML",
+            "desc": "innerHTML은 텍스트를 가져올때 태그를 인식하면서 가져옵니다."
+        },{
+            "id": 122,
+            "title": "J",
+            "name": "join()",
+            "desc": "join()은 배열을 합치거나 문자를 넣을때 사용합니다."
+        },{
+            "id": 123,
+            "title": "M",
+            "name": "Math.round() ",
+            "desc": "Math.round() 함수는 입력값을 반올림한 수와 가장 가까운 정수 값을 반환합니다."
+        },{
+            "id": 124,
+            "title": "",
+            "name": "Math.random()",
+            "desc": "Math.random() 함수는 난수0이상 1이하의 랜덤 숫자를 만듭니다."
+        },{
+            "id": 125,
+            "title": "N",
+            "name": "nextElementSibling ",
+            "desc": "nextElementSibling은 목록 항목의 다음 형제의 HTML 콘텐츠를 가져옵니다."
+        },{
+            "id": 126,
+            "title": "O",
+            "name": "offsetTop",
+            "desc": "offsetTop은 상대적으로 배치 된 가장 가까운 상위 요소의 맨 위에서부터의 거리의 값을 반환합니다."
+        },{
+            "id": 127,
+            "title": "",
+            "name": "offsetX",
+            "desc": "이벤트 대상 객체에서의 상대적 마우스 x좌표 위치를 반환합니다."
+        },{
+            "id": 128,
+            "title": "",
+            "name": "offsetY",
+            "desc": "이벤트 대상 객체에서의 상대적 마우스 y좌표 위치를 반환합니다."
+        },{
+            "id": 129,
+            "title": "P",
+            "name": "parsInt()",
+            "desc": "parseInt() 함수는 문자열 인자를 구문분석하여 특정 진수(수의 진법 체계에 기준이 되는 값)의 정수를 반환합니다."
+        },{
+            "id": 130,
+            "title": "",
+            "name": "pageX",
+            "desc": "브라우저 페이지에서의 x좌표 위치를 반환합니다."
+        },{
+            "id": 131,
+            "title": "",
+            "name": "pageY",
+            "desc": "브라우저 페이지에서의 y좌표 위치를 반환합니다."
+        },{
+            "id": 132,
+            "title": "",
+            "name": "pageXOffset",
+            "desc": "scrollX의 다른 이름으로, 문서가 수평으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다."
+        },{
+            "id": 133,
+            "title": "",
+            "name": "pageYOffset",
+            "desc": "scrollY의 다른 이름으로, 문서가 수직으로 얼마나 스크롤됐는지 픽셀 단위로 반환합니다."
+        },{
+            "id": 134,
+            "title": "",
+            "name": "preventDefault()",
+            "desc": "이벤트를 취소할 수 있는 경우, 이벤트의 전파를 막지않고 그 이벤트를 취소합니다."
+        },{
+            "id": 135,
+            "title": "",
+            "name": "previousElementSibling",
+            "desc": "nextElementSibling은 목록 항목의 이전 형제의 HTML 콘텐츠를 가져옵니다."
+        },{
+            "id": 136,
+            "title": "Q",
+            "name": "querySelector",
+            "desc": "제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 첫 번째 Element를 반환합니다."
+        },{
+            "id": 137,
+            "title": "",
+            "name": "querySelectorAll",
+            "desc": "제공한 선택자 또는 선택자 뭉치와 일치하는 문서 내 모든 요소가 반환됩니다."
+        },{
+            "id": 138,
+            "title": "R",
+            "name": "request <br /> AnimationFrame()",
+            "desc": "requestAnimationFrame()은지정된 연산(함수)의 호출을 다른 연산에 방해를 주지 않고 최대한 빨리 호출해 주는 함수입니다"
+        },{
+            "id": 139,
+            "title": "S",
+            "name": "setAttribute()",
+            "desc": "setAttribute()는 선택한 요소(element)의 속성(attribute) 값을 정합니다."
+        },{
+            "id": 140,
+            "title": "",
+            "name": "setInterval",
+            "desc": "일정한 시간 간격으로 작업을 수행하기 위해서 사용합니다."
+        },{
+            "id": 141,
+            "title": "",
+            "name": "setTimeout",
+            "desc": "일정 시간이 지난후에 실행이 됩니다."
+        },{
+            "id": 142,
+            "title": "",
+            "name": "screenX",
+            "desc": "전체 모니터 스크린에서 x좌표 위치를 반환합니다."
+        },{
+            "id": 143,
+            "title": "",
+            "name": "screenY",
+            "desc": "전체 모니터 스크린에서 y좌표 위치를 반환합니다."
+        },{
+            "id": 144,
+            "title": "",
+            "name": "split()",
+            "desc": "String 객체를 지정한 구분자를 이용하여 여러 개의 문자열로 나눕니다."
+        },{
+            "id": 145,
+            "title": "",
+            "name": "switch문",
+            "desc": "변수에 저장된 값과 switch 문에 있는 경우의 값을 검사하여 변수와 경우의 값에서 일치하는 값이 있을 때 해당하는 코드를 실행합니다."
+        },{
+            "id": 146,
+            "title": "T",
+            "name": "typeOf",
+            "desc": "typeof는 지정한 데이터 또는 변수에 저장된 자료형을 알고 싶을때 사용합니다."
+        },{
+            "id": 147,
+            "title": "",
+            "name": "toString()",
+            "desc": "toString() 메서드는 특정한 Number 객체를 나타내는 문자열을 반환합니다."
+        },{
+            "id": 148,
+            "title": "",
+            "name": "textContent",
+            "desc": "노드와 그 자손의 텍스트 콘텐츠를 표현합니다."
+        },{
+            "id": 149,
+            "title": "",
+            "name": "",
+            "desc": ""
+        },{
+            "id": 150,
+            "title": "A",
+            "name": "addClass()",
+            "desc": "addClass() 메서드는 선택한 요소에 클래스를 생성합니다."
+        },{
+            "id": 151,
+            "title": "",
+            "name": "attr()",
+            "desc": "attr() 메서드는 선택한 요소에 새 속성을 생성하거나 기존의 속성을 변경할 때 또는 요소의 속성값을 불러올 때 사용합니다. "
+        },{
+            "id": 152,
+            "title": "E",
+            "name": "each()",
+            "desc": "each () 메서드는 일치하는 각 요소에 대해 실행할 함수를 지정합니다."
+        },{
+            "id": 153,
+            "title": "F",
+            "name": "find()",
+            "desc": "find() 탐색 선택자는 선택한 하위 요소 중에서 find()로 필터링한 요소만 선택합니다."
+        },{
+            "id": 154,
+            "title": "",
+            "name": "filter()",
+            "desc": "filter() 탐색 선택자는 선택한 요소중에서 filter()로 필터링한 요소만 선택합니다."
+        },{
+            "id": 155,
+            "title": "",
+            "name": "fadeIn()",
+            "desc": "fadeIn() 메서드는 선택된 요소의 불투명도를 숨김에서 표시 (페이딩 효과)로 점차적으로 변경합니다."
+        },{
+            "id": 156,
+            "title": "",
+            "name": "fadeOut()",
+            "desc": "fadeOut() 메서드는 선택한 요소의 불투명도를 표시에서 숨김 (페이드 효과)으로 점차적으로 변경합니다."
+        },{
+            "id": 157,
+            "title": "H",
+            "name": "hasClass()",
+            "desc": "hasClass() 메서드는 선택한 요소에 지정한 클래스가 있으면 true를 반환하고, 없으면 false를 반환합니다."
+        },{
+            "id": 158,
+            "title": "",
+            "name": "hide()",
+            "desc": "hide() 메서드는 숨겨진 요소는 CSS display 속성값이 none으로 설정하여, 요소를 숨긴다."
+        },{
+            "id": 159,
+            "title": "",
+            "name": "html()",
+            "desc": "html() 메서드는 선택한 요소의 하위 요소를 가져와 문자열로 반환하거나 하위 요소를 전부 제거하고 새 요소로 바꿀 때 사용합니다."
+        },{
+            "id": 160,
+            "title": "I",
+            "name": "index()",
+            "desc": "index() 메서드는 일치하는 요소들중 선택한 요소가 몇 번째 순번을 가지고 있는지 알 수 있는 메서드입니다."
+        },{
+            "id": 161,
+            "title": "N",
+            "name": "next()",
+            "desc": "next() 메서드는 선택한 요소의 다음 형제 요소를 반환합니다."
+        },{
+            "id": 162,
+            "title": "",
+            "name": "nextAll()",
+            "desc": "nextAll() 메서드는 선택한 요소의 다음 형제 요소를 모두 반환합니다,"
+        },{
+            "id": 163,
+            "title": "",
+            "name": "nextUntil()",
+            "desc": "nextUntil() 메서드는 선택한 요소의 다음 형제 요소 중 선택자부터 조건까지 실행합니다"
+        },{
+            "id": 164,
+            "title": "O",
+            "name": "offset()",
+            "desc": "offset() 메서드는 문서를 기준으로 선택한 요소의 가로/세로로 떨어진 위치의 좌푯값을 반환하거나 변경할 때 사용합니다."
+        },{
+            "id": 165,
+            "title": "P",
+            "name": "position()",
+            "desc": "position() 메서드는 포지션 기준이 되는 요소를 기준으로 선택한 요소에서 가로/세로로 떨어진 위치의 좌푯값을 변환하거나 변경할 때 사용합니다."
+        },{
+            "id": 166,
+            "title": "R",
+            "name": "removeClass()",
+            "desc": "removeClass() 메서드는 선택한 요소에서 지정한 클래스를 삭제합니다."
+        },{
+            "id": 167,
+            "title": "",
+            "name": "removeAttr()",
+            "desc": "removeAttr() 메서드는 선택한 요소에서 기존의 속성을 삭제할 때 사용합니다."
+        },{
+            "id": 168,
+            "title": "S",
+            "name": "show()",
+            "desc": "show() 메서드는 숨겨진 요소를 CSS display 속성값이 block으로 설정하여, 요소를 표시한다."
+        },{
+            "id": 169,
+            "title": "",
+            "name": "slideUp()",
+            "desc": "slideUp() 메서드는 선택한 요소를 슬라이드 업 (숨기기)합니다."
+        },{
+            "id": 170,
+            "title": "",
+            "name": "slideDown()",
+            "desc": "slideDown() 메서드는 선택한 요소를 아래로 슬라이드 (표시)합니다."
+        },{
+            "id": 171,
+            "title": "",
+            "name": "scrollTop()",
+            "desc": "scrollTop() 메서드는 브라우저의 스크롤바가 수직/수평으로 이동한 위칫값을 불러오거나 변경할 때 사용합니다."
+        },{
+            "id": 172,
+            "title": "",
+            "name": "scrollLeft()",
+            "desc": "scrollLeft() 메서드는 선택한 요소의 가로 스크롤 막대 위치를 설정하거나 반환할 때 사용합니다."
+        },{
+            "id": 173,
+            "title": "T",
+            "name": "text()",
+            "desc": "text() 메서드는 선택한 요소에 포함되어 있는 전체 텍스트를 가져오거나 선택한 하위 요소를 전부 제거하고 새 텍스트를 생성할 때 사용합니다."
+        },{
+            "id": 174,
+            "title": "",
+            "name": "toggleClass()",
+            "desc": "toggleClass() 메서드는 선택한 요소에 지정한 클래스가 없으면 생성하고, 있을 경우에는 삭제합니다."
         }
       ]
     }
