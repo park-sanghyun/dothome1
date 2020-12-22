@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @font-face {
+            font-family: 'Cafe24Dangdanghae';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.2/Cafe24Dangdanghae.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+    body {
+                background: #E3F3FD;
+            }
+        svg {
+            font-family: 'Cafe24Dangdanghae';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background: #E3F3FD;
+        }
+        svg text {
+            text-transform: uppercase;
+            font-size: 140px;
+            animation: stroke 5s infinite alternate;
+        }
+        @keyframes stroke {
+            0% {
+                fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                stroke-dashoffset: 25%;
+                stroke-dasharray: 0 50%;
+                stroke-width: 2;
+            }
+            70% {fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1)}
+            80% {
+                fill: rgba(72,138,204,0); stroke: rgba(54,95,160,1);
+                stroke-width: 3;
+            }
+            100% {
+                fill: rgba(72,138,204,1); stroke: rgba(54,95,160,0);
+                stroke-width: 0;
+                stroke-dashoffset: -25%;
+                stroke-dasharray: 50% 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <svg viewBox="0 0 1320 300">
+        <text x="50%" y="50%" dy="40px" text-anchor="middle">sanghyun</text>
+    </svg>
+</body>
+</html>
