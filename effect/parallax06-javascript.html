@@ -409,15 +409,29 @@
     <!-- script -->
     <script>
         
-        window.addEventListener("scroll", () => {
-            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
-            let wHeight = window.innerHeight;
-            document.querySelectorAll(".reveal").forEach((elem) => {
-                if (pageYOffset + wHeight / 2 > elem.parentElement.offsetTop) {
+        // window.addEventListener("scroll", () => {
+        //     let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+        //     let wHeight = window.innerHeight;
+        //     document.querySelectorAll(".reveal").forEach((elem) => {
+        //         if (pageYOffset + wHeight / 2 > elem.parentElement.offsetTop) {
+        //             elem.classList.add("show");
+        //         }
+        //     });
+        // });
+
+        function scrollReveal(){
+            const reveal = document.querySelectorAll(".reveal");
+            reveal.forEach(elem => {
+                let scrollTop = document.documentElement.scrollTop + window.innerHeight/2;
+                let offsetTop = elem.offsetTop + elem.parentElement.offsetTop;
+
+                if(scrollTop > offsetTop){
                     elem.classList.add("show");
                 }
-            });
-        });
+            })
+        }
+
+        window.addEventListener("scroll", scrollReveal);
 
     </script>
 </body>
