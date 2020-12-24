@@ -181,21 +181,50 @@
             white-space: nowrap;
             transform: translate(-50%, -50%) scale(1.5);
         }
-        .txtBox {}
         .txtBox1 {left: 200%;}
         .txtBox2 {left: 200%;}
         .txtBox3 {left: 200%;}
         .txtBox4 {left: 200%;}
         .txtBox5 {left: 200%;}
         .txtBox6 {left: 200%;}
-
         .aniBox1 {width: 50vw; height: 50vh;}
         .aniBox2 {width: 50vw; height: 50vh;}
         .aniBox3 {width: 50vw; height: 50vh;}
         .aniBox4 {width: 50vw; height: 50vh;}
         .aniBox5 {width: 50vw; height: 50vh;}
         .aniBox6 {width: 50vw; height: 50vh;}
-        
+
+        /* section4 */
+        .s4Txt01 {
+            width: 100vw; height: 100vh;
+            background: #000;
+            overflow: hidden;
+        }
+        .s4Txt02 {
+            width: 30vw;
+            height: 30vw;
+            background: #2587CD;
+            border-radius: 50%;
+        }
+        .s4Txt03-1 {
+            width: 30vw;
+            height: 30vw;
+            border: 5px solid #DC322F;
+            background: #DC322F;
+            border-radius: 50%;
+            z-index: 1;
+        }
+        .s4Txt03 {
+            width: 30vw;
+            height: 30vw;
+            border: 5px solid #073642;
+            background: #073642;
+            border-radius: 50%;
+        }
+        .s4Txt04 {
+            color: #fff;
+            font-size: 4vw;
+        }
     </style>
 </head>
 <body>
@@ -425,7 +454,69 @@
             </div>
         </section>
         <!-- //section3 -->
-        <section id="section4"></section><!-- //section4 -->
+
+        <section id="section4"
+            data-39999="display:none"
+            data-40000="display:block"
+            data-60000="display:block"
+            data-60001="display:none">
+            <div class="s4Txt01 fixed" data-titlt="검은색 네모"
+                data-40000 = "width: 30vw; height: 30vw;"
+                data-42000 = "width: 0vw; height: 0vw;">
+            </div>
+            <div class="s4Txt02 fixed" data-titlt="푸른 원"
+                data-42000 = "width: 0vw; height: 0vw;"
+                data-44000 = "width: 200vw; height: 200vw;"
+                >
+            </div>
+            <div class="s4Txt03-1 fixed" data-titlt="빨간 원"
+                data-43999 = "width: 0vw; height: 0vw; display:none;"
+                data-47000 = "width: 0vw; height: 0vw; display:block; z-index: 1001;"
+                data-49000 = "width: 30vw; height: 30vw; display:block;"
+                >
+            </div>
+            <div class="s4Txt03 fixed" data-titlt="초록 원"
+                data-43999 = "width: 0vw; height: 0vw; display:none;"
+                data-44000 = "width: 0vw; height: 0vw; display:block; z-index: 1000; "
+                data-49000 = "width: 45vw; height: 45vw; display:block;"
+                >
+            </div>
+            <div class="s4Txt04">
+                <div class="fixed text1"
+                    data-50000 = "top: 0%; opacity:0;"
+                    data-51000 = "top: 30%; opacity:1; z-index: 1002;"
+                    data-58000 = "transform: translate(-50%,-50%) scale(1) rotate(360deg)"
+                    data-59000 = "transform: translate(-50%,-50%) scale(0) rotate(0deg)"
+                    >
+                    <p>Thank</p>
+                </div>
+                <div class="fixed text2"
+                    data-52000 = "left:10vw; top: 45%; opacity:0;"
+                    data-53000 = "left:49.5vw; top: 43%; opacity:1; z-index: 1002;"
+                    data-58000 = "transform: translate(-50%,-50%) scale(1) rotate(360deg)"
+                    data-59000 = "transform: translate(-50%,-50%) scale(0) rotate(0deg)"
+                    >
+                    <p>You</p>
+                </div>
+                <div class="fixed text3"
+                    data-54000 = "left:100vw; top: 60%; opacity:0;"
+                    data-55000 = "left:49.5vw; top: 56%; opacity:1; z-index: 1002;"
+                    data-58000 = "transform: translate(-50%,-50%) scale(1) rotate(360deg)"
+                    data-59000 = "transform: translate(-50%,-50%) scale(0) rotate(0deg)"
+                    >
+                    <p>For</p>
+                </div>
+                <div class="fixed text4"
+                    data-56000 = "top: 100%; opacity:0;"
+                    data-57000 = "top: 69%; opacity:1; z-index: 1002;"
+                    data-58000 = "transform: translate(-50%,-50%) scale(1) rotate(360deg)"
+                    data-59000 = "transform: translate(-50%,-50%) scale(0) rotate(0deg)"
+                    >
+                    <p>Watching</p>
+                </div>
+            </div>
+              
+        </section><!-- //section4 -->
         <section id="section5"></section><!-- //section5 -->
         <section id="section6"></section><!-- //section6 -->
     </div>

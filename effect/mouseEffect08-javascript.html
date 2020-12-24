@@ -204,51 +204,52 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
 
-        // class MouseMove {
-        //     constructor(obj){
-        //         this.Slow = document.querySelectorAll(".span-slow");
-        //         this.Fast = document.querySelectorAll(".span-fast");
-        //         this.init();
-        //     }
-        //     init(){
-        //         this.handleResize();
-        //         this.binds();
-        //         this.events();
-        //     }
-        //     binds(){
-        //         this.handleResize = this.handleResize.bind(this);
-        //     }
-        //     events(){
-        //         window.addEventListener('mousemove', this.handleResize);
-        //     }
-        //     handleResize(e){
-        //         this.mouseSlow = (e.pageX - (window.innerWidth / 2)) * 0.1;
-        //         this.mouseFast = (e.pageX - (window.innerWidth / 2)) * 1.1;
-        //         gsap.to(this.Slow,{
-        //             x: mouseSlow
-        //         });
-        //         gsap.to(this.Fast,{
-        //             x: -mouseFast
-        //         });
-        //     }
-        // }
-        // new MouseMove;
+        class Word {
+            constructor(obj) {
+                this.slow = document.body.querySelectorAll(".span-slow");
+                this.fast = document.body.querySelectorAll(".span-fast");
+                this.init();
+            }
+            init(){
+                this.binds();
+                this.events();
+            }
+            binds(){
+                this.handleMouse = this.handleMouse.bind(this);
+            }
+            events() {
+                window.addEventListener("mousemove", this.handleMouse);
+            }
+            handleMouse(e) {
+                this.positionSlow = ( e.pageX - (window.innerWidth/2)) * 0.1;
+                this.positionFast = ( e.pageX - (window.innerWidth/2)) * 0.2;
+                gsap.to(this.slow, {
+                    duration: .4,
+                    x: this.positionSlow
+                });
+                gsap.to(this.fast, {
+                    duration: .4,
+                    x: -this.positionFast
+                })
+            }
+        }
+        new Word();
 
-        window.addEventListener("mousemove",mouseMove)
+        // window.addEventListener("mousemove",mouseMove)
 
-        function mouseMove(e){
-            let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1;
-            let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
+        // function mouseMove(e){
+        //     let positionSlow = (e.pageX - (window.innerWidth/2)) * 0.1;
+        //     let positionFast = (e.pageX - (window.innerWidth/2)) * 0.2;
 
-            gsap.to(".span-slow",{
-                duration: .4, 
-                x: positionSlow
-            });
-            gsap.to(".span-fast",{
-                duration: .4, 
-                x: -positionFast
-            });
-        };
+        //     gsap.to(".span-slow",{
+        //         duration: .4, 
+        //         x: positionSlow
+        //     });
+        //     gsap.to(".span-fast",{
+        //         duration: .4, 
+        //         x: -positionFast
+        //     });
+        // };
         
     </script>
 </body>
