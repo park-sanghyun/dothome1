@@ -52,6 +52,7 @@ body {}
 .header_item .nav_link a span {
     font-size: 0.73vw;
     font-family: 'Arsenal';
+    color: #000;
 
 }
 .header_item .nav_link a {
