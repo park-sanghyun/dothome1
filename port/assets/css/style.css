@@ -69,13 +69,13 @@ body {}
     align-items: center;
 }
 .about {
-    margin-top: 12vw;
+    margin-top: 14vw;
 }
 .about h2 {
     color: #fff;
     text-align: center;
     font-family: "GT Sectra Display Bold";
-    font-size: 4.2vw;
+    font-size: 3.8vw;
     line-height: 1.4;
 }
 .about h2 span {
@@ -85,10 +85,10 @@ body {}
     color: #ABE1FA;
 }
 .about p {
-    margin-top: 3vw;
+    margin-top: 3.5vw;
     text-align: center;
     color: #fff;
     font-family: 'SDKukdetopokki-Lt';
-    line-height: 1.4;
-    font-size: 1.1vw;
+    line-height: 1.5;
+    font-size: 0.8vw;
 }
