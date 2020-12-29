@@ -120,7 +120,7 @@ body {overflow-X: hidden;}
 .mySelf .img {
     position: relative;
 }
-.mySelf .img img{
+.mySelf .img img {
     position: absolute;
     left: 27.5vw; top: 6vw;
     width: 37vw; height: 37vw;
