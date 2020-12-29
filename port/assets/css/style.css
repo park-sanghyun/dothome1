@@ -183,7 +183,7 @@ body {overflow-X: hidden;}
 .siteTitle .left {
     flex: 0 0 20%;
     margin-top: 2vw;
-    margin-left: -12vw;
+    margin-left: -6vw;
 }
 .siteTitle .left h2 {
     color: #fff;
@@ -209,7 +209,7 @@ body {overflow-X: hidden;}
 }
 .siteTitle .right img {
     margin-top: 5vw;
-    margin-left: 5vw;
+    margin-left: 3vw;
     width: 100%; height: 100%;
 }
 
