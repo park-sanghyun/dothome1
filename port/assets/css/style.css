@@ -1,5 +1,8 @@
-body {}
-.container {width: 100%; height: inherit; margin: 0 auto;}
+body {overflow-X: hidden;}
+.container {width: 1422px; height: inherit; margin: 0 auto;}
+#about {width: 100%; background: #150045;}
+#mySelf {width: 100%; background: #150045;}
+#siteTitle {width: 100%; background: #150045;}
 
 /* header페이지 */
 #header {
@@ -63,7 +66,7 @@ body {}
     display: inline-block;
     position: absolute;
     left: -2.5vw;
-    top: 17vw;
+    top: 15.5vw;
 
 }
 
@@ -109,8 +112,8 @@ body {}
 }
 .mySelf .box {
     position: absolute;
-    left: 50%; top: 49%;
-    transform: translate(-50%, -54%);
+    left: 50%; top: 51%;
+    transform: translate(-50%, -50%);
     width: 12vw; height: 100vh;
     background: #ED6062;
 }
@@ -119,14 +122,14 @@ body {}
 }
 .mySelf .img img{
     position: absolute;
-    left: 31vw; top: 6vw;
+    left: 27vw; top: 6vw;
     width: 38vw; height: 38vw;
     background-image: url(../img/about01.png) nowrap center center;
     background-size: cover;
 }
 .mySelf .img p {
     position: absolute;
-    left: 15.6vw; top: 25vw;
+    left: 11.6vw; top: 25vw;
     font-size: 6vw;
     color: #fff;
     font-family: "GT Sectra Display Bold";
@@ -172,15 +175,16 @@ body {}
 
 /* siteTitle */
 .siteTitle {
-    width: 100%; height: 110vh;
+    width: 100%; height: 130vh;
     background: #150045;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 .siteTitle .left {
-    flex: 0 0 22%;
+    flex: 0 0 20%;
     margin-top: 2vw;
+    margin-left: -5vw;
 }
 .siteTitle .left h2 {
     color: #fff;
@@ -194,7 +198,6 @@ body {}
     font-size: 1.6vw;
     font-family: Arial;
     padding: 0.5vw 0;
-
 }
 .siteTitle .left ul li span {
     color: #fff;
@@ -207,11 +210,13 @@ body {}
 }
 .siteTitle .right img {
     margin-top: 5vw;
+    margin-left: 5vw;
+    width: 100%; height: 100%;
 }
 
 /* siteList */
 #siteList {
-    width: 100%; height: 1000vh;
+    width: 100%; height: 410vh;
     background: #150045;
     color: #fff;
     position: relative;
@@ -223,35 +228,45 @@ body {}
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
-    font-size: 26vw;
+    font-size: 25vw;
 }
 #siteList .Num2 {
     position: absolute;
-    right: -2vw; top: 43vw;
+    right: -2vw; top: 40vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
-    font-size: 26vw;
+    font-size: 25vw;
 }
 #siteList .Num3 {
     position: absolute;
-    left: -2vw; top: 100vw;
+    left: -2vw; top: 90vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
-    font-size: 26vw;
+    font-size: 25vw;
+}
+#siteList .Num4 {
+    position: absolute;
+    right: -2vw; top: 140vw;
+    color: #fff;
+    opacity: 0.3;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 25vw;
 }
 #siteList .Box {
     position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    width: 12vw; height: 1000vh;
+    left: 50%; top: 0%;
+    transform: translate(-50%, 0%);
+    width: 12vw; height: 410vh;
     background: #ED6062;
 }
 .siteList1 .container {
     height: 100vh; width: 100%;
+    background: #150045;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -261,27 +276,30 @@ body {}
     flex: 0 0 28%;
 }
 .siteList1 .left .front {position: relative;}
-.siteList1 .left .front img {margin: -3vw 0 0 3vw;}
+.siteList1 .left .front img {
+    margin: -3vw 0 0 3vw;
+    width: 50vw; height: 30vw;
+}
 .siteList1 .left .front h3 {
     color: #fff;
     position: absolute;
     left: 0; bottom: 0;
-    font-size: 5.5vw;
+    font-size: 5vw;
     font-family: "GT Sectra Display Bold";
     padding: 0 0 1.3vw 7vw;
 }
 .siteList1 .left .front h3::before {
     content: '';
     position: absolute;
-    left: 2.1vw; top: 4vw;
+    left: 2.1vw; top: 3.5vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
 .siteList1 .rigth {
     flex: 0 0 28%;
-    margin-top: -21vw;
+    margin-top: -15.5vw;
     width: 350px; height: 200px;
-    padding-left: 2vw;
+    padding-left: 4vw;
 }
 
 /* siteList2 */
@@ -300,19 +318,22 @@ body {}
 .siteList2 .right .front {
     position: relative;
 }
-.siteList2 .right .front img {}
+.siteList2 .right .front img {
+    width: 50vw; height: 30vw;
+    padding-left: 2.5vw;
+}
 .siteList2 .right .front h3 {
     color: #fff;
     position: absolute;
     right: 0; bottom: 0;
-    font-size: 5.5vw;
+    font-size: 5vw;
     font-family: "GT Sectra Display Bold";
-    padding: 0 6vw 1.3vw 0;
+    padding: 0 4vw 1.3vw 0;
 }
 .siteList2 .right .front h3::before {
     content: '';
     position: absolute;
-    right: -1vw; top: 4vw;
+    right: -1vw; top: 3.5vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
@@ -320,19 +341,19 @@ body {}
 .siteList2 .left {
     flex: 0 0 24%;
     margin-left: 1vw;
-    margin-top: -5.5vw;
+    margin-top: -2.5vw;
 }
 .left .lTitle {
     font-size: 1.6vw;
-    padding-top: 4.3vw;
+    padding-top: 1vw;
     font-family: 'SDKukdetopokki-Lt';
 }
 .left .lList {display: flex;}
 .left .lList li {
-    width: 10.5vw; height: 66px;
-    line-height: 66px;
-    margin: 0 1vw 1.5vw 0;
-    font-size: 1.1vw;
+    width: 9.8vw; height: 50px;
+    line-height: 50px;
+    margin: 0 1vw 1.3vw 0;
+    font-size: 0.9vw;
     text-align: center;
     border: 1px solid #ED6062;
     border-radius: 0.1vw;
@@ -341,8 +362,8 @@ body {}
 }
 .left .lTitle {}
 .left .lTitle p {
-    font-size: 1.6vw;
-    padding-bottom: 3vw;
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
     font-family: 'SDKukdetopokki-Lt';
 }
 .left > div .lList li {}
@@ -351,14 +372,14 @@ body {}
 }
 .left .lLink a:nth-child(1):before {
     content: "";
-    width: 2px; height: 69px;
+    width: 2px; height: 50px;
     background: #ED6062;
     position: absolute;
-    left: 0; top: -1.1vw;
+    left: 0; top: -1.15vw;
 }
 .left .lLink a {
     color: #ED6062;
-    font-size: 0.85vw;
+    font-size: 0.4vw;
     padding: 0 0 0 60px;
     font-family: Arial;
     position: relative;
@@ -378,39 +399,85 @@ body {}
     flex: 0 0 28%;
 }
 .siteList3 .left .front {position: relative;}
-.siteList3 .left .front img {margin: -3vw 0 0 3vw;}
+.siteList3 .left .front img {
+    margin: -3vw 0 0 3vw;
+    width: 50vw; height: 30vw;
+}
 .siteList3 .left .front h3 {
     color: #fff;
     position: absolute;
     left: 0; bottom: 0;
-    font-size: 5.5vw;
+    font-size: 5vw;
     font-family: "GT Sectra Display Bold";
     padding: 0 0 1.3vw 7vw;
 }
 .siteList3 .left .front h3::before {
     content: '';
     position: absolute;
-    left: 2.1vw; top: 4vw;
+    left: 2.1vw; top: 3.5vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
 .siteList3 .rigth {
     flex: 0 0 28%;
-    margin-top: -21vw;
+    margin-top: -15.5vw;
     width: 350px; height: 200px;
-    padding-left: 2vw;
+    padding-left: 4vw;
 }
+
+/*  */
+.siteList4 {margin-top: 10vw;}
+.siteList4 .container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row-reverse;
+}
+.siteList4 .right {
+    flex: 0 0 24%;
+    text-align: right;
+    margin-right: -0.5vw;
+}
+.siteList4 .right .front {
+    position: relative;
+}
+.siteList4 .right .front img {
+    width: 50vw; height: 30vw;
+    padding-left: 2.5vw;
+}
+.siteList4 .right .front h3 {
+    color: #fff;
+    position: absolute;
+    right: 0; bottom: 0;
+    font-size: 5vw;
+    font-family: "GT Sectra Display Bold";
+    padding: 0 4vw 1.3vw 0;
+}
+.siteList4 .right .front h3::before {
+    content: '';
+    position: absolute;
+    right: -1vw; top: 3.5vw;
+    width: 1.8vw; height: 0.2vw;
+    background: #fff;
+}
+
+.siteList4 .left {
+    flex: 0 0 24%;
+    margin-left: 1vw;
+    margin-top: -2.5vw;
+}
+
 .rigth .rTitle {
-    font-size: 1.6vw;
-    padding-bottom: 3vw;
+    font-size: 1.5vw;
+    padding-bottom: 2vw;
     font-family: 'SDKukdetopokki-Lt';
 }
 .rigth .rList {display: flex;}
 .rigth .rList li {
-    width: 10.5vw; height: 66px;
-    line-height: 66px;
-    margin: 0 1vw 1.5vw 0;
-    font-size: 1.1vw;
+    width: 9.8vw; height: 50px;
+    line-height: 50px;
+    margin: 0 1vw 1.3vw 0;
+    font-size: 0.9vw;
     text-align: center;
     border: 1px solid #ED6062;
     border-radius: 0.1vw;
@@ -422,14 +489,14 @@ body {}
 }
 .rigth .rLink a:nth-child(1):before {
     content: "";
-    width: 2px; height: 69px;
+    width: 2px; height: 50px;
     background: #ED6062;
     position: absolute;
-    left: 0; top: -1vw;
+    left: 0; top: -1.15vw;
 }
 .rigth .rLink a {
     color: #ED6062;
-    font-size: 0.85vw;
+    font-size: 0.4vw;
     padding: 0 0 0 60px;
     font-family: Arial;
     position: relative;
