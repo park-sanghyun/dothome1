@@ -112,7 +112,7 @@ body {overflow-X: hidden;}
 }
 .mySelf .box {
     position: absolute;
-    left: 50%; top: 51%;
+    left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     width: 12vw; height: 100vh;
     background: #ED6062;
@@ -122,8 +122,8 @@ body {overflow-X: hidden;}
 }
 .mySelf .img img{
     position: absolute;
-    left: 27vw; top: 6vw;
-    width: 38vw; height: 38vw;
+    left: 27.5vw; top: 6vw;
+    width: 37vw; height: 37vw;
     background-image: url(../img/about01.png) nowrap center center;
     background-size: cover;
 }
@@ -223,7 +223,7 @@ body {overflow-X: hidden;}
 }
 #siteList .Num {
     position: absolute;
-    left: -2vw; top: -10vw;
+    left: -1.6vw; top: -10vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -232,7 +232,7 @@ body {overflow-X: hidden;}
 }
 #siteList .Num2 {
     position: absolute;
-    right: -2vw; top: 40vw;
+    right: -1.2vw; top: 40vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -241,7 +241,7 @@ body {overflow-X: hidden;}
 }
 #siteList .Num3 {
     position: absolute;
-    left: -2vw; top: 90vw;
+    left: -1.6vw; top: 90vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -250,7 +250,7 @@ body {overflow-X: hidden;}
 }
 #siteList .Num4 {
     position: absolute;
-    right: -2vw; top: 140vw;
+    right: -0.3vw; top: 140vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -278,7 +278,7 @@ body {overflow-X: hidden;}
 .siteList1 .left .front {position: relative;}
 .siteList1 .left .front img {
     margin: -3vw 0 0 3vw;
-    width: 50vw; height: 30vw;
+    width: 47vw; height: 30vw;
 }
 .siteList1 .left .front h3 {
     color: #fff;
@@ -319,7 +319,7 @@ body {overflow-X: hidden;}
     position: relative;
 }
 .siteList2 .right .front img {
-    width: 50vw; height: 30vw;
+    width: 47vw; height: 30vw;
     padding-left: 2.5vw;
 }
 .siteList2 .right .front h3 {
@@ -401,7 +401,7 @@ body {overflow-X: hidden;}
 .siteList3 .left .front {position: relative;}
 .siteList3 .left .front img {
     margin: -3vw 0 0 3vw;
-    width: 50vw; height: 30vw;
+    width: 47vw; height: 30vw;
 }
 .siteList3 .left .front h3 {
     color: #fff;
@@ -425,7 +425,7 @@ body {overflow-X: hidden;}
     padding-left: 4vw;
 }
 
-/*  */
+/* siteList4 */
 .siteList4 {margin-top: 10vw;}
 .siteList4 .container{
     display: flex;
@@ -442,7 +442,7 @@ body {overflow-X: hidden;}
     position: relative;
 }
 .siteList4 .right .front img {
-    width: 50vw; height: 30vw;
+    width: 47vw; height: 30vw;
     padding-left: 2.5vw;
 }
 .siteList4 .right .front h3 {
