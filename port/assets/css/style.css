@@ -17,7 +17,7 @@ body {}
 .hdMenu {
     width: 83px; height: 73px;
     background: #ED6062;
-    position: fixed;
+    position: absolute;
     left: 0; top: 144px;
     z-index: 100;
 }
@@ -227,7 +227,7 @@ body {}
 }
 #siteList .Num2 {
     position: absolute;
-    right: -2vw; top: 43vw;
+    right: -2vw; top: 33vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -236,7 +236,7 @@ body {}
 }
 #siteList .Num3 {
     position: absolute;
-    left: -2vw; top: 100vw;
+    left: -2vw; top: 90vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -245,8 +245,8 @@ body {}
 }
 #siteList .Box {
     position: absolute;
-    left: 50%; top: 49%;
-    transform: translate(-50%, -49%);
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
     width: 12vw; height: 1000vh;
     background: #ED6062;
 }
@@ -434,4 +434,3 @@ body {}
     font-family: Arial;
     position: relative;
 }
-
