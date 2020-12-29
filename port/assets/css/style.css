@@ -459,11 +459,56 @@ body {overflow-X: hidden;}
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
-
 .siteList4 .left {
     flex: 0 0 24%;
     margin-left: 1vw;
     margin-top: -2.5vw;
+}
+
+.siteList4 .side1 {
+    flex: 0 0 30%;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.siteList4 .side1 a {
+    float: left;
+    padding: 0 30px 30px 0;
+    color: #DC6966;
+    position: relative;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.siteList4 .side1 a:nth-child(1) {
+    color: #150045;
+    text-shadow: -1px 0 #DC6966, 0 1px #DC6966, 1px 0 #DC6966, 0 -1px #DC6966;
+    
+}
+.siteList4 .side1 a:nth-child(1)::before {
+    content: '01';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+.siteList4 .side1 a:nth-child(2)::before {
+    content: '02';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+.siteList4 .side1 a:nth-child(3)::before {
+    content: '03';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
 }
 
 .rigth .rTitle {
