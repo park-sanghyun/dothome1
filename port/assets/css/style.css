@@ -552,7 +552,7 @@ body {overflow-X: hidden;}
 .aniTitle .left { flex: 0 0 40%; margin-top: 2vw; margin-left: 10vw; z-index: 2; }
 .aniTitle .left h2 { color: #fff; font-size: 8.2vw; font-family: "GT Sectra Display Bold"; padding-bottom: 3vw; }
 .aniTitle .left ul {}
-.aniTitle .left ul li { color: #463C8C; font-size: 1.6vw; font-family: Arial; padding: 0.5vw 0;}
-.aniTitle .left ul li span { color: #fff; font-size: 0.7vw; padding-right: 1vw;}
+.aniTitle .left ul li { color: #463C8C; font-size: 1.6vw; font-family: Arial; font-weight: bold; padding: 0.5vw 0;}
+.aniTitle .left ul li span { color: #fff; font-size: 0.7vw; padding-right: 1vw; font-weight: black;}
 .aniTitle .right { flex: 0 0 60%; z-index: 1;}
 .aniTitle .right img { margin-top: 5vw; margin-left: -10vw; width: 100%; height: 100%;}
