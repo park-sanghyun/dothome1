@@ -122,14 +122,13 @@ body {overflow-X: hidden;}
 }
 .mySelf .img img {
     position: absolute;
-    left: 24vw; top: 6vw;
+    left: 18.5vw; top: 6vw;
     width: 37vw; height: 37vw;
     background-image: url(../img/about01.png) nowrap center center;
-    background-size: cover;
 }
 .mySelf .img p {
     position: absolute;
-    left: 11.6vw; top: 25vw;
+    left: 3vw; top: 25vw;
     font-size: 6vw;
     color: #fff;
     font-family: "GT Sectra Display Bold";
