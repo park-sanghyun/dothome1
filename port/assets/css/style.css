@@ -227,7 +227,7 @@ body {}
 }
 #siteList .Num2 {
     position: absolute;
-    right: -2vw; top: 33vw;
+    right: -2vw; top: 43vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
@@ -236,7 +236,7 @@ body {}
 }
 #siteList .Num3 {
     position: absolute;
-    left: -2vw; top: 90vw;
+    left: -2vw; top: 100vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
