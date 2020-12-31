@@ -220,7 +220,7 @@ body {overflow-X: hidden;}
     color: #fff;
     position: relative;
 }
-#siteList .Num {
+.siteList1 .Num {
     position: absolute;
     left: -1.6vw; top: -10vw;
     color: #fff;
@@ -228,6 +228,7 @@ body {overflow-X: hidden;}
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 25vw;
+    z-index: 1000;
 }
 #siteList .Num2 {
     position: absolute;
@@ -263,6 +264,10 @@ body {overflow-X: hidden;}
     width: 12vw; height: 410vh;
     background: #ED6062;
 }
+.siteList1 {
+    display: flex;
+    justify-content: space-between;
+}
 .siteList1 .container {
     height: 100vh; width: 100%;
     background: #150045;
@@ -270,19 +275,16 @@ body {overflow-X: hidden;}
     justify-content: center;
     align-items: center;
 }
-.siteList1 .left {
-    margin-top: 5vw;
-    flex: 0 0 28%;
-}
-.siteList1 .left .front {position: relative;}
+.siteList1 .left {margin-top: 5vw; flex: 1 1 30%;}
+.siteList1 .left .front {position: relative; z-index: 2000; margin-left: 13vw;}
 .siteList1 .left .front img {
-    margin: -3vw 0 0 3vw;
+    margin: -3vw 0 0 1vw;
     width: 47vw; height: 30vw;
 }
 .siteList1 .left .front h3 {
     color: #fff;
     position: absolute;
-    left: 0; bottom: 0;
+    left: -2vw; bottom: 0;
     font-size: 5vw;
     font-family: "GT Sectra Display Bold";
     padding: 0 0 1.3vw 7vw;
@@ -295,9 +297,9 @@ body {overflow-X: hidden;}
     background: #fff;
 }
 .siteList1 .rigth {
-    flex: 0 0 28%;
+    flex: 1 1 30%;
     margin-top: -15.5vw;
-    width: 350px; height: 200px;
+    height: 10vw;
     padding-left: 4vw;
 }
 
@@ -518,8 +520,8 @@ body {overflow-X: hidden;}
 }
 .rigth .rList {display: flex;}
 .rigth .rList li {
-    width: 9.8vw; height: 50px;
-    line-height: 50px;
+    width: 9.8vw; height: 2.5vw;
+    line-height: 3;
     margin: 0 1vw 1.3vw 0;
     font-size: 0.9vw;
     text-align: center;
@@ -533,7 +535,7 @@ body {overflow-X: hidden;}
 }
 .rigth .rLink a:nth-child(1):before {
     content: "";
-    width: 2px; height: 50px;
+    width: 0.15vw; height: 3vw;
     background: #ED6062;
     position: absolute;
     left: 0; top: -1.15vw;
@@ -541,7 +543,7 @@ body {overflow-X: hidden;}
 .rigth .rLink a {
     color: #ED6062;
     font-size: 0.4vw;
-    padding: 0 0 0 60px;
+    padding: 0 0 0 4vw;
     font-family: Arial;
     position: relative;
 }
