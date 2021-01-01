@@ -215,7 +215,7 @@ body {overflow-X: hidden;}
 
 /* siteList */
 #siteList {
-    width: 100%; height: 410vh;
+    width: 100%; height: 462vh;
     background: #150045;
     color: #fff;
     position: relative;
@@ -261,7 +261,7 @@ body {overflow-X: hidden;}
     position: absolute;
     left: 50%; top: 0%;
     transform: translate(-50%, 0%);
-    width: 12vw; height: 410vh;
+    width: 12vw; height: 462vh;
     background: #ED6062;
 }
 .siteList1 {
@@ -276,7 +276,7 @@ body {overflow-X: hidden;}
     align-items: center;
 }
 .siteList1 .left {margin-top: 5vw; flex: 1 1 30%;}
-.siteList1 .left .front {position: relative; z-index: 2000; margin-left: 13vw;}
+.siteList1 .left .front {position: relative; z-index: 2000; margin-left: 11.5vw;}
 .siteList1 .left .front img {
     margin: -3vw 0 0 1vw;
     width: 47vw; height: 30vw;
@@ -304,20 +304,22 @@ body {overflow-X: hidden;}
 }
 
 /* siteList2 */
-.siteList2 {margin-top: 10vw;}
+.siteList2 {margin-top: 10vw; }
 .siteList2 .container{
+    height: 100vh; width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    
 }
 .siteList2 .right {
-    flex: 0 0 24%;
-    text-align: right;
+    flex: 1 1 30%;
+    text-align: left;
     margin-right: -0.5vw;
 }
 .siteList2 .right .front {
-    position: relative;
+    position: relative; margin-left: -17.3vw;
 }
 .siteList2 .right .front img {
     width: 47vw; height: 30vw;
@@ -326,7 +328,7 @@ body {overflow-X: hidden;}
 .siteList2 .right .front h3 {
     color: #fff;
     position: absolute;
-    right: 0; bottom: 0;
+    right: 9vw; bottom: 0;
     font-size: 5vw;
     font-family: "GT Sectra Display Bold";
     padding: 0 4vw 1.3vw 0;
@@ -334,16 +336,16 @@ body {overflow-X: hidden;}
 .siteList2 .right .front h3::before {
     content: '';
     position: absolute;
-    right: -1vw; top: 3.5vw;
+    right: -0.1vw; top: 3.5vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
-
 .siteList2 .left {
-    flex: 0 0 24%;
-    margin-left: 1vw;
+    flex: 1 1 30%;
     margin-top: -2.5vw;
+    margin-left: 11.5vw;
 }
+
 .left .lTitle {
     font-size: 1.6vw;
     padding-top: 1vw;
@@ -351,8 +353,8 @@ body {overflow-X: hidden;}
 }
 .left .lList {display: flex;}
 .left .lList li {
-    width: 9.8vw; height: 50px;
-    line-height: 50px;
+    width: 9.8vw; height: 2.5vw;
+    line-height: 3;
     margin: 0 1vw 1.3vw 0;
     font-size: 0.9vw;
     text-align: center;
@@ -361,13 +363,11 @@ body {overflow-X: hidden;}
     font-family: 'Poppins', sans-serif;
     font-weight: 600;
 }
-.left .lTitle {}
 .left .lTitle p {
     font-size: 1.5vw;
     padding-bottom: 2vw;
     font-family: 'SDKukdetopokki-Lt';
 }
-.left > div .lList li {}
 .left .lLink {
     margin-top: 1.4vw;
 }
@@ -397,11 +397,11 @@ body {overflow-X: hidden;}
 }
 .siteList3 .left {
     margin-top: 5vw;
-    flex: 0 0 28%;
+    flex: 1 1 30%;
 }
-.siteList3 .left .front {position: relative;}
+.siteList3 .left .front {position: relative; z-index: 2000; margin-left: 11.5vw;}
 .siteList3 .left .front img {
-    margin: -3vw 0 0 3vw;
+    margin: -3vw 0 0 1vw;
     width: 47vw; height: 30vw;
 }
 .siteList3 .left .front h3 {
@@ -420,27 +420,29 @@ body {overflow-X: hidden;}
     background: #fff;
 }
 .siteList3 .rigth {
-    flex: 0 0 28%;
+    flex: 1 1 30%;
     margin-top: -15.5vw;
-    width: 350px; height: 200px;
+    height: 10vw;
     padding-left: 4vw;
 }
 
 /* siteList4 */
 .siteList4 {margin-top: 10vw;}
 .siteList4 .container{
+    height: 100vh; width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row-reverse;
+    
 }
 .siteList4 .right {
-    flex: 0 0 24%;
-    text-align: right;
+    flex: 1 1 30%;
+    text-align: left;
     margin-right: -0.5vw;
 }
 .siteList4 .right .front {
-    position: relative;
+    position: relative; margin-left: -17.3vw;
 }
 .siteList4 .right .front img {
     width: 47vw; height: 30vw;
@@ -449,7 +451,7 @@ body {overflow-X: hidden;}
 .siteList4 .right .front h3 {
     color: #fff;
     position: absolute;
-    right: 0; bottom: 0;
+    right: 9vw; bottom: 0;
     font-size: 5vw;
     font-family: "GT Sectra Display Bold";
     padding: 0 4vw 1.3vw 0;
@@ -457,15 +459,16 @@ body {overflow-X: hidden;}
 .siteList4 .right .front h3::before {
     content: '';
     position: absolute;
-    right: -1vw; top: 3.5vw;
+    right: -0.1vw; top: 3.5vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
 .siteList4 .left {
-    flex: 0 0 24%;
-    margin-left: 1vw;
+    flex: 1 1 30%;
     margin-top: -2.5vw;
+    margin-left: 11.5vw;
 }
+
 
 .siteList4 .side1 {
     flex: 0 0 30%;
@@ -558,3 +561,48 @@ body {overflow-X: hidden;}
 .aniTitle .left ul li span { color: #fff; font-size: 0.7vw; padding-right: 1vw; font-weight: black;}
 .aniTitle .right { flex: 0 0 60%; z-index: 1;}
 .aniTitle .right img { margin-top: 5vw; margin-left: -10vw; width: 100%; height: 100%;}
+
+/* aniList */
+#aniList {width: 100%; background: #150045;}
+.anitxt {}
+.anitxt h2 {
+    text-align: left;
+    font-size: 8.2vw;
+    padding-top: 12vw;
+    color: #150045;
+    text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966;
+    font-family: "GT Sectra Display Bold"; 
+}
+.anitxt ul {text-align: center; margin-top: 10vw;}
+.anitxt ul li {
+    line-height: 1.8;
+    font-size: 1.2vw;
+    color: #fff;
+    font-family: "GT Sectra Display Bold"; 
+}
+
+.aniList {
+    margin-top: 12vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr ;
+}
+.aniList > div {
+    width: 420px; height: 839px;
+    background: #cccccc;
+    margin: 0 83px 122px 0;
+}
+.aniList > div:nth-child(2),
+.aniList > div:nth-child(5),
+.aniList > div:nth-child(8) {margin-top: 110px;}
+.aniList > div:last-child {margin-bottom: 20vw;}
+
+/* effTitle */
+#effTitle {width: 100%; height: 100vh; background: #6695DC;}
+.effTitle { width: 100%; height: 100vh; background: #6695DC; display: flex; justify-content: center; align-items: center;}
+.effTitle .left { flex: 0 0 40%; margin-top: 2vw;  z-index: 2; padding-left: 10vw; }
+.effTitle .left h2 { color: #fff; font-size: 8.2vw; font-family: "GT Sectra Display Bold"; padding-bottom: 3vw; }
+.effTitle .left ul {}
+.effTitle .left ul li { color: #DC6966; font-size: 1.6vw; font-family: Arial; font-weight: bold; padding: 0.5vw 0;}
+.effTitle .left ul li span { color: #fff; font-size: 0.7vw; padding-right: 1vw; font-weight: black;}
+.effTitle .right { flex: 0 0 60%; z-index: 1; padding-left: 10vw;}
+.effTitle .right img { margin-top: 5vw; margin-left: -10vw; width: 100%; height: 100%;}
