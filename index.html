@@ -56,6 +56,12 @@
   <![endif]-->
 
     <style>
+        @font-face {
+            font-family: 'TmoneyRoundWindExtraBold';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
         #clock {
             display: block;
         }
@@ -63,11 +69,43 @@
         .link2 {background: #fff; left: 50%; transform: translatex(-50%); color: #000; display: inline-block; border-radius: 5px; font-weight: bold; padding: 10px 30px!important; height: auto !important; box-sizing: border-box; width: auto !important; font-size: 20px !important; margin-top: 86px !important;}
         .disqus {margin-right: 20px; margin-top: 40px;}
 
-        .image-wrap {
+        /* .image-wrap {
             background: url(./assets/img/png-section01.png);
             background-size: cover;
+        } */
+        .navbar-inner {
+            background: #465d83;
         }
-        
+        .navbar .brand {
+            color: #fff;
+        }
+        #header {
+            background: #c0b59e center 57px;
+        }
+        #header h1 {
+            color: #fff;
+            font-family: 'TmoneyRoundWindExtraBold';
+        }
+        #top-nav.navbar .nav > li > a {
+            color: #fff;
+        }
+        .donutImg h5 {
+            color: #465d83;
+        }
+        .color-shape {
+            border-bottom: 3px solid #465d83;
+        }
+
+        .image-wrap .hover-wrap .overlay-img-donut {
+            background: #465d83;
+        }
+        .image-wrap .hover-wrap .overlay-text-thumb-donut {
+            color: #c0b59e;
+        }
+        #contents_tit p {
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 30px;
+        }
     </style>
 </head>
 
@@ -101,10 +139,10 @@
     <!-- header -->
     <div id="header">
         <div class="container">
-            <div class="row">
+            <div class="row"> 
                 <div class="span12" style="text-align:center;">
                     <div class="header_tit">
-                        <a href="http://webstoryboy.co.kr"><img src="assets/img/maple-leaf01.png" alt="main"></a>
+                        <a href="http://webstoryboy.co.kr"><img src="assets/img/house02.png" alt="main"></a>
                         <h1>Professional web publishers</h1>
                     </div>
                     <div class="header_icon">
@@ -133,7 +171,7 @@
     <!-- contents_tit -->
     <div id="contents_tit">
         <div class="titt">
-            <p><a href="#" class="tit_btn">&quot;ParkSangHyun Page&quot;</a></p>
+            <p><a href="#" class="tit_btn">&quot;Front End Developer SangHyun-Park&quot;</a></p>
         </div>
     </div>
     <!-- //contents_tit -->
@@ -172,7 +210,7 @@
                                     <span class="overlay-text-thumb1-donut">클래스</span>
                                     <span class="overlay-text-thumb2-donut">CLASS</span>
                                 </div>
-                                <img src="assets/img/chysanthemum.svg" alt="portfolio">
+                                <img src="assets/img/001-sink.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>CLASS</h5>
                                     <p>클래스</p>
@@ -194,7 +232,7 @@
                                     <span class="overlay-text-thumb1-donut">자바스크립트</span>
                                     <span class="overlay-text-thumb2-donut">JAVASCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/002-berth.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>JAVASCRIPT</h5>
                                     <p>자바스크립트</p>
@@ -216,7 +254,7 @@
                                     <span class="overlay-text-thumb1-donut">제이쿼리</span>
                                     <span class="overlay-text-thumb2-donut">JQUERY</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/003-cupboard.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>JQUERY</h5>
                                     <p>제이쿼리</p>
@@ -238,7 +276,7 @@
                                     <span class="overlay-text-thumb1-donut">HTML</span>
                                     <span class="overlay-text-thumb2-donut">HTML</span>
                                 </div>
-                                <img src="assets/img/chysanthemum.svg" alt="portfolio">
+                                <img src="assets/img/004-stool-1.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>HTML</h5>
                                     <p>HTML</p>
@@ -259,7 +297,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">CSS</span>
                                 </div>
-                                <img src="assets/img/chysanthemum.svg" alt="portfolio">
+                                <img src="assets/img/005-stool.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>CSS</h5>
                                     <p>CSS</p>
@@ -280,7 +318,7 @@
                                     <span class="overlay-text-thumb1-donut">LAYOUT</span>
                                     <span class="overlay-text-thumb2-donut">LAYOUT</span>
                                 </div>
-                                <img src="assets/img/peony.png" alt="portfolio">
+                                <img src="assets/img/006-sofa.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>LAYOUT</h5>
                                     <p>LAYOUT</p>
@@ -301,7 +339,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">FLEX</span>
                                 </div>
-                                <img src="assets/img/peony.png" alt="portfolio">
+                                <img src="assets/img/007-shelf.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>FLEX</h5>
                                     <p>CSS3</p>
@@ -322,7 +360,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">GRID</span>
                                 </div>
-                                <img src="assets/img/peony.png" alt="portfolio">
+                                <img src="assets/img/008-rocking-chair.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>GRID</h5>
                                     <p>CSS3</p>
@@ -343,7 +381,7 @@
                                     <span class="overlay-text-thumb1-donut">PHOTOSHOP</span>
                                     <span class="overlay-text-thumb2-donut">PHOTOSHOP</span>
                                 </div>
-                                <img src="assets/img/daisy.png" alt="portfolio">
+                                <img src="assets/img/009-office-chair.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>PHOTOSHOP</h5>
                                     <p>PHOTOSHOP</p>
@@ -364,7 +402,7 @@
                                     <span class="overlay-text-thumb1-donut">ILLUSTRATOR</span>
                                     <span class="overlay-text-thumb2-donut">ILLUSTRATOR</span>
                                 </div>
-                                <img src="assets/img/daisy.png" alt="portfolio">
+                                <img src="assets/img/010-nightstand.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>ILLUSTRATOR</h5>
                                     <p>ILLUSTRATOR</p>
@@ -384,7 +422,7 @@
                                 <span class="overlay-text-thumb1-donut link1"><a href="https://www.figma.com/proto/ipWql5Uo1ldSOfOOp44AUJ/%EC%9B%B9-%ED%91%9C%EC%A4%80-%EC%82%AC%EC%9D%B4%ED%8A%B8-%EA%B0%80%EC%9D%B4%EB%93%9C-%EB%9D%BC%EC%9D%B8?node-id=14%3A24&viewport=994%2C-169%2C0.35253381729125977&scaling=min-zoom">FIGMA</a></span>
                                 <span class="overlay-text-thumb2-donut link2"><a href="webstandard/index.html">SITE</a></span>
                             </div>
-                            <img src="assets/img/black.png" alt="portfolio">
+                            <img src="assets/img/011-dressing-table.png" alt="portfolio">
                             <div class="img-text donutImg">
                                 <h5>WEBSTANDARD</h5>
                                 <p>WEBSTANDARD</p>
@@ -403,7 +441,7 @@
                                 <span class="overlay-text-thumb1-donut link1"><a href="#">FiGMA</a></span>
                                 <span class="overlay-text-thumb2-donut link2"><a href="responsive/index.html">SITE</a></span>
                             </div>
-                            <img src="assets/img/black.png" alt="portfolio">
+                            <img src="assets/img/012-lamp.png" alt="portfolio">
                             <div class="img-text donutImg">
                                 <h5>RESPONSVIE</h5>
                                 <p>RESPONSVIE</p>
@@ -422,7 +460,7 @@
                                 <span class="overlay-text-thumb1-donut link1"><a href="#">FiGMA</a></span>
                                 <span class="overlay-text-thumb2-donut link2"><a href="./megabox/assets/index.html">SITE</a></span>
                             </div>
-                            <img src="assets/img/black.png" alt="portfolio">
+                            <img src="assets/img/013-kitchen-table-2.png" alt="portfolio">
                             <div class="img-text donutImg">
                                 <h5>MEGABOX</h5>
                                 <p>MEGABOX</p>
@@ -442,7 +480,7 @@
                                     <span class="overlay-text-thumb1-donut">PORTFOLIO</span>
                                     <span class="overlay-text-thumb2-donut">PORTFOLIO</span>
                                 </div>
-                                <img src="assets/img/black.png" alt="portfolio">
+                                <img src="assets/img/014-kitchen-table-1.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>PORTFOLIO</h5>
                                     <p>PORTFOLIO</p>
@@ -463,7 +501,7 @@
                                     <span class="overlay-text-thumb1-donut">PORTFOLIO02</span>
                                     <span class="overlay-text-thumb2-donut">PORTFOLIO02</span>
                                 </div>
-                                <img src="assets/img/black.png" alt="portfolio">
+                                <img src="assets/img/015-kitchen-table.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>PORTFOLIO02</h5>
                                     <p>PORTFOLIO</p>
@@ -493,7 +531,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">CSS3</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/016-kitchen-1.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>CSS ANIMATION</h5>
                                     <p>CSS</p>
@@ -514,7 +552,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">ANIMATION</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/017-kitchen.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>JQUERY ANIMATION</h5>
                                     <p>SCRIPT</p>
@@ -535,7 +573,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">ANIMATION</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/018-hanger.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>GSAP ANIMATION</h5>
                                     <p>SCRIPT</p>
@@ -556,7 +594,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">ANIMATION</span>
                                 </div>
-                                <img src="assets/img/african.svg" alt="portfolio">
+                                <img src="assets/img/019-table.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>SVG ANIMATION</h5>
                                     <p>CSS</p>
@@ -577,7 +615,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">ANIMATION SAMPLE</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/020-furniture.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>ANIMATION SAMPLE</h5>
                                     <p>CSS</p>
@@ -598,7 +636,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">EFFECT</span>
                                 </div>
-                                <img src="assets/img/african.svg" alt="portfolio">
+                                <img src="assets/img/021-painting.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>ANIMATION</h5>
                                     <p>EFFECT</p>
@@ -619,7 +657,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS</span>
                                     <span class="overlay-text-thumb2-donut">BORDER-RADIUS</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/022-desktop.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>BORDER-RADIUS</h5>
                                     <p>CSS3</p>
@@ -640,7 +678,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">BOX-SHADOW</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/023-desk.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>BOX-SHADOW</h5>
                                     <p>CSS3</p>
@@ -662,7 +700,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">TRANSFORM</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/024-coffee-table.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>TRANSFORM</h5>
                                     <p>CSS3</p>
@@ -683,7 +721,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">BACKGROUND</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/025-closet.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>BACKGROUND</h5>
                                     <p>CSS3</p>
@@ -704,7 +742,7 @@
                                     <span class="overlay-text-thumb1-donut">CSS3</span>
                                     <span class="overlay-text-thumb2-donut">BLEND MODE</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/026-chair-2.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>BLEND MODE</h5>
                                     <p>CSS3</p>
@@ -734,7 +772,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">SCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/027-chair-1.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>MENU EFFECT</h5>
                                     <p>SCRIPT</p>
@@ -755,7 +793,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">SCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/028-chair.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>MOUSE EFFECT</h5>
                                     <p>SCRIPT</p>
@@ -776,7 +814,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">SCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/029-cradle.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>PARALLAX EFFECT</h5>
                                     <p>SCRIPT</p>
@@ -797,7 +835,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">SCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/030-cabinet.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>SLIDER EFFECT</h5>
                                     <p>SCRIPT</p>
@@ -818,7 +856,7 @@
                                     <span class="overlay-text-thumb1-donut">SCRIPT</span>
                                     <span class="overlay-text-thumb2-donut">SCRIPT</span>
                                 </div>
-                                <img src="assets/img/sabi.svg" alt="portfolio">
+                                <img src="assets/img/031-book-shelf-1.png" alt="portfolio">
                                 <div class="img-text donutImg">
                                     <h5>GAME EFFECT</h5>
                                     <p>SCRIPT</p>
