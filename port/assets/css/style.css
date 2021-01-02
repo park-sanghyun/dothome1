@@ -230,32 +230,35 @@ body {overflow-X: hidden;}
     font-size: 25vw;
     z-index: 1000;
 }
-#siteList .Num2 {
+.siteList2 .Num2 {
     position: absolute;
-    right: -1.2vw; top: 40vw;
+    right: -1.2vw; top: 48vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 25vw;
+    z-index: 1000;
 }
-#siteList .Num3 {
+.siteList3 .Num3 {
     position: absolute;
-    left: -1.6vw; top: 90vw;
+    left: -1.6vw; top: 106vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 25vw;
+    z-index: 1000;
 }
-#siteList .Num4 {
+.siteList4 .Num4 {
     position: absolute;
-    right: -0.3vw; top: 140vw;
+    right: -0.3vw; top: 166vw;
     color: #fff;
     opacity: 0.3;
     font-family: 'Poppins', sans-serif;
     font-weight: 100;
     font-size: 25vw;
+    z-index: 1000;
 }
 #siteList .Box {
     position: absolute;
@@ -319,7 +322,7 @@ body {overflow-X: hidden;}
     margin-right: -0.5vw;
 }
 .siteList2 .right .front {
-    position: relative; margin-left: -17.3vw;
+    position: relative; margin-left: -17.3vw; z-index: 2000;
 }
 .siteList2 .right .front img {
     width: 47vw; height: 30vw;
@@ -368,9 +371,7 @@ body {overflow-X: hidden;}
     padding-bottom: 2vw;
     font-family: 'SDKukdetopokki-Lt';
 }
-.left .lLink {
-    margin-top: 1.4vw;
-}
+.left .lLink {margin-top: 1.4vw;}
 .left .lLink a:nth-child(1):before {
     content: "";
     width: 2px; height: 50px;
@@ -395,10 +396,7 @@ body {overflow-X: hidden;}
     justify-content: center;
     align-items: center;
 }
-.siteList3 .left {
-    margin-top: 5vw;
-    flex: 1 1 30%;
-}
+.siteList3 .left {margin-top: 5vw; flex: 1 1 30%;}
 .siteList3 .left .front {position: relative; z-index: 2000; margin-left: 11.5vw;}
 .siteList3 .left .front img {
     margin: -3vw 0 0 1vw;
@@ -442,7 +440,7 @@ body {overflow-X: hidden;}
     margin-right: -0.5vw;
 }
 .siteList4 .right .front {
-    position: relative; margin-left: -17.3vw;
+    position: relative; margin-left: -17.3vw; z-index: 2000;
 }
 .siteList4 .right .front img {
     width: 47vw; height: 30vw;
@@ -581,20 +579,16 @@ body {overflow-X: hidden;}
     font-family: "GT Sectra Display Bold"; 
 }
 
-.aniList {
-    margin-top: 12vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr ;
-}
-.aniList > div {
-    width: 420px; height: 839px;
-    background: #cccccc;
-    margin: 0 83px 122px 0;
-}
+.aniList {margin-top: 12vw; display: grid; grid-template-columns: 1fr 1fr 1fr ;}
+.aniList > div {width: 420px; height: 839px; background: #cccccc; margin: 0 83px 122px 0;}
 .aniList > div:nth-child(2),
 .aniList > div:nth-child(5),
 .aniList > div:nth-child(8) {margin-top: 110px;}
 .aniList > div:last-child {margin-bottom: 20vw;}
+
+
+
+
 
 /* effTitle */
 #effTitle {width: 100%; height: 100vh; background: #6695DC;}
@@ -606,3 +600,198 @@ body {overflow-X: hidden;}
 .effTitle .left ul li span { color: #fff; font-size: 0.7vw; padding-right: 1vw; font-weight: black;}
 .effTitle .right { flex: 0 0 60%; z-index: 1; padding-left: 10vw;}
 .effTitle .right img { margin-top: 5vw; margin-left: -10vw; width: 100%; height: 100%;}
+
+/* efftList */
+#efftList {width: 100%; background: #181726;}
+.efftList {}
+.efftList h2 {
+    text-align: left;
+    font-size: 8.2vw;
+    padding-top: 12vw;
+    color: #181726;
+    text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966;
+    font-family: "GT Sectra Display Bold"; 
+}
+
+/* list1 */
+.efftList .list1 {}
+.efftList .list1 h3 {
+    margin: 12vw 0 4.72vw 0;
+    color: #fff;
+    font-size: 4.1vw;
+    font-family: "GT Sectra Display Bold";
+}
+.efftList .list1 .effBox {width: 74.2vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list1 .effBox img {width: 100%;}
+
+.efftList .list1 .effTxt {display: flex;}
+.efftList .list1 .effTxt .left {flex: 1 1 40%;}
+.efftList .list1 .effTxt .left h4 {
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    font-size: 2.43vw;
+    margin-bottom: 0.9vw;
+    margin-top: -0.5vw;
+}
+.efftList .list1 .effTxt .left p {
+    color: #fff;
+    font-size: 1.3vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.efftList .list1 .effTxt .right {flex: 1 1 55%;}
+.efftList .list1 .effTxt .right h4 {
+    font-family: "GT Sectra Display Bold";
+    color: #fff;
+    font-size: 31px;
+    font-weight: 700;
+}
+.efftList .list1 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list1 .effTxt .right table tr {}
+.efftList .list1 .effTxt .right table tr th {
+    color: #fff;
+    width: 50%;
+    font-size: 0.5vw;
+    font-family: arial;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid #E05C5F;
+}
+.efftList .list1 .effTxt .right table tr th:nth-child(2) {
+    width: 25%;
+}
+
+.efftList .list1 .effTxt .right table tr td {
+    color: #fff;
+    width: 30%;
+    font-family: arial;
+    font-size: 0.8vw;
+    padding: 1.1vw 0;
+    border-bottom: 1px solid #525364;
+    font-weight: 700;
+}
+.efftList .list1 .effTxt .right table tr td a {
+    color: #fff;
+}
+
+/* list2 */
+.efftList .list2 {margin-top: 400px;}
+.efftList .list2 h3 {
+    margin: 12vw 0 4.72vw 0;
+    color: #fff;
+    font-size: 4.1vw;
+    font-family: "GT Sectra Display Bold";
+}
+.efftList .list2 .effBox {width: 74.2vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list2 .effBox img {width: 100%;}
+
+.efftList .list2 .effTxt {display: flex;}
+.efftList .list2 .effTxt .left {flex: 1 1 40%;}
+.efftList .list2 .effTxt .left h4 {
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    font-size: 2.43vw;
+    margin-bottom: 0.9vw;
+    margin-top: -0.5vw;
+}
+.efftList .list2 .effTxt .left p {
+    color: #fff;
+    font-size: 1.3vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.efftList .list2 .effTxt .right {flex: 1 1 55%;}
+.efftList .list2 .effTxt .right h4 {
+    font-family: "GT Sectra Display Bold";
+    color: #fff;
+    font-size: 31px;
+    font-weight: 700;
+}
+.efftList .list2 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list2 .effTxt .right table tr {}
+.efftList .list2 .effTxt .right table tr th {
+    color: #fff;
+    width: 50%;
+    font-size: 0.5vw;
+    font-family: arial;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid #E05C5F;
+}
+.efftList .list2 .effTxt .right table tr th:nth-child(2) {
+    width: 25%;
+}
+
+.efftList .list2 .effTxt .right table tr td {
+    color: #fff;
+    width: 30%;
+    font-family: arial;
+    font-size: 0.8vw;
+    padding: 1.1vw 0;
+    border-bottom: 1px solid #525364;
+    font-weight: 700;
+}
+.efftList .list2 .effTxt .right table tr td a {
+    color: #fff;
+}
+
+/* list3 */
+.efftList .list3 {margin-top: 400px;}
+.efftList .list3 h3 {
+    margin: 12vw 0 4.72vw 0;
+    color: #fff;
+    font-size: 4.1vw;
+    font-family: "GT Sectra Display Bold";
+}
+.efftList .list3 .effBox {width: 74.2vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list3 .effBox img {width: 100%;}
+
+.efftList .list3 .effTxt {display: flex;}
+.efftList .list3 .effTxt .left {flex: 1 1 40%;}
+.efftList .list3 .effTxt .left h4 {
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    font-size: 2.43vw;
+    margin-bottom: 0.9vw;
+    margin-top: -0.5vw;
+}
+.efftList .list3 .effTxt .left p {
+    color: #fff;
+    font-size: 1.3vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+
+.efftList .list3 .effTxt .right {flex: 1 1 55%;}
+.efftList .list3 .effTxt .right h4 {
+    font-family: "GT Sectra Display Bold";
+    color: #fff;
+    font-size: 31px;
+    font-weight: 700;
+}
+.efftList .list3 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list3 .effTxt .right table tr {}
+.efftList .list3 .effTxt .right table tr th {
+    color: #fff;
+    width: 50%;
+    font-size: 0.5vw;
+    font-family: arial;
+    padding-bottom: 1vw;
+    border-bottom: 2px solid #E05C5F;
+}
+.efftList .list3 .effTxt .right table tr th:nth-child(2) {
+    width: 25%;
+}
+
+.efftList .list3 .effTxt .right table tr td {
+    color: #fff;
+    width: 30%;
+    font-family: arial;
+    font-size: 0.8vw;
+    padding: 1.1vw 0;
+    border-bottom: 1px solid #525364;
+    font-weight: 700;
+}
+.efftList .list3 .effTxt .right table tr td a {
+    color: #fff;
+}
