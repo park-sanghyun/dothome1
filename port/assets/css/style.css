@@ -581,6 +581,11 @@ body {overflow-X: hidden;}
 
 .aniList {margin-top: 12vw; display: grid; grid-template-columns: 1fr 1fr 1fr ;}
 .aniList > div {width: 420px; height: 839px; background: #cccccc; margin: 0 83px 122px 0;}
+.aniList > div iframe {}
+.aniList > div iframe p {
+    color: #000;
+    z-index: 10000;
+}
 .aniList > div:nth-child(2),
 .aniList > div:nth-child(5),
 .aniList > div:nth-child(8) {margin-top: 110px;}
