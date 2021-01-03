@@ -619,6 +619,55 @@ body {overflow-X: hidden;}
     font-family: "GT Sectra Display Bold"; 
 }
 
+#aniList {
+    position: relative;
+}
+#aniList .side1 {
+    flex: 0 0 30%;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+#aniList .side1 a {
+    float: left;
+    padding: 0 30px 30px 0;
+    color: #DC6966;
+    position: relative;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+#aniList .side1 a:nth-child(2) {
+    color: #150045;
+    text-shadow: -1px 0 #DC6966, 0 1px #DC6966, 1px 0 #DC6966, 0 -1px #DC6966;
+    
+}
+#aniList .side1 a:nth-child(1)::before {
+    content: '01';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+#aniList .side1 a:nth-child(2)::before {
+    content: '02';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+#aniList .side1 a:nth-child(3)::before {
+    content: '03';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+
 
 
 /* effTitle */
@@ -633,7 +682,7 @@ body {overflow-X: hidden;}
 .effTitle .right img { margin-top: 5vw; margin-left: -10vw; width: 100%; height: 100%;}
 
 /* efftList */
-#efftList {width: 100%; background: #181726;}
+#efftList {width: 100%; height: 630vh; background: #181726; position: relative;}
 .efftList {}
 .efftList h2 {
     text-align: left;
@@ -825,4 +874,149 @@ body {overflow-X: hidden;}
 }
 .efftList .list3 .effTxt .right table tr td a {
     color: #fff;
+}
+
+.efftList .side1 {
+    flex: 0 0 30%;
+    position: absolute;
+    right: 0; bottom: 0;
+}
+.efftList .side1 a {
+    float: left;
+    padding: 0 30px 30px 0;
+    color: #DC6966;
+    position: relative;
+    font-weight: 500;
+    font-family: 'Poppins';
+}
+.efftList .side1 a:nth-child(3) {
+    color: #181726;
+    text-shadow: -1px 0 #DC6966, 0 1px #DC6966, 1px 0 #DC6966, 0 -1px #DC6966;
+    
+}
+.efftList .side1 a:nth-child(1)::before {
+    content: '01';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+.efftList .side1 a:nth-child(2)::before {
+    content: '02';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+.efftList .side1 a:nth-child(3)::before {
+    content: '03';
+    color: #fff;
+    font-size: 0.2vw;
+    text-shadow: 0 0 #fff;
+    font-weight: 100;
+    position: absolute;
+    left: -10px; top: -10px;
+}
+
+/* react-vue */
+#react-vue {
+    width: 100%; background: #181726;
+}
+.react-vue {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.react-vue h2 {
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    font-size: 10vw;
+}
+
+#react-vue-box {
+    width: 100%; height: 180vh; background: #181726;
+}
+
+.react-vue-box {}
+.react-vue-box .imgWrap {width: 74vw; padding-top: 10vw;}
+.react-vue-box .imgWrap img {width: 100%;}
+
+.react-vue-box .txtWrap {display: flex; margin-top: 4vw; width: 100%;}
+.react-vue-box .txtWrap .left {flex: 1 1 40%;}
+.react-vue-box .txtWrap .left p {
+    width: 27vw;
+    color: #fff;
+    font-size: 1.3vw;
+    font-family: 'Poppins';
+    font-weight: 600;
+}
+.react-vue-box .txtWrap .right {flex: 1 1 55%;}
+.react-vue-box .txtWrap .right h4 {
+    font-family: "GT Sectra Display Bold";
+    color: #fff;
+    font-size: 1.5vw;
+    font-weight: 700;
+}
+.react-vue-box .txtWrap .right table {text-align: left; margin: 1.5vw 0 0 -0.2vw; width: 100%;}
+.react-vue-box .txtWrap .right table tr {}
+.react-vue-box .txtWrap .right table tr th {
+    color: #fff;
+    width: 50%;
+    font-size: 0.5vw;
+    font-family: arial;
+    padding-bottom: 1vw;
+    border-bottom: 0.13vw solid #E05C5F;
+}
+.react-vue-box .txtWrap .right table tr th:nth-child(2) {
+    width: 25%;
+}
+
+.react-vue-box .txtWrap .right table tr td {
+    color: #fff;
+    width: 30%;
+    font-family: arial;
+    font-size: 0.8vw;
+    padding: 1.1vw 0;
+    border-bottom: 0.06vw solid #525364;
+    font-weight: 700;
+}
+.react-vue-box .txtWrap .right table tr td a {
+    color: #fff;
+}
+
+/* footer */
+#footer {width: 100%; height: 100vh; background: #181726; position: relative;}
+.footer > div h4 {
+    position: absolute;
+    left: 43vw; bottom: 2vw;
+    color: #fff;
+    font-family: Arial;
+    font-weight: bolder;
+}
+.footer {display: flex; color: #fff; margin: 0 5vw; justify-content: center; align-items: center; height: 100vh;}
+.footer .left {flex: 1 1 30%;}
+.footer .left li {
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 0.3vw;
+    line-height: 1.5;
+}
+.footer .center {flex: 1 1 30%}
+.footer .center li {
+    text-align: center;
+    font-family: "GT Sectra Display Bold";
+    font-size: 3vw;
+}
+.footer .right {flex: 1 1 30%}
+.footer .right li {
+    text-align: right;
+    font-family: Arial;
+    font-weight: bolder;
+    font-size: 0.3vw;
+    line-height: 1.5;
 }
