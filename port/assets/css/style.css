@@ -586,12 +586,38 @@ body {overflow-X: hidden;}
     color: #000;
     z-index: 10000;
 }
-.aniList > div:nth-child(2),
-.aniList > div:nth-child(5),
+.aniList > div:nth-child(2) {margin-top: 110px;}
+.aniList > div:nth-child(5)
 .aniList > div:nth-child(8) {margin-top: 110px;}
-.aniList > div:last-child {margin-bottom: 20vw;}
+.aniList > div:nth-child(4),
+.aniList > div:nth-child(6),
+.aniList > div:nth-child(7),
+.aniList > div:nth-child(9) {margin-top: -110px;}
+.aniList > div:last-child {margin-bottom: 30vw;}
 
-
+.aniList > div {width: 420px; height: 839px; background: #cccccc; margin: 0 83px 122px 0; position: relative;}
+.aniList > div iframe {position: relative;}
+.aniList > div a {
+    color: #fff;
+    position: absolute;
+    left: 39%; bottom: 10%;
+    font-family: Arial;
+    font-weight: bold;
+}
+.aniList > div > .aniImg img {
+    position: absolute;
+    left: 0; top: 0;
+}
+.aniList > div > .aniImg p {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 2.5vw;
+    font-family: "GT Sectra Display Bold"; 
+}
 
 
 
@@ -621,12 +647,12 @@ body {overflow-X: hidden;}
 /* list1 */
 .efftList .list1 {}
 .efftList .list1 h3 {
-    margin: 12vw 0 4.72vw 0;
+    margin: 12vw 0 4vw 0;
     color: #fff;
     font-size: 4.1vw;
     font-family: "GT Sectra Display Bold";
 }
-.efftList .list1 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list1 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 4vw;}
 .efftList .list1 .effBox img {width: 100%;}
 
 .efftList .list1 .effTxt {display: flex;}
@@ -649,10 +675,10 @@ body {overflow-X: hidden;}
 .efftList .list1 .effTxt .right h4 {
     font-family: "GT Sectra Display Bold";
     color: #fff;
-    font-size: 31px;
+    font-size: 1.5vw;
     font-weight: 700;
 }
-.efftList .list1 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list1 .effTxt .right table {text-align: left; margin: 1.5vw 0 0 -0.2vw; width: 100%;}
 .efftList .list1 .effTxt .right table tr {}
 .efftList .list1 .effTxt .right table tr th {
     color: #fff;
@@ -660,7 +686,7 @@ body {overflow-X: hidden;}
     font-size: 0.5vw;
     font-family: arial;
     padding-bottom: 1vw;
-    border-bottom: 2px solid #E05C5F;
+    border-bottom: 0.13vw solid #E05C5F;
 }
 .efftList .list1 .effTxt .right table tr th:nth-child(2) {
     width: 25%;
@@ -672,7 +698,7 @@ body {overflow-X: hidden;}
     font-family: arial;
     font-size: 0.8vw;
     padding: 1.1vw 0;
-    border-bottom: 1px solid #525364;
+    border-bottom: 0.06vw solid #525364;
     font-weight: 700;
 }
 .efftList .list1 .effTxt .right table tr td a {
@@ -687,7 +713,7 @@ body {overflow-X: hidden;}
     font-size: 4.1vw;
     font-family: "GT Sectra Display Bold";
 }
-.efftList .list2 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list2 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 4vw;}
 .efftList .list2 .effBox img {width: 100%;}
 
 .efftList .list2 .effTxt {display: flex;}
@@ -710,10 +736,10 @@ body {overflow-X: hidden;}
 .efftList .list2 .effTxt .right h4 {
     font-family: "GT Sectra Display Bold";
     color: #fff;
-    font-size: 31px;
+    font-size: 1.5vw;
     font-weight: 700;
 }
-.efftList .list2 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list2 .effTxt .right table {text-align: left; margin: 1.5vw 0 0 -0.2vw; width: 100%;}
 .efftList .list2 .effTxt .right table tr {}
 .efftList .list2 .effTxt .right table tr th {
     color: #fff;
@@ -721,7 +747,7 @@ body {overflow-X: hidden;}
     font-size: 0.5vw;
     font-family: arial;
     padding-bottom: 1vw;
-    border-bottom: 2px solid #E05C5F;
+    border-bottom: 0.13vw solid #E05C5F;
 }
 .efftList .list2 .effTxt .right table tr th:nth-child(2) {
     width: 25%;
@@ -733,7 +759,7 @@ body {overflow-X: hidden;}
     font-family: arial;
     font-size: 0.8vw;
     padding: 1.1vw 0;
-    border-bottom: 1px solid #525364;
+    border-bottom: 0.06vw solid #525364;
     font-weight: 700;
 }
 .efftList .list2 .effTxt .right table tr td a {
@@ -748,7 +774,7 @@ body {overflow-X: hidden;}
     font-size: 4.1vw;
     font-family: "GT Sectra Display Bold";
 }
-.efftList .list3 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 84px;}
+.efftList .list3 .effBox {width: 100%; height: 40vw; overflow: hidden; margin-bottom: 4vw;}
 .efftList .list3 .effBox img {width: 100%;}
 
 .efftList .list3 .effTxt {display: flex;}
@@ -771,10 +797,10 @@ body {overflow-X: hidden;}
 .efftList .list3 .effTxt .right h4 {
     font-family: "GT Sectra Display Bold";
     color: #fff;
-    font-size: 31px;
+    font-size: 1.5vw;
     font-weight: 700;
 }
-.efftList .list3 .effTxt .right table {text-align: left; margin: 28px 0 0 -0.2vw; width: 816px;}
+.efftList .list3 .effTxt .right table {text-align: left; margin: 1.5vw 0 0 -0.2vw; width: 100%;}
 .efftList .list3 .effTxt .right table tr {}
 .efftList .list3 .effTxt .right table tr th {
     color: #fff;
@@ -782,7 +808,7 @@ body {overflow-X: hidden;}
     font-size: 0.5vw;
     font-family: arial;
     padding-bottom: 1vw;
-    border-bottom: 2px solid #E05C5F;
+    border-bottom: 0.13vw solid #E05C5F;
 }
 .efftList .list3 .effTxt .right table tr th:nth-child(2) {
     width: 25%;
@@ -794,7 +820,7 @@ body {overflow-X: hidden;}
     font-family: arial;
     font-size: 0.8vw;
     padding: 1.1vw 0;
-    border-bottom: 1px solid #525364;
+    border-bottom: 0.06vw solid #525364;
     font-weight: 700;
 }
 .efftList .list3 .effTxt .right table tr td a {
