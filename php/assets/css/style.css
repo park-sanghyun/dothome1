@@ -1,0 +1,164 @@
+#skip a {
+    position: absolute;
+    left: 0;
+    top: -100px;
+    z-index: 10000;
+    color: #000;
+    border: 1px solid #fff;
+    background: #fff;
+    font-size: 18px;
+    padding: 12px 24px;
+    font-family: 'Chosunilbo_myungjo';
+}
+#skip a:focus,
+#skip a:active {
+    top: 0;
+}
+/* header */
+#header {
+    position: fixed;
+    left: 0; top: 0;
+    z-index: 2000;
+    width: 100%;
+    color: #fff;
+    height: 82px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #2E2E30;
+}
+#header .site {flex: 1 1 30%;}
+#header .site a {
+    position: relative;
+    text-transform: capitalize;
+    display: block;
+    padding-left: 40px;
+    border-right: 1px solid #2E2E30;
+    width: 175px;
+    height: 82px;
+    padding: 32px 27px 27px 60px;
+    text-align: center;
+    box-sizing: border-box;
+    font-family: 'Rajdhani';
+}
+#header .site a::before {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 36px;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+}
+#header .site a::after {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 46px;
+    width: 30px;
+    height: 1px;
+    background: #fff;
+}
+#header .logo {
+    flex: 1 1 30%;
+    text-align: center;
+    font-family: "Saol Display Regular";
+    font-size: 28px;
+}
+#header .logo a {
+    padding: 0 10px 5px 10px;
+}
+#header .nav {
+    flex: 1 1 30%;
+    text-align: right;
+}
+#header .nav ul {
+    padding-right: 20px;
+}
+#header .nav li {
+    display: inline-block;
+    padding-left: 5px;
+}
+#header .nav li a {
+    display: block;
+    font-size: 16px;
+    font-family: 'Rajdhani', 'Chosunilbo_myungjo';
+}
+#header.black {
+    background: #000;
+}
+#mainCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mainText {
+    font-size: 10vw;
+    font-family: "Saol Display Regular";
+    font-weight: normal;
+    line-height: 9vw;
+}
+#signUpCont {
+    height: 100vh;
+    background: #000;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Chosunilbo_myungjo';
+}
+.signUp {
+    width: 300px;
+}
+.signUp h1 {
+    text-align: center;
+    font-size: 18px;
+}
+.signUp h1 strong {
+    font-weight: normal;
+    display: block
+}
+.signUp .input-text {
+    border: 1px solid #fff;
+    background: #000;
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+.signUp .birth {
+    display: flex;
+    justify-content: space-between;
+}
+.signUp .birth > div {
+    flex: 0 0 30%;
+    text-align: center;
+}
+.signUp .birth > div label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+.signUp .birth > div select {
+    display: block;
+    width: 100%;
+    background: #000;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 10px;
+}
+.signUp .signUpBtn {
+    width: 100%;
+    background: #fff;
+    margin: 10px 0;
+    padding: 15px;
+}
+.signUp .signDesc {
+    text-align: center;
+}
+.signUp .signDesc a {
+    text-decoration: underline;
+}
