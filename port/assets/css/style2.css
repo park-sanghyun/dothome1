@@ -2,17 +2,35 @@
     width: 100%; height: 100vh;
     background: #150045;
     overflow: hidden;
+    user-select: none;
+}
+#header .hdName h2 .text {
+    cursor: pointer;
+    -webkit-text-stroke-color: #DC6966;
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+}
+#header .hdName h2 .Portfolio {
+    background-image: linear-gradient(180deg, #DC6966 0%, #DC6966 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 0%;
+}
+#header .hdName h2 .Portfolio:hover {
+    background-size: 100% 200%;
 }
 .hdName h2 {
     font-size: 8.2vw;
     margin: -3.2vw 0 0 13vw;
     color: #150045;
-    text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966;
+    /* text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966; */
     font-family: "GT Sectra Display Bold"; 
 }
 .hdMenu {
-    /* width: 83px; height: 73px; */
-    width: 4.7639vw; height: 4.0694vw;
+    width: 83px; height: 73px;
+    /* width: 4.7639vw; height: 4.0694vw; */
     background: #ED6062;
     position: absolute;
     left: 0; top: 10vw;
@@ -24,28 +42,32 @@
 }
 .hdMenu a span {
     position: absolute;
-    left: 2.5vw; top: 1.6vw;
+    left: 50%; top: 38%;
     transform: rotate(-90deg);
     color: #fff;
-    font-size: 0.6vw;
-    letter-spacing: 0.2vw;
+    font-size: 14px;
+    letter-spacing: 2px;
     font-weight: 700;
     font-family: 'Arial';
 }
 .header_item {
+    width: 100%;
     margin-top: 17.5vw;
-    display: inline-flex;
+    display: flex;
     justify-content: left;
     align-items: center; 
     color: #fff;
     z-index: -100;
-    width: 100%; height: 0.15vw;
+    width: 100%; height: 0.3vw;
     background: #ED6062;
 }
 .header_item .nav_link {
-    margin-right: 15vw;
+    white-space: nowrap;
+    display: flex;
+    flex-wrap: nowrap;
+    cursor: pointer;
+    width: 100%;
     margin-top: 0;
-    display: inline-block;
 }
 .header_item .nav_link:nth-child(1) {
     margin-left: 5vw;
@@ -56,11 +78,61 @@
     color: #fff;
     position: relative;
 } 
-.header_item .nav_link a span {
-    font-size: 0.73vw;
+.header_item .nav_link a .num {
+    font-size: 1vw;
     font-family: 'Arsenal', sans-serif;
     display: inline-block;
     position: absolute;
     left: -2.5vw;
-    top: 5.5vw
+    top: 5.2vw
+}
+.header_item .nav_link a .text {
+    cursor: pointer;
+    -webkit-text-stroke-color: #fff;
+    -webkit-text-stroke-width: 0.02em;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-repeat: no-repeat;
+    transition: background-size .5s cubic-bezier(0.67, 0.01, 0.15, 0.98);
+    padding-right: 15vw;
+}
+.header_item .nav_link a .about {
+    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+.header_item .nav_link a .about:hover {
+    background-size: 100% 0%;
+}
+.header_item .nav_link a .site {
+    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+.header_item .nav_link a .site:hover {
+    background-size: 100% 0%;
+}
+.header_item .nav_link a .ani {
+    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+.header_item .nav_link a .ani:hover {
+    background-size: 100% 0%;
+}
+.header_item .nav_link a .effect {
+    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+.header_item .nav_link a .effect:hover {
+    background-size: 100% 0%;
+}
+.header_item .nav_link a .react {
+    background-image: linear-gradient(180deg, #fff 0%, #fff 50%, transparent 50.1%);
+    background-position: 100% 0%;
+    background-size: 100% 200%;
+}
+.header_item .nav_link a .react:hover {
+    background-size: 100% 0%;
 }
