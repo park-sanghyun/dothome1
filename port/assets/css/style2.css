@@ -1,0 +1,66 @@
+#header {
+    width: 100%; height: 100vh;
+    background: #150045;
+    overflow: hidden;
+}
+.hdName h2 {
+    font-size: 8.2vw;
+    margin: -3.2vw 0 0 13vw;
+    color: #150045;
+    text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966;
+    font-family: "GT Sectra Display Bold"; 
+}
+.hdMenu {
+    /* width: 83px; height: 73px; */
+    width: 4.7639vw; height: 4.0694vw;
+    background: #ED6062;
+    position: absolute;
+    left: 0; top: 10vw;
+    z-index: 100;
+}
+.hdMenu a {
+    color: #fff;
+    font-size: 0.6vw;
+}
+.hdMenu a span {
+    position: absolute;
+    left: 2.5vw; top: 1.6vw;
+    transform: rotate(-90deg);
+    color: #fff;
+    font-size: 0.6vw;
+    letter-spacing: 0.2vw;
+    font-weight: 700;
+    font-family: 'Arial';
+}
+.header_item {
+    margin-top: 17.5vw;
+    display: inline-flex;
+    justify-content: left;
+    align-items: center; 
+    color: #fff;
+    z-index: -100;
+    width: 100%; height: 0.15vw;
+    background: #ED6062;
+}
+.header_item .nav_link {
+    margin-right: 15vw;
+    margin-top: 0;
+    display: inline-block;
+}
+.header_item .nav_link:nth-child(1) {
+    margin-left: 5vw;
+}
+.header_item .nav_link a {
+    font-size: 10.2vw;
+    font-family: "GT Sectra Display Bold";
+    color: #fff;
+    position: relative;
+} 
+.header_item .nav_link a span {
+    font-size: 0.73vw;
+    font-family: 'Arsenal', sans-serif;
+    display: inline-block;
+    position: absolute;
+    left: -2.5vw;
+    top: 5.5vw
+}
