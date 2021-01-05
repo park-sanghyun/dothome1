@@ -24,21 +24,21 @@
         </div>
         <div class="header_item">
             <div class="nav_link">
+                <div></div>
                 <a href="#" class="menu--word"><span class="num">01</span><span class="about text">about</span></a>
                 <a href="#" class="menu--word"><span class="num">02</span><span class="site text">site</span></a>
                 <a href="#" class="menu--word"><span class="num">03</span><span class="ani text">animation</span></a>
                 <a href="#" class="menu--word"><span class="num">04</span><span class="effect text">effect</span></a>
                 <a href="#" class="menu--word"><span class="num">05</span><span class="react text">react</span></a>
-
+            </div>
+            <!-- <div class="nav_link">
             </div>
             <div class="nav_link">
             </div>
             <div class="nav_link">
             </div>
             <div class="nav_link">
-            </div>
-            <div class="nav_link">
-            </div>
+            </div> -->
         </div>
     </header>
     <!-- //header -->
@@ -71,7 +71,7 @@
 
             for (let i = 0; i < width + 1; i++) {
                 const clone = word.cloneNode(true)
-                word.parentNode.appendChild(clone)
+                word.parentNode.append(clone)
                 cloned.push(clone)
             }
         }
@@ -84,10 +84,6 @@
         window.addEventListener('resize', calculate)
         window.addEventListener('load', calculate)
 
-
-        /*--------------------
-        Animate
-        --------------------*/
         const animate = () => {
             // Acceleration
             acc += 0.1
