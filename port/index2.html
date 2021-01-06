@@ -88,9 +88,13 @@
                             <a href="#" class="next">next</a>
                         </div>
                     </div>
+                    <div class="slider-dot">
+
+                    </div>
                     <div class="img-text">
                         <p>About <span>me</span></p>
                     </div>
+                    
                 </div>
             </div>
         </section>
@@ -176,36 +180,59 @@
         const sliderImg = $(".slider-img");
         const slider = $(".slider");
         const sliderBtn = $(".slider-btn");
+        const sliderDot = $(".slider-dot");
  
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderHeight = slider.outerHeight();
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let sliderShowNumber = 1;
         let currentIndex = 0;
-        let slisderCount = slider.length -1;
-        let sliderWidth = slider.width();
-        let sliderHeight = slider.height();
-        let sliderTotalWidth = sliderWidth * slisderCount;
+        let dotIndex = "";
 
-        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth});
-        $(".slider:last-child").prependTo(sliderImg);
 
-        function moveLeft(){
-            sliderImg.animate({ left: + sliderWidth }, 400 , function(){
-                $(".slider:last-child").prependTo(sliderImg);
-                sliderImg.css("left","");
-            });
-        }
-        function moveRight(){
-            sliderImg.animate({ left: - sliderWidth }, 400 , function(){
-                $(".slider:first-child").appendTo(sliderImg);
-                sliderImg.css("left","");
-            });
-        }
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight});
 
-        sliderBtn.find(".prev").click(function(e){
-            e.preventDefault()
-            moveLeft();
+        // 이미지 움직이기
+        function gotoSlider(index){
+            sliderImg.animate({ left: -sliderWidth * index }, 400);
+            currentIndex = index;
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        };
+        
+        // 이미지 갯수만큼 닷 버튼 만들기
+        slider.each(function(){
+            dotIndex += "<a href='#'></a>";
+            // dotIndex += "<a href='#'>"+ (index+1) + "</a>";
+            // let name = $(this).find("img").attr("alt");
+            // dotIndex += "<a href='#'>"+ name + "</a>";
         });
-        sliderBtn.find(".next").click(function(e){
-            e.preventDefault()
-            moveRight();
+        sliderDot.html(dotIndex);
+        sliderDot.find("a").eq(0).addClass("active");
+
+        // 닷 버튼 클릭하기
+        sliderDot.on("click","a", function(e){
+            e.preventDefault();
+            gotoSlider($(this).index());
+        });
+
+        // 버튼 클릭하기
+        sliderBtn.on("click","a", function(e){
+            e.preventDefault();
+            let nextIndex = (currentIndex + 1) % sliderCount;
+            let prevIndex = (currentIndex - 1) % sliderCount;
+            if( currentIndex == 0 ) prevIndex = sliderCount -1;
+            
+            
+            // console.log("nextIndex :" + nextIndex);
+            console.log("prevIndex :" + prevIndex);
+
+
+            if( $(this).hasClass("prev")){
+                gotoSlider(prevIndex);
+            } else {
+                gotoSlider(nextIndex);
+            }
         });
     </script>
 </body>
