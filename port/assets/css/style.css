@@ -1,5 +1,5 @@
 body {overflow-X: hidden;}
-.container {width: 1422px; height: inherit; margin: 0 auto;}
+.container {width: 100%; height: inherit; margin: 0 auto;}
 #about {width: 100%; background: #150045;}
 #mySelf {width: 100%; background: #150045;}
 #siteTitle {width: 100%; background: #150045;}

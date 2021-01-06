@@ -1,9 +1,12 @@
-#header {
-    width: 100%; height: 100vh;
-    background: #150045;
-    overflow: hidden;
-    user-select: none;
-}
+/* 레이아웃 */
+#header {width: 100%; height: 50vw; background: #150045; overflow: hidden; user-select: none;}
+#contents {width: 100%;}
+#about {width: 100%; height: 50vw; background: #150045; display: flex; justify-content: center; align-items: center;}
+
+/* 컨테이너 */
+.container {width: 100%; margin: 0 auto; }
+
+/* 헤더영역 */
 #header .hdName h2 .text {
     cursor: pointer;
     -webkit-text-stroke-color: #DC6966;
@@ -23,12 +26,12 @@
 }
 .hdName h2 {
     font-size: 8.2vw;
-    margin: -3.2vw 0 0 13vw;
+    margin: -3.2vw 0 0 6vw;
     color: #150045;
     /* text-shadow: -2px 0 #DC6966, 0 2px #DC6966, 2px 0 #DC6966, 0 -2px #DC6966; */
     font-family: "GT Sectra Display Bold"; 
 }
-.hdMenu {
+.nav {
     width: 83px; height: 73px;
     /* width: 4.7639vw; height: 4.0694vw; */
     background: #ED6062;
@@ -36,11 +39,11 @@
     left: 0; top: 10vw;
     z-index: 100;
 }
-.hdMenu a {
+.nav a {
     color: #fff;
     font-size: 0.6vw;
 }
-.hdMenu a span {
+.nav a span {
     position: absolute;
     left: 50%; top: 38%;
     transform: rotate(-90deg);
@@ -51,7 +54,6 @@
     font-family: 'Arial';
 }
 .header_item {
-    width: 100%;
     margin-top: 17.5vw;
     display: flex;
     justify-content: left;
@@ -64,7 +66,7 @@
 .header_item .nav_link {
     white-space: nowrap;
     display: flex;
-    flex-wrap: nowrap;
+    /* flex-wrap: nowrap; */
     cursor: pointer;
     width: 100%;
     margin-top: 0;
@@ -82,10 +84,13 @@
     font-size: 1vw;
     font-family: 'Arsenal', sans-serif;
     display: inline-block;
+    
     position: absolute;
     left: -2.5vw;
     top: 5.2vw
 }
+
+/* 헤더 오버 효과 */
 .header_item .nav_link a .text {
     cursor: pointer;
     -webkit-text-stroke-color: #fff;
@@ -135,4 +140,31 @@
 }
 .header_item .nav_link a .react:hover {
     background-size: 100% 0%;
+}
+
+/* about */
+.about {}
+.about h2 {
+    color: #fff;
+    text-align: center;
+    font-family: "GT Sectra Display Bold";
+    font-size: 3.8vw;
+    line-height: 1.4;
+}
+.about h2 span {
+    font-family: 'Cafe24Dangdanghae';
+}
+.about h2 span em {
+    color: #ABE1FA;
+}
+.about ul {
+    margin-top: 3.5vw;
+    width: 100%;
+}
+.about ul li {
+    text-align: center;
+    color: #fff;
+    font-family: 'SDKukdetopokki-Lt';
+    line-height: 1.5;
+    font-size: 0.8vw;
 }
