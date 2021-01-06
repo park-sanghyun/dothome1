@@ -65,19 +65,29 @@
         <section id="aboutMe">
             <div class="container">
                 <div class="aboutMe">
-                    <div class="box">
+                    <div class="centerBox">
+                        <div class="box"></div>
                         <!-- <div class="img">
                             
                             <img src="./assets/img/about01.png" alt="이미지" >
                             <p>About <span>me</span></p>
                         </div> -->
-                        <figure class="img">
-                            <img src="./assets/img/about01.png" alt="이미지">
-                            <figcaption>
-                                <p>About <span>me</span></p>
-                            </figcaption>
-                        </figure>
-                        <a class="box-scroll" href="#" aria-hidden="true" rel="noopner"><span></span></a>
+                        
+                        <!-- <a class="box-scroll" href="#" aria-hidden="true" rel="noopner"><span></span></a> -->
+                    </div>
+                    <div class="img-wrap">
+                        <div class="slider-img">
+                            <div class="slider s1"><img src="./assets/img/about01.png" alt="이미지"></div>
+                            <div class="slider s2"><img src="./assets/img/about01.png" alt="이미지"></div>
+                            <div class="slider s3"><img src="./assets/img/about01.png" alt="이미지"></div>
+                        </div>
+                        <div class="slider-btn">
+                            <a href="#" class="prev">prev</a>
+                            <a href="#" class="next">next</a>
+                        </div>
+                    </div>
+                    <div class="img-text">
+                        <p>About <span>me</span></p>
                     </div>
                 </div>
             </div>
@@ -157,6 +167,44 @@
             requestAnimationFrame(animate)
         }
         animate()
+    
     </script>  
+    <script>
+        const sliderWrap = $(".img-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+ 
+        let currentIndex = 0;
+        let slisderCount = slider.length -1;
+        let sliderWidth = slider.width();
+        let sliderHeight = slider.height();
+        let sliderTotalWidth = sliderWidth * slisderCount;
+
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth});
+        $(".slider:last-child").prependTo(sliderImg);
+
+        function moveLeft(){
+            sliderImg.animate({ left: + sliderWidth }, 400 , function(){
+                $(".slider:last-child").prependTo(sliderImg);
+                sliderImg.css("left","");
+            });
+        }
+        function moveRight(){
+            sliderImg.animate({ left: - sliderWidth }, 400 , function(){
+                $(".slider:first-child").appendTo(sliderImg);
+                sliderImg.css("left","");
+            });
+        }
+
+        sliderBtn.find(".prev").click(function(e){
+            e.preventDefault()
+            moveLeft();
+        });
+        sliderBtn.find(".next").click(function(e){
+            e.preventDefault()
+            moveRight();
+        });
+    </script>
 </body>
 </html>

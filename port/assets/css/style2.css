@@ -1,8 +1,8 @@
 /* 레이아웃 */
-#header {width: 100%; height: 50vw; background: #150045; overflow: hidden; user-select: none;}
+#header {width: 100%; height: 75vw; background: #150045; overflow: hidden; user-select: none;}
 #contents {width: 100%;}
-#about {width: 100%; height: 60vw; background: #150045; display: flex; justify-content: center; align-items: center;}
-#aboutMe {width: 100%; height: 50vw; background: #150045; position: relative;}
+#about {width: 100%; height: 75vw; background: #150045; display: flex; justify-content: center; align-items: center;}
+#aboutMe {width: 100%; height: 75vw; background: #150045; position: relative;}
 
 /* 컨테이너 */
 .container {width: 100%; margin: 0 auto; }
@@ -160,6 +160,7 @@
 }
 .about ul {
     margin-top: 3.5vw;
+    
 }
 .about ul li {
     width: 100%;
@@ -173,25 +174,47 @@
 /* aboutMe */
 .aboutMe {
     width: 100%; height: inherit;
+}
+.aboutMe .centerBox {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.aboutMe .box {
-    width: 12vw; height: 50vw;
+.aboutMe .centerBox .box {
+    width: 12vw; height: 75vw;
     background: #ED6062;
 }
-.aboutMe .img {width: 100%;}
-.aboutMe .img img {
+
+.aboutMe .img-text p {
+    position: absolute;
+    left: 23.9%; top: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    z-index: 110;
+}
+.aboutMe .img-text p::before {
+    content: '';
+    position: absolute;
+    left: -4vw; top: 4vw;
+    width: 1.8vw; height: 0.2vw;
+    background: #fff;
+}
+.aboutMe .img-text p span {
+    display: block;
+}
+/* .aboutMe .img-wrap {width: 100%;}
+.aboutMe .img-wrap img {
     position: absolute;
     left: 50%; top: 50%;
     transform: translate(-50%, -50%);
     width: 37vw; height: 37vw;
     background-image: url(../img/about01.png) nowrap center center;
 }
-.aboutMe .img figcaption {
+.aboutMe .img-wrap figcaption {
 }
-.aboutMe .img figcaption p {
+.aboutMe .img-wrap figcaption p {
     position: absolute;
     left: 23.9%; top: 60%;
     transform: translate(-50%, -50%);
@@ -199,16 +222,56 @@
     color: #fff;
     font-family: "GT Sectra Display Bold";
 }
-.aboutMe .img figcaption p::before {
+.aboutMe .img-wrap figcaption p::before {
     content: '';
     position: absolute;
     left: -4vw; top: 4vw;
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
-.aboutMe .img p span {
+.aboutMe .img-wrap p span {
     display: block;
+} */
+
+/* slider */
+.img-wrap {
+    width: 37vw; height: 37vw;
+    overflow: hidden;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 100;
 }
+.slider-img {
+    display: flex;
+    position: relative;
+    
+}
+.slider-img .slider {
+    width: 37vw; height: 37vw;
+}
+.slider-img .slider img {
+    width: 37vw; height: 37vw;
+}
+.slider-btn a {
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 1.5vw;
+    background: rgba(0,0,0,0.5);
+    text-transform: capitalize;
+    font-family: var(--font-cafe);
+    color : #fff;
+}
+.slider-btn a.prev {
+    left: 0;
+}
+.slider-btn a.next {
+    right: 0;
+}
+
+
+
+
 @media (max-width: 1220px){
     .container {width: 100%;}
 }
