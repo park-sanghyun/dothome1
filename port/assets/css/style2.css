@@ -1,8 +1,10 @@
 /* 레이아웃 */
-#header {width: 100%; height: 75vw; background: #150045; overflow: hidden; user-select: none;}
+#header {width: 100%; height: 50vw; background: #150045; overflow: hidden; user-select: none;}
 #contents {width: 100%;}
 #about {width: 100%; height: 75vw; background: #150045; display: flex; justify-content: center; align-items: center;}
-#aboutMe {width: 100%; height: 75vw; background: #150045; position: relative;}
+#aboutMe {width: 100%; background: #150045; position: relative;}
+#siteTitle {width: 100%; background: #150045;}
+#siteList {width: 100%; height: 100vh; background: #150045;}
 
 /* 컨테이너 */
 .container {width: 100%; margin: 0 auto; }
@@ -50,7 +52,7 @@
     transform: rotate(-90deg);
     color: #fff;
     font-size: 14px;
-    letter-spacing: 2px;
+    letter-spacing: 1px;
     font-weight: 700;
     font-family: 'Arial';
 }
@@ -186,7 +188,6 @@
     background: #ED6062;
     z-index: 1;
 }
-
 .aboutMe .img-text p {
     position: absolute;
     left: 23.9%; top: 60%;
@@ -206,34 +207,6 @@
 .aboutMe .img-text p span {
     display: block;
 }
-/* .aboutMe .img-wrap {width: 100%;}
-.aboutMe .img-wrap img {
-    position: absolute;
-    left: 50%; top: 50%;
-    transform: translate(-50%, -50%);
-    width: 37vw; height: 37vw;
-    background-image: url(../img/about01.png) nowrap center center;
-}
-.aboutMe .img-wrap figcaption {
-}
-.aboutMe .img-wrap figcaption p {
-    position: absolute;
-    left: 23.9%; top: 60%;
-    transform: translate(-50%, -50%);
-    font-size: 6vw;
-    color: #fff;
-    font-family: "GT Sectra Display Bold";
-}
-.aboutMe .img-wrap figcaption p::before {
-    content: '';
-    position: absolute;
-    left: -4vw; top: 4vw;
-    width: 1.8vw; height: 0.2vw;
-    background: #fff;
-}
-.aboutMe .img-wrap p span {
-    display: block;
-} */
 
 /* slider */
 .img-wrap {
@@ -280,29 +253,289 @@
     
 }
 .slider-dot a {
-    width: 20px;
-    height: 20px;
+    width: 1.38vw;
+    height: 1.38vw;
     display: inline-block;
     background: rgba(0,0,0,0.3);
     text-indent: -9999px;
     border-radius: 50%;
-    margin: 5px;
+    margin: 0.34vw;
     transition: background 0.3s;
 }
 .slider-dot a.active {
     background: rgba(255,255,255,0.9);
 }
 
-
-
-
-@media (max-width: 1220px){
-    .container {width: 100%;}
+/* siteTitle */
+.siteTitle {
+    height: 75vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.siteTitle .left {
+    flex: 0 0 25%;
+}
+.siteTitle .left h2 {
+    color: #fff;
+    font-size: 8.2vw;
+    line-height: 1.1;
+    font-family: "GT Sectra Display Bold";
+    padding-bottom: 3vw;
+}
+.siteTitle .left h2 span {
+    display: block;
+}
+.siteTitle .left ul li {
+    color: #8CB8FA;
+    font-size: 1.6vw;
+    font-family: Arial;
+    padding: 0.5vw 0;
+}
+.siteTitle .left ul li span {
+    color: #fff;
+    font-size: 0.7vw;
+    padding-right: 1vw;
+}
+.siteTitle .right {
+    flex: 0 0 50%;
+    margin-top: 3vw;
+}
+.siteTitle .right img {
+    width: 100%; height: 100%;
+    margin-left: -3vw;
+}
+
+/* siteList */
+.content {
+    margin: 0 auto ;
+    width: 100%;
+    overflow: hidden;
+}
+.siteList {
+    position: relative;
+}
+.siteList .centbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.siteList .centbox .box {
+    width: 12vw; height: 50vw;
+    background: #ED6062;
+    z-index: 1;
+    opacity: 0;
+}
+.siteList .contents {
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+}
+.content-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.content-item .left {
+    margin: -1vw 5vw 0 -5vw;
+}
+.left .content-item-imgWrap {
+    width: 47vw;
+    position: relative;
+   
+}
+.left .content-item-imgWrap .content-item-num {
+    color: #fff;
+    /* opacity: 0.3; */
+    font-family: 'Poppins', sans-serif;
+    font-weight: 100;
+    font-size: 25vw;
+    position: absolute;
+    left: -14vw; top: -20vw;
+    z-index: -1;
+}
+.left .content-item-imgWrap img {
+    margin-left: 1vw;
+    width: 47vw; height: 30vw;
+}
+.left .content-item-imgWrap figcaption p {
+    color: #fff;
+    position: absolute;
+    left: -2vw; bottom: 0;
+    font-size: 5vw;
+    font-family: "GT Sectra Display Bold";
+    padding: 0 0 1.3vw 7vw;
+}
+.content-item-desc::before {
+    content: '';
+    position: absolute;
+    left: 2vw; top: 3.5vw;
+    width: 1.8vw; height: 0.2vw;
+    background: #fff;
+}
+.content-item-desc span {display: block;}
+
+.content-item .right {
+    width: 22vw;
+    margin-top: -3vw;
+    color: #fff;
+}
+.content-item .right .rTitle {
+    font-size: 1.5vw;
+    padding-bottom: 4vw;
+    font-family: 'SDKukdetopokki-Lt';
+}
+.content-item .right .rList {display: flex;}
+.content-item .right .rList li {
+    width: 150vw; height: 2.5vw;
+    line-height: 3;
+    margin: 0 1vw 1.3vw 0;
+    font-size: 0.9vw;
+    text-align: center;
+    border: 1px solid #ED6062;
+    border-radius: 0.1vw;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+}
+.content-item .right .rLink {
+    margin-top: 2.5vw;
+}
+.content-item .right .rLink a:nth-child(1):before {
+    content: "";
+    width: 0.15vw; height: 3vw;
+    background: #ED6062;
+    position: absolute;
+    left: 0; top: -1.15vw;
+}
+.content-item .right .rLink a {
+    color: #ED6062;
+    font-size: 0.4vw;
+    padding: 0 0 0 4vw;
+    font-family: Arial;
+    position: relative;
+}
+
+/* reveal - imgWrap */
+.reveal > img {opacity: 0;}
+.reveal > .content-item-num {opacity: 0;}
+.reveal > figcaption > p {opacity: 0;}
+.reveal > div {opacity: 0;}
+.reveal.show > img {animation: opacitiy 1000ms 200ms linear forwards;}
+.reveal.show > .content-item-num {animation: opacitiy1 1000ms 200ms linear forwards;}
+.reveal.show > figcaption > p {animation: opacitiy2 1000ms 200ms linear forwards;}
+.reveal.show > div {animation: opacitiy3 1000ms 200ms linear forwards;}
+
+
+.reveal {
+    position: relative;
+} 
+.left .reveal.show {
+    width: 92.5%;
+}
+
+.reveal.reveal-two::after {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 0;
+    height: 100%;
+    z-index: 100;
+    background: #ED6062;
+}
+.reveal.reveal-TTB::before {
+    content: '';
+    position: absolute;
+    right: 0; top: 0;
+    width: 100%;
+    height: 0;
+    z-index: 100;
+}
+.reveal.reveal-TTB2::before {
+    content: '';
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%);
+    width: 10%;
+    height: 0;
+    z-index: 100;
+    background: #000;
+}
+
+
+/* 한가지 */
+.reveal.show::before {
+    animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
+}
+.reveal.reveal-TTB.show::before {
+    animation: reveal-TTB 1000ms cubic-bezier(.77,0,.18,1);
+}
+.reveal.reveal-TTB2.show::before {
+    animation: reveal-TTB2 1000ms cubic-bezier(.77,0,.18,1);
+}
+/* 두가지 */
+.reveal.reveal-two.show::after {
+    animation: reveal-two 1000ms 300ms cubic-bezier(.77,0,.18,1);
+}
+
+.reveal.reveal-two.reveal-TTB.show::after {
+    animation: reveal-two-TTB 1000ms 300ms cubic-bezier(.77,0,.18,1);
+}
+
+
+@keyframes reveal {
+    0% {width: 0; left: 0;}
+    50% {width: 100%; left: 0;}
+    80% {width: 100%; left: 0;}
+    100% {width: 0; left: 100%;}
+}
+@keyframes reveal-two {
+    0% {width: 0; left: 0;}
+    50% {width: 100%; left: 0;}
+    80% {width: 100%; left: 0;}
+    100% {width: 0; left: 100%;}
+}
+
+@keyframes reveal-TTB {
+    0% {height: 0; top: 0;}
+    50% {height: 100%; top: 0;}
+    80% {height: 100%; top: 0;}
+    100% {height: 0; top: 100%;}
+}
+
+@keyframes opacitiy {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    70% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes opacitiy1 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    90% {opacity: 0.3;}
+    100% {opacity: 0.3;}
+}
+@keyframes opacitiy2 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    70% {opacity: 1;}
+    100% {opacity: 1;}
+}
+@keyframes opacitiy3 {
+    0% {opacity: 0;}
+    60% {opacity: 0;}
+    90% {opacity: 1;}
+    100% {opacity: 1;}
+}
+
+
+
+
+
+@media (max-width: 1220px){}
 @media (max-width: 1024px){}
 @media (max-width: 960px){}
 @media (max-width: 768px){}
 @media (max-width: 600px){}
-@media (max-width: 300px){
-    .aboutMe .img figcaption p {left: 22%; top: 52.5%;}
-}
+@media (max-width: 300px){}
