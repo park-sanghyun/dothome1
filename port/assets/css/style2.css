@@ -412,11 +412,15 @@
 .reveal > img ,
 .reveal > .content-item-num,
 .reveal > figcaption > p,
+.right.reveal.reveal-TTB > div, 
 .centbox.reveal.reveal-TTB > div {opacity: 0;}
-.reveal.show > img {animation: opacitiy 1000ms 200ms linear forwards;}
-.reveal.show > figcaption > p {animation: opacitiy2 1000ms 200ms linear forwards;}
-.reveal.show > div {animation: opacitiy3 1000ms 200ms linear forwards;}
-.reveal.show > .content-item-num {animation: opacitiy1 1000ms 200ms linear forwards;}
+
+.centbox.reveal.reveal-TTB.show > div {animation: opacitiy 500ms 200ms linear forwards;}
+.reveal.show > .content-item-num {animation: opacitiy1 500ms 200ms linear forwards;}
+.reveal.show > img {animation: opacitiy 2000ms 200ms linear forwards;}
+.reveal.show > figcaption > p {animation: opacitiy 2000ms 200ms linear forwards;}
+.right.reveal.reveal-TTB.show > div {animation: opacitiy 2500ms 200ms linear forwards;}
+
 
 .reveal {
     position: relative;
