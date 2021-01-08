@@ -4,7 +4,7 @@
 #about {width: 100%; height: 75vw; background: #150045; display: flex; justify-content: center; align-items: center;}
 #aboutMe {width: 100%; background: #150045; position: relative;}
 #siteTitle {width: 100%; background: #150045;}
-#siteList {width: 100%; height: 100vh; background: #150045;}
+#siteList {width: 100%; height: 50vw; background: #150045;}
 
 /* 컨테이너 */
 .container {width: 100%; margin: 0 auto; }
@@ -238,19 +238,14 @@
     font-family: var(--font-cafe);
     color : #fff;
 }
-.slider-btn a.prev {
-    left: 0;
-}
-.slider-btn a.next {
-    right: 0;
-}
+.slider-btn a.prev {left: 0;}
+.slider-btn a.next {right: 0;}
 .slider-dot {
     position: absolute;
     left: 50%;
     bottom: 20%;
     transform: translateX(-50%);
     z-index: 2;
-    
 }
 .slider-dot a {
     width: 1.38vw;
@@ -262,13 +257,11 @@
     margin: 0.34vw;
     transition: background 0.3s;
 }
-.slider-dot a.active {
-    background: rgba(255,255,255,0.9);
-}
+.slider-dot a.active {background: rgba(255,255,255,0.9);}
 
 /* siteTitle */
 .siteTitle {
-    height: 75vw;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -303,7 +296,7 @@
 }
 .siteTitle .right img {
     width: 100%; height: 100%;
-    margin-left: -3vw;
+    margin-left: -2vw;
 }
 
 /* siteList */
@@ -344,7 +337,6 @@
 .left .content-item-imgWrap {
     width: 47vw;
     position: relative;
-   
 }
 .left .content-item-imgWrap .content-item-num {
     color: #fff;
@@ -376,7 +368,6 @@
     background: #fff;
 }
 .content-item-desc span {display: block;}
-
 .content-item .right {
     width: 22vw;
     margin-top: -3vw;
@@ -418,21 +409,20 @@
 }
 
 /* reveal - imgWrap */
-.reveal > img {opacity: 0;}
-.reveal > .content-item-num {opacity: 0;}
-.reveal > figcaption > p {opacity: 0;}
-.reveal > div {opacity: 0;}
+.reveal > img ,
+.reveal > .content-item-num,
+.reveal > figcaption > p,
+.centbox.reveal.reveal-TTB > div {opacity: 0;}
 .reveal.show > img {animation: opacitiy 1000ms 200ms linear forwards;}
-.reveal.show > .content-item-num {animation: opacitiy1 1000ms 200ms linear forwards;}
 .reveal.show > figcaption > p {animation: opacitiy2 1000ms 200ms linear forwards;}
 .reveal.show > div {animation: opacitiy3 1000ms 200ms linear forwards;}
-
+.reveal.show > .content-item-num {animation: opacitiy1 1000ms 200ms linear forwards;}
 
 .reveal {
     position: relative;
 } 
 .left .reveal.show {
-    width: 92.5%;
+    width: 48vw;
 }
 
 .reveal.reveal-two::after {
@@ -466,14 +456,12 @@
 
 /* 한가지 */
 .reveal.show::before {
-    animation: reveal 1000ms cubic-bezier(.77,0,.18,1);
+    animation: reveal 19s00ms cubic-bezier(.77,0,.18,1);
 }
 .reveal.reveal-TTB.show::before {
     animation: reveal-TTB 1000ms cubic-bezier(.77,0,.18,1);
 }
-.reveal.reveal-TTB2.show::before {
-    animation: reveal-TTB2 1000ms cubic-bezier(.77,0,.18,1);
-}
+
 /* 두가지 */
 .reveal.reveal-two.show::after {
     animation: reveal-two 1000ms 300ms cubic-bezier(.77,0,.18,1);
@@ -516,18 +504,7 @@
     90% {opacity: 0.3;}
     100% {opacity: 0.3;}
 }
-@keyframes opacitiy2 {
-    0% {opacity: 0;}
-    60% {opacity: 0;}
-    70% {opacity: 1;}
-    100% {opacity: 1;}
-}
-@keyframes opacitiy3 {
-    0% {opacity: 0;}
-    60% {opacity: 0;}
-    90% {opacity: 1;}
-    100% {opacity: 1;}
-}
+
 
 
 
