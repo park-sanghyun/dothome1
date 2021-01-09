@@ -10,7 +10,11 @@
     height: 2000px;
     background: #150045;
 }
-#section3 {}
+#section3 {
+    width: 100%;
+    height: 2000px;
+    background: #150045;
+}
 #section4 {}
 #section5 {}
 
@@ -27,6 +31,7 @@
     left: 0; top: 0;
     width: 100%;
     height: 80px;
+    z-index: 1000;
 }
 #header h1 {
     color: #ED6061;
@@ -128,4 +133,88 @@
     font-size: 16px;
     line-height: 1.7;
     padding: 0 20vw;
+}
+
+
+/* sec3 */
+.sec3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.sec3 .box {
+    width: 12vw; height: 100vh;
+    background: #ED6061;
+}
+.slider-wrap {
+    width: 37vw; height: 37vw;
+    overflow: hidden;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.slider-img {
+    display: flex;
+    position: relative;
+    width: 37vw; height: 37vw;
+}
+.slider-img .slider {
+    position: relative;
+}
+.slider-img .slider img {
+    width: 37vw; height: 37vw;
+}
+.slider-btn a {
+    position: absolute; top: 50%;
+    transform: translateY(-50%);
+    z-index: 1000;
+    padding: 20px;
+    background: rgba(0,0,0,0.5);
+    text-transform: capitalize;
+    font-family: var(--font-cafe);
+    color : #fff;
+}
+.slider-btn a.prev {
+    left: 0;
+}
+.slider-btn a.next {
+    right: 0;
+}
+.slider-dot {
+    position: absolute;
+    left: 50%;
+    bottom: 2%;
+    transform: translateX(-50%);
+    z-index: 2;
+}
+.slider-dot a {
+    width: 1.38vw;
+    height: 1.38vw;
+    display: inline-block;
+    background: rgba(0,0,0,0.3);
+    text-indent: -9999px;
+    border-radius: 50%;
+    margin: 0.34vw;
+    transition: background 0.3s;
+}
+.slider-dot a.active {background: rgba(255,255,255,0.9);}
+
+.box .img-text p {
+    position: absolute;
+    left: 23.9%; top: 60%;
+    transform: translate(-50%, -50%);
+    font-size: 6vw;
+    color: #fff;
+    font-family: "GT Sectra Display Bold";
+    z-index: 110;
+}
+.box .img-text p::before {
+    content: '';
+    position: absolute;
+    left: -4vw; top: 4vw;
+    width: 1.8vw; height: 0.2vw;
+    background: #fff;
+}
+.box .img-text p span {
+    display: block;
 }

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="./assets/css/font.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style4.css">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">  
+</head>
+<body>
+    
+    <header id="header">
+        <h1>portfolio</h1>
+        <nav class="nav">
+            <span>menu</span>
+        </nav>
+    </header>
+    <!-- //header -->
+
+    <footer id="footer">
+        <div class="link">
+            <a href="#c">01.</a>
+            <a href="#c">02.</a>
+            <a href="#c">03.</a>
+            <a href="#c">04.</a>
+        </div>
+    </footer>
+
+    <div id="contents">
+        <section id="section1">
+            <div class="sec1">
+                <div class="title">
+                    <span>about</span> <span>site</span> <span>animation</span> <span>effect</span> <span>react</span>
+                </div>
+            </div>
+        </section>
+        <!-- //section1 -->
+
+        <section id="section2">
+            <div class="container">
+                <div class="sec2">
+                    <div class="text">   
+                        <h2><strong>안녕하세요!</strong> Frontend Web Developer <em>박상현입니다.</em></h2>
+                        <p>저는 개발자를 꿈꾸던 사람은 아니었습니다. 우연히 접하게 된 개발자의 길은 새로운 세상이었으며, 새로운 세상에 저의 열정을 쏟고 싶다는 마음가짐이 생겨 개발자의 길에 들어서게 되었습니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section2 -->
+
+        <section id="section3">
+            <div class="sec3">
+                <div class="box">
+                    <div class="slider-wrap">
+                        <div class="slider-img">
+                            <div class="slider s1"><img src="./assets/img/about01.png" alt="이미지"></div>
+                            <div class="slider s2"><img src="./assets/img/about02.png" alt="이미지"></div>
+                            <div class="slider s3"><img src="./assets/img/about03.png" alt="이미지"></div>
+                            <div class="slider s4"><img src="./assets/img/about04.png" alt="이미지"></div>
+                            <div class="slider s5"><img src="./assets/img/about05.png" alt="이미지"></div>
+                        </div>
+                        <div class="slider-dot"></div>
+                    </div>
+                    <div class="slider-btn">
+                        <a href="#" class="prev">prev</a>
+                        <a href="#" class="next">next</a>
+                    </div>
+                    <div class="img-text">
+                        <p>About <span>me</span></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
+        <section id="section4"></section><!-- //section4 -->
+        <section id="section5"></section><!-- //section5 -->
+        <section id="section6"></section><!-- //section6 -->
+    </div>
+
+    <!-- script -->
+    <script src="./assets/js/jquery.min_1.12.4.js"></script>
+    <script>
+        const sliderWrap = $(".slider-wrap");
+        const sliderImg = $(".slider-img");
+        const slider = $(".slider");
+        const sliderBtn = $(".slider-btn");
+        const sliderDot = $(".slider-dot");
+ 
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderHeight = slider.outerHeight();
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let sliderShowNumber = 1;
+        let currentIndex = 0;
+        let dotIndex = "";
+
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight});
+
+        // 이미지 움직이기
+        function gotoSlider(index){
+            sliderImg.animate({ left: -sliderWidth * index }, 400);
+            currentIndex = index;
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        };
+        
+        // 이미지 갯수만큼 닷 버튼 만들기
+        slider.each(function(){
+            dotIndex += "<a href='#'></a>";
+        });
+        sliderDot.html(dotIndex);
+        sliderDot.find("a").eq(0).addClass("active");
+
+        // 닷 버튼 클릭하기
+        sliderDot.on("click","a", function(e){
+            e.preventDefault();
+            gotoSlider($(this).index());
+        });
+
+        // 버튼 클릭하기
+        sliderBtn.on("click","a", function(e){
+            e.preventDefault();
+            let nextIndex = (currentIndex + 1) % sliderCount;
+            let prevIndex = (currentIndex - 1) % sliderCount;
+            if( currentIndex == 0 ) prevIndex = sliderCount -1;
+
+            if( $(this).hasClass("prev")){
+                gotoSlider(prevIndex);
+            } else {
+                gotoSlider(nextIndex);
+            }
+        });
+    </script>
+</body>
+</html>
+
+<!-- https://www.stereo.ca/ -->
