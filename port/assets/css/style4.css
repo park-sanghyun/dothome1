@@ -215,6 +215,4 @@
     width: 1.8vw; height: 0.2vw;
     background: #fff;
 }
-.box .img-text p span {
-    display: block;
-}
+.box .img-text p span {display: block;}
