@@ -57,31 +57,32 @@
 
         <section id="section3">
             <div class="sec3">
-                <div class="box">
-                    <div class="slider-wrap">
-                        <div class="slider-img">
-                            <div class="slider s1"><img src="./assets/img/about01.png" alt="이미지"></div>
-                            <div class="slider s2"><img src="./assets/img/about02.png" alt="이미지"></div>
-                            <div class="slider s3"><img src="./assets/img/about03.png" alt="이미지"></div>
-                            <div class="slider s4"><img src="./assets/img/about04.png" alt="이미지"></div>
-                            <div class="slider s5"><img src="./assets/img/about05.png" alt="이미지"></div>
-                        </div>
-                        <div class="slider-dot"></div>
+                <div class="centerBox reveal reveal-TTB">
+                    <div class="box"></div>
+                </div>
+                <div class="slider-wrap reveal reveal-two">
+                    <div class="slider-img">
+                        <div class="slider s1"><img src="./assets/img/about01.png" alt="이미지"></div>
+                        <div class="slider s2"><img src="./assets/img/about02.png" alt="이미지"></div>
+                        <div class="slider s3"><img src="./assets/img/about03.png" alt="이미지"></div>
+                        <div class="slider s4"><img src="./assets/img/about04.png" alt="이미지"></div>
+                        <div class="slider s5"><img src="./assets/img/about05.png" alt="이미지"></div>
                     </div>
-                    <div class="slider-btn">
-                        <a href="#" class="prev">prev</a>
-                        <a href="#" class="next">next</a>
-                    </div>
-                    <div class="img-text">
-                        <p>About <span>me</span></p>
-                    </div>
+                    <div class="slider-dot"></div>
+                </div>
+                <div class="img-text">
+                    <p class="reveal">About <span>me</span></p>
+                </div>
+                <div class="slider-btn reveal">
+                    <a href="#" class="prev">prev</a>
+                    <a href="#" class="next">next</a>
                 </div>
             </div>
         </section>
         <!-- //section3 -->
 
         <section id="section4"></section><!-- //section4 -->
-        <section id="section5"></section><!-- //section5 -->
+        <section id="section5"></section><!-- //section5 --> 
         <section id="section6"></section><!-- //section6 -->
     </div>
 
@@ -136,6 +137,16 @@
             } else {
                 gotoSlider(nextIndex);
             }
+        });
+    </script>
+    <script>
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+            $(".reveal").each(function(){
+                if( scrollTop + $(window).height()/2 > $(this).offset().top ){
+                    $(this).addClass("show");
+                }
+            });
         });
     </script>
 </body>
