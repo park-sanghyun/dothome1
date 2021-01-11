@@ -173,7 +173,7 @@
     left: 50%;
     bottom: 2%;
     transform: translateX(-50%);
-    z-index: 1000;
+    z-index: 2000;
 }
 .slider-dot a {
     width: 1.3vw;
@@ -224,7 +224,8 @@
 .reveal > .box,
 .reveal > a,
 .slider-img.reveal,
-.img-text > .reveal {opacity: 0;}
+.img-text.reveal > p,
+.slider-dot.reveal {opacity: 0;}
 
 .reveal.show > .box,
 .slider-img.reveal.show {
@@ -233,8 +234,11 @@
 .reveal.show > a {
     animation: opacitiy1 800ms 200ms linear forwards;
 }
-.img-text > .reveal.show {
-    animation: opacitiy2 2000ms 200ms linear forwards;
+.slider-dot.reveal.show {
+    animation: opacitiy2 1500ms linear forwards;
+}
+.img-text.reveal.show > p {
+    animation: opacitiy2 1500ms 200ms linear forwards;
 }
 
 .slider-img.reveal {
@@ -244,9 +248,9 @@
     content: '';
     position: absolute;
     right: 0; top: 0;
-    width: 0;
+    width: 0%;
     height: 100%;
-    z-index: 100;
+    z-index: 200;
     background: #fff;
 }
 .slider-img.reveal.show::before {
@@ -261,7 +265,7 @@
     background: #150045;
 }
 .slider-img.reveal.reveal-two.show::after {
-    animation: reveal-two 2000ms 300ms cubic-bezier(.77,0,.18,1);
+    animation: reveal-two 1500ms 300ms cubic-bezier(.77,0,.18,1);
 }
 
 
@@ -278,11 +282,29 @@
     animation: reveal-TTB 1000ms cubic-bezier(.77,0,.18,1);
 }
 
+.img-text.reveal > p::before {
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 0%;
+    height: 100%;
+    z-index: 100;
+    background: #fff;
+}
+.img-text.reveal.show > p::before {
+    animation: reveal1 1400ms 300ms  cubic-bezier(.77,0,.18,1);
+}
 @keyframes reveal {
-    0% {width: 0%; height: 0%;}
-    50% {width: 100%; height: 100%;}
-    80% {width: 100%; height: 100%;}
-    100% {width: 100%; height: 100%;}
+    0% {width: 0%; left: 0%;}
+    50% {width: 0%; left: 0%;}
+    80% {width: 100%; left: 0%;}
+    100% {width: 100; left: 100%;}
+}
+@keyframes reveal1 {
+    0% {width: 0%; left: 0%;}
+    50% {width: 0%; left: 0%;}
+    80% {width: 100%; left: 0%;}
+    100% {width: 100; left: 100%;}
 }
 @keyframes reveal-two {
     0% {width: 0; left: 0;}
@@ -299,8 +321,8 @@
 
 @keyframes opacitiy {
     0% {opacity: 0;}
-    60% {opacity: 0;}
-    70% {opacity: 1;}
+    50% {opacity: 0;}
+    80% {opacity: 1;}
     100% {opacity: 1;}
 }
 @keyframes opacitiy1 {
