@@ -39,70 +39,82 @@
 
         <section id="section2">
             <div class="container">
-<<<<<<< HEAD
                 <div class="sec2">
                     <div class="text">   
-                        <h2><strong>안녕하세요!</strong> Frontend Web Developer <em>박상현입니다.</em></h2>
+                        <h2>
+                            <strong class="split s1">안녕하세요!</strong> 
+                            <em class="split s2">Frontend Web Developer</em> 
+                            <em class="split s3">박상현입니다.</em>
+                        </h2>
                         <p>저는 개발자를 꿈꾸던 사람은 아니었습니다. 우연히 접하게 된 개발자의 길은 새로운 세상이었으며, 새로운 세상에 저의 열정을 쏟고 싶다는 마음가짐이 생겨 개발자의 길에 들어서게 되었습니다.</p>
-=======
-                <div class="siteList">
-                    <div class="centbox reveal reveal-TTB">
-                        <div class="box"></div>
-                    </div>
-                    <div class="contents">
-                        <section id="section1" class="content-item">
-                            <div class="left">
-                                <figure class="content-item-imgWrap reveal reveal-two">
-                                    <span class="content-item-num">01</span>
-                                    <img src="./assets/img/siteimg01.png" alt="이미지" >
-                                    <figcaption>
-                                        <p class="content-item-desc reveal">Webstandard <span>Site</span></p>
-                                    </figcaption>
-                                </figure>
-                            </div>
-                            <div class="right reveal reveal-TTB">
-                                <div class="rTitle">
-                                    <p>
-                                        웹 표준을 준수한 사이트 입니다.
-                                        Skip 메뉴, IR 효과 , 이미지 
-                                        스프라이트 등 웹 접근성을 높여 
-                                        사용자가 이용하기 불편함이 없게 
-                                        제작하였습니다.
-                                    </p>
-                                </div>
-                                <div>
-                                    <ul class="rList">
-                                        <li>웹 표준</li>
-                                        <li>웹 접근성</li>
-                                    </ul>
-                                    <ul class="rList">
-                                        <li>Hover 효과</li>
-                                        <li>Skip 메뉴</li>
-                                    </ul>
-                                    <ul class="rList">
-                                        <li>IR 효과</li>
-                                        <li>이미지 스프라이트</li>
-                                    </ul>
-                                </div>
-                                <div class="rLink reveal">
-                                    <a href="#">VIEW SITE</a>
-                                    <a href="#">VIEW SOURCE</a>
-                                </div>
-                            </div>
-                            
-                        </section>
->>>>>>> 3da37270d906f97f5b2cb62ba4c5ae5c95bd8466
                     </div>
                 </div>
             </div>
         </section>
         <!-- //section2 -->
 
-        <section id="section3"></section><!-- //section3 -->
+        <section id="section3">
+            <div class="sec3">
+                <span class="bar"></span>
+                <div class="about">
+                    <span class="about-num">01.</span>
+                    <h2 class="about-title">About me</h2>
+                    <figure class="about-imgWrap">
+                        <div class="about-img"></div>
+                    </figure>
+                    <div class="about-dot">
+                        <a href="#" class="active"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section3 -->
+
         <section id="section4"></section><!-- //section4 -->
         <section id="section5"></section><!-- //section5 -->
         <section id="section6"></section><!-- //section6 -->
     </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+        
+
+        $(".split").each(function() {
+            let text = $(this).text();
+            let split = text.split("").join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label", text);
+        });
+
+        $(window).scroll(function(){
+            let scrollTop = $(window).scrollTop();
+
+            if( scrollTop > $("#section2").offset().top - 300 ){
+                let tl = gsap.timeline();
+                tl.to(".text h2 .s1 span",{opacity: 1, y:0, x:0, rotation: 360, stagger: 0.04, duration: 0.4})
+                tl.to(".text h2 .s2 span",{opacity: 1, y:0, x:0, rotation: 360, stagger: 0.04, duration: 0.4}, "-=0.2")
+                tl.to(".text h2 .s3 span",{opacity: 1, y:0, x:0, rotation: 360, stagger: 0.04, duration: 0.4}, "-=0.2")
+            }
+
+            if( scrollTop > $("#section3").offset().top - 300 ){
+                $(".sec3").addClass("show");
+            }
+        });
+        
+    </script>
+
+
+
+
+
+
+
 </body>
 </html>
 

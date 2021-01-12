@@ -5,14 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style4.css">
-
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Arsenal:wght@400;700&display=swap" rel="stylesheet">  
 </head>
 <body>
     
@@ -47,7 +41,11 @@
             <div class="container">
                 <div class="sec2">
                     <div class="text">   
-                        <h2><strong>안녕하세요!</strong> Frontend Web Developer <em>박상현입니다.</em></h2>
+                        <h2>
+                            <strong class="split s1">안녕하세요!</strong> 
+                            <em class="split s2">Frontend Web Developer</em> 
+                            <em class="split s3">박상현입니다.</em>
+                        </h2>
                         <p>저는 개발자를 꿈꾸던 사람은 아니었습니다. 우연히 접하게 된 개발자의 길은 새로운 세상이었으며, 새로운 세상에 저의 열정을 쏟고 싶다는 마음가짐이 생겨 개발자의 길에 들어서게 되었습니다.</p>
                     </div>
                 </div>
@@ -56,26 +54,20 @@
         <!-- //section2 -->
 
         <section id="section3">
-            <div class="sec3 reveal">
-                <div class="centerBox reveal reveal-TTB">
-                    <div class="box"></div>
-                </div>
-                <div class="slider-wrap">
-                    <div class="slider-img reveal reveal-two">
-                        <div class="slider s1"><img src="./assets/img/about01.png" alt="이미지"></div>
-                        <div class="slider s2"><img src="./assets/img/about02.png" alt="이미지"></div>
-                        <div class="slider s3"><img src="./assets/img/about03.png" alt="이미지"></div>
-                        <div class="slider s4"><img src="./assets/img/about04.png" alt="이미지"></div>
-                        <div class="slider s5"><img src="./assets/img/about05.png" alt="이미지"></div>
+            <div class="sec3">
+                <span class="bar"></span>
+                <div class="about">
+                    <span class="about-num">01.</span>
+                    <h2 class="about-title">About me</h2>
+                    <figure class="about-imgWrap">
+                        <div class="about-img"></div>
+                    </figure>
+                    <div class="about-dot">
+                        <a href="#" class="active"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
+                        <a href="#"></a>
                     </div>
-                    <div class="slider-dot reveal"></div>
-                </div>
-                <div class="img-text reveal">
-                    <p>About <span>me</span></p>
-                </div>
-                <div class="slider-btn reveal">
-                    <a href="#" class="prev">prev</a>
-                    <a href="#" class="next">next</a>
                 </div>
             </div>
         </section>
@@ -84,8 +76,8 @@
         <section id="section4">
             <div class="container">
                 <div class="sec4">
-                    <div class="sec4_left">
-                        <h2>Site Project</h2>
+                    <div class="sec4-left">
+                        <h2>Site <span>Project</span></h2>
                         <ul>
                             <li><span>01</span>Webstandard Site</li>
                             <li><span>02</span>Responsive Site</li>
@@ -93,8 +85,10 @@
                             <li><span>04</span>Naver Clover Site</li>
                         </ul>
                     </div>
-                    <div class="sec4_right">
-                        <img src="./assets/img/siteTitle01.png" alt="이미지">
+                    <div class="sec4-right">
+                        <figure class="sec4-imgWrap">
+                            <div class="sec4-img"></div>
+                        </figure>
                     </div>
                 </div>
             </div>
@@ -102,81 +96,80 @@
         <!-- //section4 -->
 
         <section id="section5">
-            <div class="container">
-                <div class="sec5">
-                    <div class="centbox">
-                        <div class="box"></div>
+            <div class="sec5">
+                <span class="bar"></span>
+                <div class="list1">
+                    <div class="list1-left">
+                        <span class="list1-num">01</span>
+                        <h2 class="list1-title">Webstandard Site</h2>
+                        <figure class="list1-imgWrap">
+                            <div class="list1-img"></div>
+                        </figure>
                     </div>
-                    <div class="contents"></div>
+                    <div class="list1-right">
+                        <div class="list1-desc">
+                            웹 표준을 준수한 사이트 입니다.
+                            Skip 메뉴, IR 효과 , 이미지 
+                            스프라이트 등 웹 접근성을 높여 
+                            사용자가 이용하기 불편함이 없게 
+                            제작하였습니다.
+                        </div>
+                        <ul>
+                            <li class="list1-key">
+                                <span>웹 표준</span>
+                                <span>웹 접근성</span>
+                                <span>Hover 효과</span>
+                                <span>Skip 메뉴</span>
+                                <span>IR 효과</span>
+                                <span>이미지 스프라이트</span>
+                            </li>
+                        </ul>
+                        <div class="list1-link">
+                            <a href="#">VIEW SITE</a>
+                            <a href="#">VIEW SOURCE</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
+        </div>
         </section>
-        <!-- //section5 --> 
+        <!-- //section5 -->
         <section id="section6"></section><!-- //section6 -->
     </div>
 
-    <!-- script -->
-    <script src="./assets/js/jquery.min_1.12.4.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
     <script>
-        const sliderWrap = $(".slider-wrap");
-        const sliderImg = $(".slider-img");
-        const slider = $(".slider");
-        const sliderBtn = $(".slider-btn");
-        const sliderDot = $(".slider-dot");
- 
-        let sliderCount = slider.length;
-        let sliderWidth = slider.outerWidth();
-        let sliderHeight = slider.outerHeight();
-        let sliderTotalWidth = sliderWidth * sliderCount;
-        let sliderShowNumber = 1;
-        let currentIndex = 0;
-        let dotIndex = "";
-
-        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight});
-
-        // 이미지 움직이기
-        function gotoSlider(index){
-            sliderImg.animate({ left: -sliderWidth * index }, 400);
-            currentIndex = index;
-            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
-        };
         
-        // 이미지 갯수만큼 닷 버튼 만들기
-        slider.each(function(){
-            dotIndex += "<a href='#'></a>";
-        });
-        sliderDot.html(dotIndex);
-        sliderDot.find("a").eq(0).addClass("active");
 
-        // 닷 버튼 클릭하기
-        sliderDot.on("click","a", function(e){
-            e.preventDefault();
-            gotoSlider($(this).index());
+        $(".split").each(function() {
+            let text = $(this).text();
+            let split = text.split("").join("</span><span aria-hidden='true'>");
+            split = "<span aria-hidden='true'>" + split + "</span>";
+            $(this).html(split).attr("aria-label", text);
         });
 
-        // 버튼 클릭하기
-        sliderBtn.on("click","a", function(e){
-            e.preventDefault();
-            let nextIndex = (currentIndex + 1) % sliderCount;
-            let prevIndex = (currentIndex - 1) % sliderCount;
-            if( currentIndex == 0 ) prevIndex = sliderCount -1;
-
-            if( $(this).hasClass("prev")){
-                gotoSlider(prevIndex);
-            } else {
-                gotoSlider(nextIndex);
-            }
-        });
-    </script>
-    <script>
         $(window).scroll(function(){
             let scrollTop = $(window).scrollTop();
-            $(".reveal").each(function(){
-                if( scrollTop + $(window).height()/2 > $(this).offset().top ){
-                    $(this).addClass("show");
-                }
-            });
+
+            if( scrollTop > $("#section2").offset().top - 300 ){
+                let tl = gsap.timeline();
+                tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
+                tl.to(".text h2 .s2 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+                tl.to(".text h2 .s3 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+                tl.to(".text p",{opacity: 1, x:0, duration: 0.4, stagger: 0.05})
+            }
+
+            if( scrollTop > $("#section3").offset().top - 300 ){
+                $(".sec3").addClass("show");
+            }
+
+            if( scrollTop > $("#section5").offset().top - 300 ){
+                $(".sec5").addClass("show");
+            }
         });
+        
     </script>
 </body>
 </html>
