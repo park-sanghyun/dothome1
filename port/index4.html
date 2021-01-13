@@ -98,16 +98,98 @@
         <section id="section5">
             <div class="sec5">
                 <span class="bar"></span>
-                <div class="list1">
-                    <div class="list1-left">
-                        <span class="list1-num">01</span>
-                        <h2 class="list1-title">Webstandard Site</h2>
-                        <figure class="list1-imgWrap">
-                            <div class="list1-img"></div>
+                <div class="container">
+                    <div class="list">
+                        <div class="list-left">
+                            <figure class="list-imgWrap">
+                                <div class="list-img"></div>
+                            </figure>
+                            <div class="list-title">
+                                <h2 class="list-text">Webstandard</h2>
+                            </div>
+                        </div>
+                        <div class="list-right">
+                            <h2>웹 표준 사이트</h2>
+                            <div class="list-desc">
+                                웹 표준을 준수한 사이트 입니다.
+                                Skip 메뉴, IR 효과 , 이미지 
+                                스프라이트 등 웹 접근성을 높여 
+                                사용자가 이용하기 불편함이 없게 
+                                제작하였습니다.
+                            </div>
+                            <div class="list-BtnWrap">
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">웹 표준</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">웹 접근성</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">Hover 효과</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">Skip 메뉴</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">IR 효과</span>
+                                    </p>
+                                </a>
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">이미지 스프라이트</span>
+                                    </p>
+                                </a>
+                            </div>
+                            <div class="list-link">
+                                <a href="#" class="white">
+                                    <p>
+                                        <span class="bg"></span>
+                                        <span class="base"></span>
+                                        <span class="text">VIEW SITE</span>
+                                    </p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- //section5 -->
+
+        <!-- <section id="section6">
+            <div class="sec6">
+                <div class="list2">
+                    <span class="bar"></span>
+                    <div class="list2-left">
+                        <span class="list2-num">02</span>
+                        <h2 class="list2-title">Responsive</h2>
+                        <figure class="list2-imgWrap">
+                            <div class="list2-img"></div>
                         </figure>
                     </div>
-                    <div class="list1-right">
-                        <div class="list1-desc">
+                    <div class="list2-right">
+                        <div class="list2-desc">
                             웹 표준을 준수한 사이트 입니다.
                             Skip 메뉴, IR 효과 , 이미지 
                             스프라이트 등 웹 접근성을 높여 
@@ -115,7 +197,7 @@
                             제작하였습니다.
                         </div>
                         <ul>
-                            <li class="list1-key">
+                            <li class="list2-key">
                                 <span>웹 표준</span>
                                 <span>웹 접근성</span>
                                 <span>Hover 효과</span>
@@ -124,16 +206,20 @@
                                 <span>이미지 스프라이트</span>
                             </li>
                         </ul>
-                        <div class="list1-link">
+                        <div class="list2-link">
                             <a href="#">VIEW SITE</a>
                             <a href="#">VIEW SOURCE</a>
                         </div>
                     </div>
                 </div>
-        </div>
-        </section>
+            </div>
+        </section> -->
         <!-- //section5 -->
-        <section id="section6"></section><!-- //section6 -->
+
+        <section id="section6">
+
+        </section>
+        <!-- //section6 -->
     </div>
 
 
@@ -165,11 +251,13 @@
                 $(".sec3").addClass("show");
             }
 
-            if( scrollTop > $("#section5").offset().top - 300 ){
-                $(".sec5").addClass("show");
-            }
+            // if( scrollTop > $("#section5").offset().top - 300 ){
+            //     $(".sec5").addClass("show");
+            //     let tl = gsap.timeline();
+            //     tl.to(".list1-num",{opacity: 0.07, x:0, duration: 1, delay: 0.7})
+            //     tl.to(".list1-right",{opacity: 1, x:0, duration: 0.4})
+            // }
         });
-        
     </script>
 </body>
 </html>
