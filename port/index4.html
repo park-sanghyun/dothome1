@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 
+    <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style4.css">
 </head>
@@ -97,9 +98,9 @@
 
         <section id="section5">
             <div class="sec5">
-                <span class="bar"></span>
+                <span class="bar reverse"></span>
                 <div class="container">
-                    <div class="list">
+                    <div id="list1" class="list">
                         <div class="list-left">
                             <figure class="list-imgWrap">
                                 <div class="list-img"></div>
@@ -177,45 +178,6 @@
         </section>
         <!-- //section5 -->
 
-        <!-- <section id="section6">
-            <div class="sec6">
-                <div class="list2">
-                    <span class="bar"></span>
-                    <div class="list2-left">
-                        <span class="list2-num">02</span>
-                        <h2 class="list2-title">Responsive</h2>
-                        <figure class="list2-imgWrap">
-                            <div class="list2-img"></div>
-                        </figure>
-                    </div>
-                    <div class="list2-right">
-                        <div class="list2-desc">
-                            웹 표준을 준수한 사이트 입니다.
-                            Skip 메뉴, IR 효과 , 이미지 
-                            스프라이트 등 웹 접근성을 높여 
-                            사용자가 이용하기 불편함이 없게 
-                            제작하였습니다.
-                        </div>
-                        <ul>
-                            <li class="list2-key">
-                                <span>웹 표준</span>
-                                <span>웹 접근성</span>
-                                <span>Hover 효과</span>
-                                <span>Skip 메뉴</span>
-                                <span>IR 효과</span>
-                                <span>이미지 스프라이트</span>
-                            </li>
-                        </ul>
-                        <div class="list2-link">
-                            <a href="#">VIEW SITE</a>
-                            <a href="#">VIEW SOURCE</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <!-- //section5 -->
-
         <section id="section6">
 
         </section>
@@ -236,28 +198,50 @@
             $(this).html(split).attr("aria-label", text);
         });
 
-        $(window).scroll(function(){
-            let scrollTop = $(window).scrollTop();
+        // $(window).scroll(function(){
+        //     let scrollTop = $(window).scrollTop();
 
-            if( scrollTop > $("#section2").offset().top - 300 ){
+        //     if( scrollTop > $("#section2").offset().top - 300 ){
+        //         let tl = gsap.timeline();
+        //         tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
+        //         tl.to(".text h2 .s2 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+        //         tl.to(".text h2 .s3 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
+        //         tl.to(".text p",{opacity: 1, y:0, duration: 0.4, stagger: 0.05})
+        //     }
+
+        //     if( scrollTop > $("#section3").offset().top - 300 ){
+        //         $(".sec3").addClass("show");
+        //     }
+
+        //     if( scrollTop > $("#section5").offset().top - 300 ){
+        //         $(".sec5").addClass("show");
+        //     }
+        // });
+
+        window.addEventListener("scroll", () => {
+            let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
+
+            if( pageYOffset > document.getElementById("section2").offsetTop - 300){
                 let tl = gsap.timeline();
                 tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
                 tl.to(".text h2 .s2 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
                 tl.to(".text h2 .s3 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
-                tl.to(".text p",{opacity: 1, x:0, duration: 0.4, stagger: 0.05})
+                tl.to(".text p",{opacity: 1, y:0, duration: 0.4, stagger: 0.05})
             }
 
-            if( scrollTop > $("#section3").offset().top - 300 ){
-                $(".sec3").addClass("show");
+            if( pageYOffset > document.getElementById("section3").offsetTop - 300){
+                document.querySelector(".sec3").classList.add("show");
             }
 
-            // if( scrollTop > $("#section5").offset().top - 300 ){
-            //     $(".sec5").addClass("show");
-            //     let tl = gsap.timeline();
-            //     tl.to(".list1-num",{opacity: 0.07, x:0, duration: 1, delay: 0.7})
-            //     tl.to(".list1-right",{opacity: 1, x:0, duration: 0.4})
-            // }
-        });
+            if( pageYOffset > document.getElementById("section5").offsetTop - 300){
+                document.querySelector(".sec5").classList.add("show");
+            }
+            if( pageYOffset > document.getElementById("section5").offsetTop - 800){
+                document.querySelector(".bar.reverse").classList.add("show");
+            }
+                    
+        })
+
     </script>
 </body>
 </html>
