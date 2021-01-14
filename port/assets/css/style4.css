@@ -19,7 +19,6 @@
 #section5 {
     position: relative;
     background: #150045;
-    overflow: hidden;
 }
 #section6 {}
 
@@ -346,12 +345,13 @@
 /* sec5 */
 .sec5 {
     position: relative;
+    padding: 0 12vw;
 }
 .sec5 .bar {
     position: absolute;
     left: 50%;
     top: 0;
-    width: 15vw;
+    width: 13vw;
     height: 100%;
     background: #ED6061;
     transform: translate(-50%);
