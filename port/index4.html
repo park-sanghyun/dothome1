@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="assets/css/style4.css">
 </head>
 <body>
-    
+ 
     <header id="header">
         <h1>portfolio</h1>
         <nav class="nav">
@@ -428,7 +428,7 @@
                         </p>
                     </div>
                     <div class="sec7-list">
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation01.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -441,7 +441,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation02.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -454,7 +454,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation03.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -467,7 +467,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation06.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -480,7 +480,10 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
+                            <figure class="sec7-imgWrap"></figure>
+                        </div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation05.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -493,7 +496,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation06.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -506,7 +509,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation07.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -519,7 +522,7 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
+                        <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation08.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
@@ -532,8 +535,8 @@
                                 </figcaption>
                             </figure>
                         </div>
-                        <div>
-                            <!-- <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation09.html" frameborder="0" width="100%" height="100%"></iframe> -->
+                        <!-- <div>
+                            <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation09.html" frameborder="0" width="100%" height="100%"></iframe>
                             <a href="#">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
@@ -544,7 +547,7 @@
                                     </p>
                                 </figcaption>
                             </figure>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -600,10 +603,18 @@
             if( pageYOffset > document.getElementById("list4").offsetTop + 3600){
                 document.querySelector(".sec5 .list:nth-child(4)").classList.add("show");
             } 
-            
-                    
+
         })
 
+        document.querySelectorAll(".content-item").forEach((elem, i) => {
+            i++;
+            elem.addEventListener("mouseenter", (e) => { 
+                document.querySelector(".content-item:nth-child("+i+") > .sec7-imgWrap").classList.add("active");
+            });
+            elem.addEventListener("mouseleave", (e) => {
+                document.querySelector(".content-item:nth-child("+i+") > .sec7-imgWrap").classList.remove("active");
+            });
+        })
     </script>
 </body>
 </html>
