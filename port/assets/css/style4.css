@@ -29,7 +29,6 @@
 }
 #scction7 {
     background: #150045;
-    height: 400vh;
     padding: 0 10vw;
 }
 
@@ -798,10 +797,10 @@
 .sec7-list {
     display: grid; 
     grid-template-columns: 1fr 1fr 0.5fr;
-    margin-top: 20vw;
+    margin-top: 30vw;
 }   
 .sec7-list > .content-item {width: 21.99vw; height: 42.9vw; margin-bottom:122px; position: relative;}
-.sec7-list > .content-item:nth-child(3) {margin-right: 0;}
+.sec7-list > .content-item:nth-child(3n+2) {margin-top: -30vw;}
 .sec7-list > .content-item iframe {position: relative;}
 .sec7-list > .content-item a {
     color: #fff;
