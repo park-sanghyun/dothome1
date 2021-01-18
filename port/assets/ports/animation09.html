@@ -1,96 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Lato&display=swap");
-        * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-        }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-        body {
-            display: grid;
-            place-items: center;
-            height: 100vh;
-            background: #f8fddf;
-            font-family: "Lato", sans-serif;
-            color: #2b2b2b;
-            overflow-y: hidden;
-        }
+body {
+  display: grid;
+  place-items: center;
+  height: 100%;
+  background: #f8fddf;
+  font-family: "Lato", sans-serif;
+  color: #2b2b2b;
+  overflow-y: hidden;
+}
 
-        a {
-            text-decoration: none;
-            color: #d33f2e;
-            font-size: 0.9rem;
-        }
+a {
+  text-decoration: none;
+  color: #d33f2e;
+  font-size: 0.9rem;
+}
 
-        .container {
-            width: 100%;
-            max-width: 800px;
-            height: 100%;
-            padding: 1em;
-            display: grid;
-            grid-template-rows: 800px 1fr;
-            -webkit-box-align: start;
-            align-items: start;
-        }
+.container {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  padding: 1em;
+  display: grid;
+  grid-template-rows: 800px 1fr;
+  -webkit-box-align: start;
+          align-items: start;
+}
 
-        section {
-            width: 100%;
-            max-width: 800px;
-            height: 100%;
-            max-height: 800px;
-            position: relative;
-        }
+section {
+  width: 100%;
+  max-width: 800px;
+  height: 100%;
+  max-height: 800px;
+  position: relative;
+}
 
-        .svg-content {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
+.svg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 
-        footer {
-            padding: 1em 0 2em;
-            text-align: center;
-            display: grid;
-            place-items: center;
-        }
-        footer a {
-            margin-top: 20px;
-        }
-        footer div {
-            border: none;
-            outline: none;
-            width: 40px;
-            height: 40px;
-            background: #ffa004;
-            border-radius: 50%;
-            display: grid;
-            place-items: center;
-            cursor: pointer;
-        }
-        footer div svg {
-            width: 20px;
-            height: 20px;
-            fill: none;
-            stroke-width: 3;
-            stroke: #fff;
-            text-align: center;
-        }
+footer {
+  padding: 1em 0 2em;
+  text-align: center;
+  display: grid;
+  place-items: center;
+}
+footer a {
+  margin-top: 20px;
+}
+footer div {
+  border: none;
+  outline: none;
+  width: 40px;
+  height: 40px;
+  background: #ffa004;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+}
+footer div svg {
+  width: 20px;
+  height: 20px;
+  fill: none;
+  stroke-width: 3;
+  stroke: #fff;
+  text-align: center;
+}
 
-        @media (max-width: 580px) {
-            .container {
-                grid-template-rows: 1fr 30%;
-            }
-        }
+@media (max-width: 580px) {
+  .container {
+    grid-template-rows: 1fr 30%;
+  }
+}
 
     </style>
 </head>
+
 <body>
     <div class="container">
         <section>
@@ -298,134 +299,53 @@
         </footer>
       </div>
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
-      <script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
         let main_tl = gsap.timeline();
-        let clouds_tl = gsap.timeline();
+let cloud_tl = gsap.timeline();
 
-        clouds_tl.from("#clouds", {
-            duration: 3,
-            opacity: 0,
-            x: -40,
-            delay: 2
-        });
+cloud_tl.from("#clouds", {duration: 3, opacity: 0, x: -40, delay: 2});
 
-        let board24 = gsap.from(".b24",{
-            duration: 0.5,
-            scale: 0,
-            transformOrigin: "50%, 50%",
-            ease: "back.out(2)"
-        });
+let board24 = gsap.from(".b24", {duration: 0.5, scale: 0, transformOrigin: "50% 50%", ease: "back.out(2)"});
 
-        let open_text = gsap.from(".greenCirc",{
-            duration: 0,
-            scale: 0,
-            stagger: 0.2,
-            transformOrigin: "50% 50%",
-            ease: "elastic.out(1, 1.5)"
-        })
+let open_text = gsap.from(".greenCirc", 0.4, {scale: 0, stagger: 0.2, transformOrigin: "50% 50%", ease: "elastic.out(1, 1.5)"});
 
-        bkg_tl = gsap.timeline({duration: 0.5});
-        bkg_tl
-            .from("#city-bkg-back", {
-                y: 180, ease: "power4.out"
-            })
-            .from("#city-bkg-front", {
-                y: 180, ease: "power4.out"
-            }, "-=.3")
-            .from("#bush-left", {
-                scaleY: 0, y: 10, transformOrigin: "50% 100%", ease: "elastic.out(1, 0.6)"
-            }, "-=.3");
+bkg_tl = gsap.timeline({ duration : 0.5 });
+bkg_tl
+	.from("#city-bkg-back", {y: 180, ease: "power4.out"})
+	.from("#city-bkg-front", {y: 180, ease: "power4.out"}, "-=.3")
+	.from("#bush-left", {scaleY :0, y: 10, transformOrigin: "50% 100%", ease: "elastic.out(1, 0.6)"}, "-=.3")
+	.from("#bush-right", {scaleY :0, y: 10, transformOrigin: "50% 100%", ease: "elastic.out(1, 0.6)"}, "-=.3");
 
-        main_tl.set("#arrow-top", {
-                clipPath: "polygon(0 0, 0% 0%, 0% 0%, 0% 0%, 0% 0%, 0 0%)"
-            })
-            .from("#ground", {
-                duration: 0.5,
-                transformOrigin: "50% 50%"
-            })
-            .add(bkg_tl)
-            .from("#pole", {
-                scaleY: 0,
-                transformOrigin: "0% 100%",
-                ease: "elastic.out(0, 0.5)"
-            })
-            .from("#arrow-bottom",{
-                scale: 0,
-                rotation: 30,
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1, 0.3)"
-            })
-            .from("#pink-bottom", {
-                duration: 0.7,
-                scale: 0,
-                rotation: 30,
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1, 0.6)"
-            }, "-=.3")
-            .from("#pink-top", {
-                duration: 0.7,
-                scale: 0,
-                rotation: 30,
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1, 0.6)"
-            }, "-=.3")
-            .from("#board-24", {
-                duration: 0.5,
-                opacity: 0,
-                scale: 0,
-                transformOrigin: "50% 50%",
-                ease: "elastic.out(1, 0.6)"
-            })
-            .add(board24, "<.3")
-            .from("#panel-yellow",{
-                duration: .5,
-                scale: 0,
-                transformOrigin: "0% 0%",
-                ease: "back.out"
-            },"-=.2")
-            .from("#panel-blue",{
-                duration: .5,
-                scale: 0,
-                transformOrigin: "100% 100%",
-                ease: "back.out"
-            },"-=.2")
-            .to("#arrow-top", {
-                duration: 1,
-                clipPath: "polygon(0 0, 50% 60%, 100% 50%, 100% 100%, 0 100%)",
-                transformOrigin: "0% 0%",
-                ease: "power4.out"
-            })
-            .from("#text-moms", {
-                duration: 0.7,
-                scale: 0,
-                transformOrigin: "50% 50%",
-                ease: "bounce.out"
-            },"-=.2")
-            .from("#text-diner", {
-                duration: 0.7,
-                scale: 0,
-                transformOrigin: "50% 50%",
-                ease: "bounce.out"
-            },"-=.2")
-            .from("#top-bar",{
-                duration: 0.5,
-                scale: 0,
-                transformOrigin: "0% 0%",
-                ease: "elastic.out"
-            })
-            .add(open_text);
+main_tl.set("#arrow-top", {clipPath: "polygon(0 0, 0% 0%, 0% 0%, 0% 0%, 0 0%)"})
+	.from("#ground", {duration: 0.5, transformOrigin: "50% 50%"})
+	.add(bkg_tl)
+	.from("#pole", {scaleY : 0, transformOrigin: "0% 100%", ease: "elastic.out(1, 0.5)"})
+	.from("#arrow-bottom", {scale: 0, rotation: 30, transformOrigin: "50% 50%", ease: "elastic.out(1,0.3)"})
+	.from("#pink-bottom", {duration: 0.7, scale: 0, rotation: 30, transformOrigin: "50% 50%", ease: "elastic.out(1, 0.6)"}, "-=.3")
+	.from("#pink-top", {duration: 0.7, scale: 0, rotation: 30, transformOrigin: "50% 50%", ease: "elastic.out(1, 0.6)"}, "-=.3")
+	.from("#board-24", {duration: 0.5, opacity: 0, scale: 0, transformOrigin: "50% 50%", ease: "elastic.out(1, 0.6)"})
+	.add(board24, "<.3")
+	.from("#panel-yellow", {duration: 0.5, scale: 0, transformOrigin: "0% 0%", ease: "back.out"}, "-=.2")
+	.from("#panel-blue", {duration: 0.5, scale: 0, transformOrigin: "100% 100%", ease: "back.out"}, "-=.2")
+	.to("#arrow-top", {duration: 1, clipPath: "polygon(0 0, 50% 60%, 100% 50%, 100% 100%, 0 100%)", transformOrigin: "0% 0%", ease: "power4.out"})
+	.from("#text-moms", {duration: 0.7, scale: 0, transformOrigin: "50% 50%", ease: "bounce.out"}, "-=.2")
+	.from("#text-diner", {duration: 0.7, scale: 0, transformOrigin: "50% 50%", ease: "bounce.out"}, "-=.2")
+	.from("#top-bar", {duration: 0.5, scale: 0, transformOrigin: "0% 0%", ease: "elastic.out"})
+	.add(open_text);
 
-        let replayBtn = document.getElementById("replayBtn");
+main_tl.duration(7);
 
-        replayBtn.addEventListener("click", () => {
-            main_tl.restart();
-            clouds_tl.restart();
-            gsap.from("#refreshBtn", {
-                duration: 0.5,
-                rotation: 90
-            });
-        });
-      </script>
+let replayBtn = document.getElementById("replayBtn");
+
+replayBtn.addEventListener("click", () => {
+  main_tl.restart();
+  clouds_tl.restart();
+  gsap.from("#refreshBtn", {duration: 0.5, rotation: 90});
+});
+
+    </script>
 </body>
+
 </html>

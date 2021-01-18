@@ -27,6 +27,11 @@
     background: #ED6061;
     padding: 0 10vw;
 }
+#scction7 {
+    background: #150045;
+    height: 400vh;
+    padding: 0 10vw;
+}
 
 /* container */
 .container {
@@ -775,4 +780,84 @@
 .sec6-right .sec6-imgWrap .sec6-img {
     background: url(../img/siteTitle02.png) no-repeat center center / contain;
     height: 100%; width: 100%;
+}
+
+/* sec7 */
+.sec7 {}
+.sec7-text {
+    width: 100%;
+    padding-top: 20vw;
+}
+.sec7-text p {
+    color: #fff;
+    font-family: "GT Sectra Display Bold"; 
+    font-size: 1.2vw;
+    line-height: 1.8;
+    text-align: center;
+}
+.sec7-list {
+    display: grid; 
+    grid-template-columns: 1fr 1fr 0.5fr;
+    margin-top: 20vw;
+}
+.sec7-list > div {width: 21.99vw; height: 43vw; background: #ccc; margin-bottom:122px; position: relative;}
+.sec7-list > div:nth-child(3) {margin-right: 0;}
+.sec7-list > div iframe {position: relative;}
+.sec7-list > div a {
+    color: #fff;
+    position: absolute;
+    left: 39%; bottom: 10%;
+    font-family: Arial;
+    font-weight: bold;
+}
+.sec7-list > div > .sec7-imgWrap {
+    position: absolute; 
+    left: 0; top: 0;
+    width: 22vw; height: 43vw;
+}
+.sec7-list > div:nth-child(1) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList01.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(2) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList02.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(3) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList03.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(4) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList06.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(5) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList05.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(6) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList06.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(7) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList07.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(8) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList08.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div:nth-child(9) > .sec7-imgWrap .sec7-img {
+    background: url(../img/aniList09.png) no-repeat center center / cover;
+    width: 100%; height: 100%;
+}
+.sec7-list > div > .sec7-imgWrap p {
+    color: #fff;
+    text-align: center;
+    position: absolute;
+    left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    font-size: 2.5vw;
+    font-family: "GT Sectra Display Bold"; 
 }
