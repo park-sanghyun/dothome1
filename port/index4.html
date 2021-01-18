@@ -578,6 +578,7 @@
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
+            // sec2
             if( pageYOffset > document.getElementById("section2").offsetTop - 300){
                 let tl = gsap.timeline();
                 tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
@@ -586,10 +587,12 @@
                 tl.to(".text p",{opacity: 1, y:0, duration: 0.4, stagger: 0.05})
             }
 
+            // sec3
             if( pageYOffset > document.getElementById("section3").offsetTop - 300){
                 document.querySelector(".sec3").classList.add("show");
             }
 
+            // sec5
             if( pageYOffset > document.getElementById("list1").offsetTop + 3600){
                 document.querySelector(".sec5 .bar").classList.add("show");
                 document.querySelector(".sec5 .list:nth-child(1)").classList.add("show");
@@ -604,6 +607,16 @@
                 document.querySelector(".sec5 .list:nth-child(4)").classList.add("show");
             } 
 
+            // sec7
+            
+            gsap.to(".content-item", {
+                duration: .3,
+                y: -pageYOffset * 0.3,
+                ease: Power1.ease
+            })
+        
+            
+
         })
 
         document.querySelectorAll(".content-item").forEach((elem, i) => {
@@ -615,7 +628,9 @@
                 document.querySelector(".content-item:nth-child("+i+") > .sec7-imgWrap").classList.remove("active");
             });
         })
-        
+
+
+
     </script>
 </body>
 </html>
