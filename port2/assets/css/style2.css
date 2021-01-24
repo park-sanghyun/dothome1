@@ -9,7 +9,6 @@
     z-index: 6000;
 }
 #section2 {
-    background: #000;
     z-index: 5000;
 }
 #section3 {
@@ -77,12 +76,6 @@
 .sec1-box5 {
     border-radius: 50%;
 }
-.sec1-box5.b2 {z-index: 6251; background: rgba(0, 0, 0, 0.8);}
-.sec1-box5.b3 {z-index: 6252; background: rgba(0, 0, 0, 0.6);}
-
-/* sec2 */
-.sec2-box1 {
-    background: #000;
-    border-radius: 50%;
-    z-index: 5500;
-}
+.sec1-box5.b2 {z-index: 6251; background: rgba(255, 0, 0, 0.2);}
+.sec1-box5.b3 {z-index: 6252; background: rgba(255, 0, 0, 0.2);}
+.sec1-box5.b4 {z-index: 6253; background: rgba(255, 0, 0, 0.2);}
