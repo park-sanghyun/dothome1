@@ -9,7 +9,6 @@
     z-index: 6000;
 }
 #section2 {
-    background: #000;
     z-index: 5000;
 }
 #section3 {
@@ -58,7 +57,7 @@
 }
 .sec1-box2-1 {
     border-radius: 50%;
-    box-shadow: 0 0 0 2000px rgba(0,0,0,0.1);
+    box-shadow: 0 0 0 2000px rgba(0,0,0,0.5);
     z-index: 6150;
 }
 .sec1-box3 {
