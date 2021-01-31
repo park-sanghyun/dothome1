@@ -2,8 +2,13 @@
 <div class="logo"><a href="../main/index.html">ParkSangHyun</a></div>
 <div class="nav">
     <ul>
-        <li><a href="../sign/signUp.php">회원가입</a></li>
-        <li><a href="../sign/logIn.php">로그인</a></li>
+    <?php if( isset($_SESSION['memberID']) ){ ?>
+            <li class="active"><?=$_SESSION['youNickName']?>님 환영합니다.</li>
+            <li><a href="../sign/logOut.php">로그아웃</a></li>
+        <?php } else { ?>
+            <li><a href="../sign/signUp.php">회원가입</a></li>                
+            <li><a href="../sign/login.php">로그인</a></li>
+        <?php } ?>
         <li><a href="../board/board.php">게시판</a></li>
     </ul>
     <ul>

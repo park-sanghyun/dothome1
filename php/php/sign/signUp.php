@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="author" content="webstoryboy">
-    <meta name="description" content="웹스토리보이 포트폴리오 사이트입니다.">
-    <meta name="keywords" content="웹표준, 웹접근성, 사이트만들기, 포트폴리오, 웹스토리보이">
+    <meta name="description" content="박상현 포트폴리오 사이트입니다.">
+    <meta name="keywords" content="웹표준, 웹접근성, 사이트만들기, 포트폴리오, 박상현">
     <title>ParkSangHyun 로그인</title>
 
     <!-- CSS Style -->
@@ -89,7 +89,7 @@
                            </div>
                        </div>
                        <button class="signUpBtn" type="submit" value="회원가입">회원가입</button>
-                       <p class="signDesc">로그인을 원하면? <a href="logIn.php">로그인</a></p>
+                       <p class="signDesc">로그인을 원하면? <a href="login.php">로그인</a></p>
                    </fieldset>
                </form>
            </div>

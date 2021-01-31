@@ -39,9 +39,6 @@ html {
     box-sizing: border-box;
     -ms-flex: 0 1 auto
 }
-button {
-    border: 0;
-}
 body,
 button,
 dd,
@@ -93,9 +90,7 @@ select,
 button,
 a {
     font-family: inherit;
-    font-size: 100%;
-    text-decoration: none;
-    color: #000;
+    font-size: 100%
 }
 input,
 textarea,
@@ -111,6 +106,13 @@ select {
     border-radius: 0;
     font-size: 16px;
     /* 확대 방지 */
+}
+button {
+    border: 0;
+}
+a {
+    text-decoration: none;
+    color: #000;
 }
 a,
 a:hover,
@@ -158,7 +160,28 @@ img, fieldset {
     padding: 0;
     margin: -1px;
     overflow: hidden;
-    clip: rect(0, 0, 0, 0);
+    clip: rect(0,0,0,0);
     white-space: nowrap;
     border: 0;
 }
+/* 간격 설정 */
+.mt5 { margin-top: 5px !important;}
+.mt10 { margin-top: 10px !important;}
+.mt15 { margin-top: 15px !important;}
+.mt20 { margin-top: 20px !important;}
+.mt25 { margin-top: 25px !important;}
+.mt30 { margin-top: 30px !important;}
+.mt35 { margin-top: 35px !important;}
+.mt40 { margin-top: 40px !important;}
+.mt45 { margin-top: 45px !important;}
+.mt50 { margin-top: 50px !important;}
+.ml5 { margin-left: 5px !important;}
+.ml10 { margin-left: 10px !important;}
+.ml15 { margin-left: 15px !important;}
+.ml20 { margin-left: 20px !important;}
+.ml25 { margin-left: 25px !important;}
+.ml30 { margin-left: 30px !important;}
+.ml35 { margin-left: 35px !important;}
+.ml40 { margin-left: 40px !important;}
+.ml45 { margin-left: 45px !important;}
+.ml50 { margin-left: 50px !important;}
