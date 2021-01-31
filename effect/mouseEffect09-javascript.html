@@ -56,6 +56,7 @@
             cloned.forEach(i => {
                 i.parentNode.removeChild(i);
             })
+            
             cloned = []
             wordWidth = Math.ceil(word.clientWidth);
             width = Math.ceil(window.innerWidth / wordWidth);
@@ -64,6 +65,7 @@
                 word.parentNode.appendChild(clone);
                 cloned.push(clone);
             }
+            console.log(cloned)
         }
 
         //  이벤트 리스너
