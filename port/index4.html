@@ -2,17 +2,32 @@
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width">
+    <title>Portfolio</title>
 
     <link rel="stylesheet" href="assets/css/font.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style4.css">
+
+
 </head>
 <body>
-    <div class="clock"></div>
 
-    <div class="loading"></div>
+    <div class="progress">
+        <div class="progress-line">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+                width="80px" height="60px"
+                viewBox="5 0 80 60">
+                <path id="wave" 
+                    fill="none" 
+                    stroke="#fff" 
+                    stroke-width="4"
+                    stroke-linecap="round">
+                </path>
+            </svg>
+        </div>
+    </div>
+    <!-- //progress -->
  
     <header id="header">
         <h1>portfolio</h1>
@@ -24,10 +39,10 @@
 
     <footer id="footer">
         <div class="link">
-            <a href="#c">01.</a>
-            <a href="#c">02.</a>
-            <a href="#c">03.</a>
-            <a href="#c">04.</a>
+            <a href="#section3" aria-hidden="true">01.</a>
+            <a href="#section4" aria-hidden="true">02.</a> 
+            <a href="#section6" aria-hidden="true">03.</a>
+            <a href="#section8" aria-hidden="true">04.</a>
         </div>
     </footer>
 
@@ -37,6 +52,7 @@
                 <div class="title menu-item">
                     <div class="menu-word"><span class="text">about</span> <span class="text">site</span> <span class="text">animation</span> <span class="text">effect</span> <span class="text">react</span></div>
                 </div>
+                <div class="clock"></div>
             </div>
         </section>
         <!-- //section1 -->
@@ -63,15 +79,25 @@
                 <div class="about">
                     <span class="about-num">01.</span>
                     <h2 class="about-title">About me</h2>
-                    <figure class="about-imgWrap">
-                        <div class="about-img"></div>
-                    </figure>
-                    <div class="about-dot">
-                        <a href="#" class="active"></a>
-                        <a href="#"></a>
-                        <a href="#"></a>
-                        <a href="#"></a>
+                    <!-- 이미지 슬라이드 -->
+                    <div class="about-imgWrap">
+                        <div class="about-img">
+                            <div class="slider s1">
+                                <img src="./assets/img/about02.png" alt="이미지">
+                            </div>
+                            <div class="slider s2">
+                                <img src="./assets/img/about01.png" alt="이미지">
+                            </div>
+                            <div class="slider s3">
+                                <img src="./assets/img/about03.png" alt="이미지">
+                            </div>
+                            <div class="slider s4">
+                                <img src="./assets/img/about05.png" alt="이미지">
+                            </div>
+                        </div>
                     </div>
+                    <div class="about-dot"></div>
+                    <!-- 이미지 슬라이드 -->
                 </div>
             </div>
         </section>
@@ -166,7 +192,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/webstandard/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -239,7 +265,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/responsive/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -312,7 +338,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/megabox/assets/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -433,7 +459,7 @@
                     <div class="sec7-list">
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation01.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/xxOBVWw">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -446,7 +472,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation02.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/KKgPvXE">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -459,7 +485,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation03.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/yLJGeMq">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -472,7 +498,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation06.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/VwKvLXp">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -488,7 +514,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation05.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/zYKvGWx">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -501,7 +527,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation06.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/VwKvLXp">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -514,7 +540,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation07.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/LYREadJ">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -527,7 +553,7 @@
                         </div>
                         <div class="content-item">
                             <iframe src="https://park-sanghyun.github.io/dothome1/port/assets/ports/animation08.html" frameborder="0" width="100%" height="100%"></iframe>
-                            <a href="#">CODE VIEW</a>
+                            <a href="https://codepen.io/gugukaka/pen/KKMLpZQ">CODE VIEW</a>
                             <figure class="sec7-imgWrap">
                                 <div class="sec7-img"></div>
                                 <figcaption>
@@ -820,8 +846,142 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
+
     <script>
-        // 무한로딩
+
+        // 푸터버튼
+        document.querySelectorAll("a[href^='#']").forEach(elem => {
+            elem.addEventListener("click", e => {
+                e.preventDefault();
+                document.querySelector(elem.getAttribute('href')).scrollIntoView({
+                    behavior : 'smooth'
+                }) 
+            });
+        });
+
+        // svg 움직임
+        const path = document.querySelector('#wave');
+        const animation = document.querySelector('#moveTheWave');
+        const m = 0.512286623256592433;
+
+        function buildWave(w, h) {
+
+        const a = h / 4;
+        const y = h / 2;
+
+        const pathData = [
+            'M', w * 0, y + a / 2,
+            'c',
+            a * m, 0,
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a,
+            's',
+            -(1 - a) * m, a,
+            a, a,
+            's',
+            -(1 - a) * m, -a,
+            a, -a].
+            join(' ');
+            path.setAttribute('d', pathData);
+        }
+        buildWave(90, 60);
+
+
+        // 로딩
+        function loading() {
+            let $progress = $(".progress"),
+                $progressLine = $(".progress-line");
+
+            let imgLoad = imagesLoaded("body"),
+                imgToalt = imgLoad.images.length,
+                imgLoaded = 0,
+                imgCurrent = 0,
+                progressTimmer = setInterval(updateProgress, 1000/60);
+
+            imgLoad.on("progress", function (){
+                imgLoaded++;
+            });
+
+            function updateProgress(){
+                let target = ( imgLoaded/imgToalt ) * 100;
+                imgCurrent += ( target - imgCurrent ) * 0.05;
+
+                if( imgCurrent >= 100 ){
+                    clearInterval(progressTimmer);
+
+                    $("body").addClass("active");
+
+                    gsap.to($progressLine, {
+                        duration: 2.1,
+                        top : "53%",
+                        height : "0%",
+                        opacity: "0",
+                        ease: "power1.out" 
+                    });
+                    gsap.to($progress, {
+                        duration: 1.5,
+                        top : "53%",
+                        height : "0%",
+                        ease: "power4.out" 
+                    });
+
+                    //메인 애니메이션
+                    let tl = gsap.timeline();
+                }
+
+                if( imgCurrent > 99 ){
+                    imgCurrent = 100;
+                    setInterval(function(){
+                        gsap.to(".sec1 .title",{opacity:1 , duration: 0.4, delay: 0.5})
+                        gsap.to(".clock",{opacity:1 , duration: 0.4, scale: 1})
+                        gsap.to("#header h1",{opacity:1 , y : 0, duration: 0.4, delay: 1})
+                        gsap.to("#header .nav",{opacity:1 , left: 0, duration: 0.4, delay: 1})
+                        gsap.to("footer .link",{opacity:1 , right : -50, duration: 0.4, delay: 1})
+                    }, 1500)
+                }
+            }
+        }
+        loading();
+
+        // 무한텍스트
         let wordWidth = 0;
         let width = 0;
         let cloned = [];
@@ -844,7 +1004,6 @@
                 word.parentNode.appendChild(clone);
                 cloned.push(clone);
             }
-            console.log(cloned)
         }
 
         const handleMouse = bool => hover = bool;
@@ -882,11 +1041,13 @@
             $(this).html(split).attr("aria-label", text);
         });
 
+        
+       
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
             // sec2
-            if( pageYOffset > document.getElementById("section2").offsetTop - 300){
+            if( pageYOffset > document.getElementById("section2").offsetTop - 969){
                 let tl = gsap.timeline();
                 tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
                 tl.to(".text h2 .s2 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
@@ -895,55 +1056,126 @@
             }
 
             // sec3
-            if( pageYOffset > document.getElementById("section3").offsetTop - 300){
+            if( pageYOffset > document.getElementById("section3").offsetTop - 969){
                 document.querySelector(".sec3").classList.add("show");
             }
 
+
+            // sec4
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section4").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec4-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(4)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section4").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec4-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(4)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-right",{opacity: 1, x:0, duration: 0.3})
+                }
+            }
+
             // sec5
-            if( pageYOffset > document.getElementById("list1").offsetTop + 3600){
-                document.querySelector(".sec5 .bar").classList.add("show");
-                document.querySelector(".sec5 .list:nth-child(1)").classList.add("show");
-            } 
-            if( pageYOffset > document.getElementById("list2").offsetTop + 3600){
-                document.querySelector(".sec5 .list:nth-child(2)").classList.add("show");
-            } 
-            if( pageYOffset > document.getElementById("list3").offsetTop + 3600){
-                document.querySelector(".sec5 .list:nth-child(3)").classList.add("show");
-            } 
-            if( pageYOffset > document.getElementById("list4").offsetTop + 3600){
-                document.querySelector(".sec5 .list:nth-child(4)").classList.add("show");
-            } 
+            for(let i = 1; i < 5; i++){
+                if(window.matchMedia('(max-width: 380px)').matches){
+                    if( pageYOffset > document.getElementById("list"+i).offsetTop + 1500){
+                        document.querySelector(".sec5 .bar").classList.add("show");
+                        document.querySelector(".sec5 .list:nth-child("+i+")").classList.add("show");
+                    } 
+                } else {
+                    if( pageYOffset > document.getElementById("list"+i).offsetTop + 3000){
+                        document.querySelector(".sec5 .bar").classList.add("show");
+                        document.querySelector(".sec5 .list:nth-child("+i+")").classList.add("show");
+                    } 
+                }
+            }
 
             // sec6
+            
             if( pageYOffset < document.getElementById("section6").offsetTop - 150 || pageYOffset > document.getElementById("section7").offsetTop - 150){
                 document.querySelector("#header .nav").style.backgroundColor = "#ED6061";
                 document.querySelector("#header h1").classList.remove("show")
-
             } else {
                 document.querySelector("#header .nav").style.backgroundColor = "#150045";
                 document.querySelector("#header h1").classList.add("show")
             }   
+            
+            
+
+            // sec6 Animation
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section6").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec6-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section6").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec6-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-right",{opacity: 1, x:0, duration: 0.3})
+                }
+            }
 
             // sec7
-            if( pageYOffset > document.getElementById("section7").offsetTop - 600){
-                gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (-pageYOffset * 0.03) * 1, ease: Power1.ease})
-                gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power4.ease})
-                gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (-pageYOffset * 0.03) * 1, ease: Power1.ease})
+            if( pageYOffset > document.getElementById("section7").offsetTop - 969){
+                gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+                gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (-pageYOffset * 0.03) * 2, ease: Power4.ease})
+                gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+            }
+
+            // sec8 
+
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section8").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec8-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section8").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec8-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-right",{opacity: 1, x:0, duration: 0.3})
+                }
             }
 
             // sec9
-            if( pageYOffset > document.getElementById("sec9-1").offsetTop - 100){
-                document.querySelector(".sec9 .sec9-list:nth-child(1)").classList.add("show");
-            }
-            if( pageYOffset > document.getElementById("sec9-2").offsetTop - 100){
-                document.querySelector(".sec9 .sec9-list:nth-child(2)").classList.add("show");
-            }
-            if( pageYOffset > document.getElementById("sec9-3").offsetTop - 100){
-                document.querySelector(".sec9 .sec9-list:nth-child(3)").classList.add("show");
+            for(let i = 1; i < 4; i++){
+                if( pageYOffset > document.getElementById("sec9-"+i).offsetTop - 969){
+                    document.querySelector(".sec9 .sec9-list:nth-child("+i+")").classList.add("show");
+                }
             }
             
             // sec10
-            if( pageYOffset > document.getElementById("section10").offsetTop - 300){
+            if( pageYOffset > document.getElementById("section10").offsetTop - 969){
                 let tl = gsap.timeline();
                 tl.to(".sec10-top h2",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 0.4})
                 tl.to(".sec10-bottom .bottom-left h3",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 0.4 , delay: 2})
@@ -961,12 +1193,23 @@
                 gsap.to(".sec11-left",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 1})
                 gsap.to(".sec11-right",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 1})
             }
+
+            // footer
+            for(let i = 1; i<5; i++){
+                if( pageYOffset < document.getElementById("section6").offsetTop - 900 || pageYOffset > document.getElementById("section7").offsetTop - 900){
+                    document.querySelector("#footer .link a:nth-child("+i+")").style.color = "#ED6061";
+                } else {
+                    document.querySelector("#footer .link a:nth-child("+i+")").style.color = "#150045";
+                }   
+            }
         })
 
+        // animation hover
         document.querySelectorAll(".content-item").forEach((elem, i) => {
             i++;
             elem.addEventListener("mouseenter", () => { 
                 document.querySelector(".content-item:nth-child("+i+") > .sec7-imgWrap").classList.add("active");
+                document.querySelector(".content-item:nth-child(5) > .sec7-imgWrap").classList.remove("active");
             });
             elem.addEventListener("mouseleave", () => {
                 document.querySelector(".content-item:nth-child("+i+") > .sec7-imgWrap").classList.remove("active");
@@ -974,31 +1217,74 @@
         })
 
 
-
+        // background clock
         pentitle="Cubic Inspired Clock";
         $(document).ready(function(){
-        for (var i = 0; i < 60; i++) {
-            $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-260px);\"></div>");
-        }
-        clock();
-        setInterval(clock, 1000);
-        function clock() {
-            var d = new Date();
-            var seconds = d.getSeconds();
-            var minutes = d.getMinutes();
-            var hours = d.getHours();
-            if (hours >= 12) {
-            hours -= 12;
+            for (var i = 0; i < 60; i++) {
+                if(window.matchMedia('(max-width: 380px)').matches){
+                    $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-150px);\"></div>");
+                } else {
+                    $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-260px);\"></div>");
+                }
             }
-            clearClock();
-            $('.b' + seconds).addClass('activesec');
-            $('.b' + minutes).addClass('active');
-            $('.b' + (hours*5)).addClass('activehour');
-        }
-        function clearClock() {
-            $('.bit').removeClass('active').removeClass('activehour').removeClass('activesec');
-        }
+            clock();
+            setInterval(clock, 1000);
+            function clock() {
+                var d = new Date();
+                var seconds = d.getSeconds();
+                var minutes = d.getMinutes();
+                var hours = d.getHours();
+                if (hours >= 12) {
+                hours -= 12;
+                }
+                clearClock();
+                $('.b' + seconds).addClass('activesec');
+                $('.b' + minutes).addClass('active');
+                $('.b' + (hours*5)).addClass('activehour');
+            }
+            function clearClock() {
+                $('.bit').removeClass('active').removeClass('activehour').removeClass('activesec');
+            }
         });
+    </script>
+    <script>
+
+        // 슬라이드
+        const sliderWrap = $(".about-imgWrap");
+        const sliderImg = $(".about-img");
+        const slider = $(".slider");
+        const sliderDot = $(".about-dot");
+
+        let sliderCount = slider.length;
+        let sliderWidth = slider.outerWidth();
+        let sliderHeight = slider.outerHeight();
+        let sliderTotalWidth = sliderWidth * sliderCount;
+        let sliderShowNumber = 1;
+        let currentIndex = 0;
+        let dotIndex = "";
+
+        sliderImg.css({ width: sliderTotalWidth, height: sliderHeight});
+
+        // 이미지 움직이기
+        function gotoSlider(index){
+            sliderImg.animate({ left: -sliderWidth * index }, 400);
+            currentIndex = index;
+            sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+        };
+        
+        // 이미지 갯수만큼 닷 버튼 만들기
+        slider.each(function(){
+            dotIndex += "<a href='#'></a>";
+        });
+        sliderDot.html(dotIndex);
+        sliderDot.find("a").eq(0).addClass("active");
+
+        // 닷 버튼 클릭하기
+        sliderDot.on("click","a", function(e){
+            e.preventDefault();
+            gotoSlider($(this).index());
+        });
+
     </script>
 </body>
 </html>
