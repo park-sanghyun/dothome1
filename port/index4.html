@@ -192,7 +192,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/webstandard/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -265,7 +265,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/responsive/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -338,7 +338,7 @@
                                 </a>
                             </div>
                             <div class="list-link">
-                                <a href="#" class="white">
+                                <a href="https://park-sanghyun.github.io/dothome1/megabox/assets/index.html" class="white">
                                     <p>
                                         <span class="bg"></span>
                                         <span class="base"></span>
@@ -849,6 +849,7 @@
     <script src="./assets/js/imagesloaded.pkgd.min.js"></script>
 
     <script>
+
         // 푸터버튼
         document.querySelectorAll("a[href^='#']").forEach(elem => {
             elem.addEventListener("click", e => {
@@ -947,7 +948,6 @@
                     clearInterval(progressTimmer);
 
                     $("body").addClass("active");
-                    //$progress.hide();
 
                     gsap.to($progressLine, {
                         duration: 2.1,
@@ -969,11 +969,17 @@
 
                 if( imgCurrent > 99 ){
                     imgCurrent = 100;
+                    setInterval(function(){
+                        gsap.to(".sec1 .title",{opacity:1 , duration: 0.4, delay: 0.5})
+                        gsap.to(".clock",{opacity:1 , duration: 0.4, scale: 1})
+                        gsap.to("#header h1",{opacity:1 , y : 0, duration: 0.4, delay: 1})
+                        gsap.to("#header .nav",{opacity:1 , left: 0, duration: 0.4, delay: 1})
+                        gsap.to("footer .link",{opacity:1 , right : -50, duration: 0.4, delay: 1})
+                    }, 1500)
                 }
             }
         }
         loading();
-
 
         // 무한텍스트
         let wordWidth = 0;
@@ -1035,13 +1041,13 @@
             $(this).html(split).attr("aria-label", text);
         });
 
-
+        
        
         window.addEventListener("scroll", () => {
             let pageYOffset = (window.pageYOffset || document.documentElement.scrollTop);
 
             // sec2
-            if( pageYOffset > document.getElementById("section2").offsetTop - 300){
+            if( pageYOffset > document.getElementById("section2").offsetTop - 969){
                 let tl = gsap.timeline();
                 tl.to(".text h2 .s1 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4})
                 tl.to(".text h2 .s2 span",{opacity: 1, x:0, stagger: 0.05, duration: 0.4}, "-=0.2")
@@ -1050,8 +1056,34 @@
             }
 
             // sec3
-            if( pageYOffset > document.getElementById("section3").offsetTop - 300){
+            if( pageYOffset > document.getElementById("section3").offsetTop - 969){
                 document.querySelector(".sec3").classList.add("show");
+            }
+
+
+            // sec4
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section4").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec4-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(4)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section4").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec4-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-left ul li:nth-child(4)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec4-right",{opacity: 1, x:0, duration: 0.3})
+                }
             }
 
             // sec5
@@ -1070,31 +1102,80 @@
             }
 
             // sec6
+            
             if( pageYOffset < document.getElementById("section6").offsetTop - 150 || pageYOffset > document.getElementById("section7").offsetTop - 150){
                 document.querySelector("#header .nav").style.backgroundColor = "#ED6061";
                 document.querySelector("#header h1").classList.remove("show")
-
             } else {
                 document.querySelector("#header .nav").style.backgroundColor = "#150045";
                 document.querySelector("#header h1").classList.add("show")
             }   
+            
+            
+
+            // sec6 Animation
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section6").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec6-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section6").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec6-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec6-right",{opacity: 1, x:0, duration: 0.3})
+                }
+            }
 
             // sec7
-            if( pageYOffset > document.getElementById("section7").offsetTop - 600){
-                gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (-pageYOffset * 0.03) * 1, ease: Power1.ease})
-                gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power4.ease})
-                gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (-pageYOffset * 0.03) * 1, ease: Power1.ease})
+            if( pageYOffset > document.getElementById("section7").offsetTop - 969){
+                gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+                gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (-pageYOffset * 0.03) * 2, ease: Power4.ease})
+                gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+            }
+
+            // sec8 
+
+            if(window.matchMedia('(max-width: 380px)').matches){
+                if( pageYOffset > document.getElementById("section8").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec8-right",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section8").offsetTop - 300){
+                    let tl = gsap.timeline();
+                    tl.to(".sec8-left h2",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left h2 span",{opacity: 1, x:0, rotation:0 , duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(1)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(2)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-left ul li:nth-child(3)",{opacity: 1, x:0, duration: 0.3})
+                    tl.to(".sec8-right",{opacity: 1, x:0, duration: 0.3})
+                }
             }
 
             // sec9
             for(let i = 1; i < 4; i++){
-                if( pageYOffset > document.getElementById("sec9-"+i).offsetTop - 600){
+                if( pageYOffset > document.getElementById("sec9-"+i).offsetTop - 969){
                     document.querySelector(".sec9 .sec9-list:nth-child("+i+")").classList.add("show");
                 }
             }
             
             // sec10
-            if( pageYOffset > document.getElementById("section10").offsetTop - 600){
+            if( pageYOffset > document.getElementById("section10").offsetTop - 969){
                 let tl = gsap.timeline();
                 tl.to(".sec10-top h2",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 0.4})
                 tl.to(".sec10-bottom .bottom-left h3",{opacity: 1, x:0, rotation:0 ,stagger: 0.05, duration: 0.4 , delay: 2})
