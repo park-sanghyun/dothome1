@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="park's">
+    <meta name="description" content="웹 퍼블리셔를 위한 정보 공유 사이트입니다.">
+    <meta name="keywords" content="웹스토리보이, 웹 퍼블리셔, 웹 표준, 웹 접근성, 화려한 디자인, webstoryboy, publisher, css3, html, markup, design, Webstoryboy">
+    <title>Pasahu13 | slider Effect</title>
+    <!-- Bootstrap core CSS -->
+    <link href="../assets/css/bootstrap.css" rel="stylesheet">
+    <link href="../assets/css/docs.min.css" rel="stylesheet">
+    <link href="../assets/css/prism.css" rel="stylesheet">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="../assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" href="../assets/ico/favicon_114.png">
+    <link rel="icon" href="../assets/ico/icon.png">
+    <link rel="icon" href="../assets/ico/favicon_57.png" sizes="16x16">
+    <link rel="icon" href="../assets/ico/favicon_72.png" sizes="32x32">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="48x48">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="64x64">
+    <link rel="icon" href="../assets/ico/favicon_114.png" sizes="128x128">
+    <!-- Facebook meta tags -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="park's" />
+    <meta property="og:url" content="http://pasahu13.dothome.co.kr/" />
+    <meta property="og:image" content="http://pasahu13.dothome.co.kr/" />
+    <meta property="og:site_name" content="park's" />
+    <meta property="og:description" content="웹과 관련된 정보를 제공합니다." />
+    <!-- twitter meta tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@webstoryboy" />
+    <meta name="twitter:title" content="park's" />
+    <meta name="twitter:description" content="웹과 관련된 정보를 제공합니다." />
+    <meta property="twitter:image" content="http://richclub8.dothome.co.kr/assets/ico/icon.png" />
+    <!-- 웹 폰트 -->
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Brush+Script" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Gaegu&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Fredoka+One&display=swap" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.../assets2/js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+<body>
+    <a class="sr-only" href="#content">Skip to main content</a>
+    <header class="navbar navbar-inverse navbar-static-top bs-docs-nav" role="banner">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="../index.html" class="navbar-brand">PARK'S &lt;/doc&gt;</a>
+            </div>
+            <nav class="collapse navbar-collapse bs-navbar-collapse pull-right" role="navigation">
+                <ul class="nav navbar-nav">
+                    <li><a href="https://pasahu13.tistory.com/">Tistory</a></li>
+                    <li><a href="https://codepen.io/gugukaka">Codepen</a></li>
+                    <li><a href="https://github.com/park-sanghyun/dothome1">Github</a></li>
+                    <li><a href="https://figma.com/@pasahu13">Figma</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="bs-header bgs5" id="content">
+        <div class="container">
+            <h1>Slider Effect Reference v1.0 &lt;/doc&gt;</h1>
+            <p><a href="http://pasahu13.dothome.co.kr/" target="_blank">pasahu13.dothme.co.kr</a></p>
+        </div>
+    </div>
+    <div class="container bs-docs-container">
+        <div class="row">
+            <div class="col-md-12" role="main">
+                <!-- 배너 광고 1140 -->
+                <div class="ad">
+                    <script src="https://ads-partners.coupang.com/g.js"></script>
+                    <script>
+                        new PartnersCoupang.G({ id:348408 });
+                    </script>
+                </div>
+                <!-- //배너 광고 1140 -->
+                
+                <!-- Intro1 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro1" class="page-header">Slider Effect01</h2>
+                    <p class="bs-callout bs-callout-info">이미지 슬라이드 기본 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect01-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home1" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile1" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home1">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;              //현재 첫 번째 보이는 이미지
+let sliderCount = slider.length;   //이미지 갯수
+
+
+//3초에 한번씩 함수를 실행
+setInterval(function(){
+let nextIndex = (currentIndex + 1) % sliderCount;  //이미지 갯수만큼 반복
+
+slider.eq(currentIndex).fadeOut(); //첫 번째 이미지 사라지기
+slider.eq(nextIndex).fadeIn();     //두 번째 이미지 보이기
+
+// currentIndex++;
+currentIndex = nextIndex;
+
+},3000);
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile1">
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap")
+const sliderImg = document.querySelector(".slider-img")
+const slider = document.querySelectorAll(".slider")
+
+let currentIndex = 0;              //현재 보이는 첫 번째 이미지
+let sliderCount = slider.length;   //이미지 갯수
+
+setInterval(() => {
+    let nextIndex = (currentIndex + 1) % sliderCount;
+
+    // slider[currentIndex].style.display = "none";
+    // slider[nextIndex].style.display = "block";
+
+    slider[currentIndex].style.opacity = "0";
+    slider[nextIndex].style.opacity = "1";
+
+    currentIndex = nextIndex;
+},3000);
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro1 -->
+
+                <!-- Intro2 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro2" class="page-header">Slider Effect02</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 가로로 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect02-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home2" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile2" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home2">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currntIndex = 0;
+let sliderCount = slider.length;   //이미지 갯수
+
+setInterval(function(){
+
+    currntIndex &lt; sliderCount - 1 ? currntIndex++ : currntIndex = 0;
+
+    let sliderPosition = currntIndex * (-800) + "px";
+
+    sliderImg.animate({left: sliderPosition}, 400);
+
+
+},3000);
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile2">
+<pre class="line-numbers language-js"><code>const sliderWrap = document.querySelector(".slider-wrap")
+const sliderImg = document.querySelector(".slider-img")
+const slider = document.querySelectorAll(".slider")
+
+let currentIndex = 0;
+let sliderCount = slider.length;
+let sliderWidth = sliderWrap.clientWidth;
+
+setInterval(function(){
+    
+    currentIndex &lt; sliderCount - 1 ? currentIndex++ : currentIndex = 0;
+    let sliderPosition = currentIndex * -sliderWidth;
+    gsap.to(sliderImg, {
+        duration: 1, 
+        left: sliderPosition, 
+        ease: "expo.out"
+    });
+
+},3000);
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro2 -->
+
+                <!-- Intro3 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro3" class="page-header">Slider Effect03</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 가로로 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect03-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home3" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile3" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home3">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+setInterval(function(){
+    sliderImg.animate({ left: "-800px"}, 400, function(){
+        $(".slider:first-child").appendTo(sliderImg)
+        sliderImg.css("left","");
+    });
+}, 3000);
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile3">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro3 -->
+
+                <!-- Intro4 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro4" class="page-header">Slider Effect04</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 위로 넘어가는 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect04-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home4" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile4" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home4">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+
+let currentIndex = 0;
+let slisderCount = slider.length -1;
+let sliderHeight = slider.height();
+let sliderSpeed = 400;
+
+// 한바퀴
+// setInterval(function(){
+//     currentIndex &lt; slisderCount ? currentIndex++ : currentIndex = 0;
+
+//     let sliderPostion = currentIndex * -sliderHeight;
+//     sliderImg.animate({ top: sliderPostion}, sliderSpeed);
+
+// }, 3000);
+
+// 연속적
+setInterval(function(){
+    sliderImg.animate({ top: -sliderHeight }, sliderSpeed ,function(){
+        $(".slider:eq(0)").appendTo(sliderImg);
+        sliderImg.css("top", "");
+    });
+}, 3000);   
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile4">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+                <!-- //Intro4 -->
+
+                <!-- Intro5 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro5" class="page-header">Slider Effect05</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 버튼을 클릭시 가로로 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect05-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home5" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile5" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home5">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let currentIndex = 0;
+let slisderCount = slider.length -1;
+let sliderWidth = slider.width();
+let sliderHeight = slider.height();
+let sliderTotalWidth = sliderWidth * slisderCount;
+
+sliderImg.css({ width: sliderTotalWidth, height: sliderHeight, marginLeft: -sliderWidth});
+$(".slider:last-child").prependTo(sliderImg);
+
+function moveLeft(){
+    sliderImg.animate({ left: + sliderWidth }, 400 , function(){
+        $(".slider:last-child").prependTo(sliderImg);
+        sliderImg.css("left","");
+    });
+}
+function moveRight(){
+    sliderImg.animate({ left: - sliderWidth }, 400 , function(){
+        $(".slider:first-child").appendTo(sliderImg);
+        sliderImg.css("left","");
+    });
+}
+
+sliderBtn.find(".prev").click(function(){
+    moveLeft();
+});
+sliderBtn.find(".next").click(function(){
+    moveRight();
+});
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile5">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro5 -->
+
+                <!-- Intro6 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro6" class="page-header">Slider Effect06</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 3단으로 이동하는 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect06-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home6" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile6" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home6">
+<pre class="line-numbers language-js"><code>const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderShowNumber = 3;
+let currentIndex = 0;
+
+let sliderCopy = $(".slider:lt("+sliderShowNumber+")").clone()
+sliderImg.append(sliderCopy);
+
+function moveLeft(){
+    if( currentIndex == 0 ){  // 처음 이미지
+        currentIndex = sliderCount;
+        sliderImg.css("margin-left", sliderWidth * -currentIndex);
+    }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       
+    currentIndex--;
+    sliderImg.stop().animate({"margin-left": -sliderWidth * currentIndex}, 400)
+}
+
+function moveRight(){
+    if( currentIndex == sliderCount ){ // 마지막 이미지
+        currentIndex = 0;
+        sliderImg.css("margin-left", currentIndex);
+    }
+    currentIndex++;
+    sliderImg.stop().animate({"margin-left": -sliderWidth * currentIndex}, 400)
+}
+
+// 버튼 클릭하기
+sliderBtn.on("click","a" , function(){
+    if( $(this).hasClass("prev")){
+        moveLeft();
+    } else {
+        moveRight();
+    }
+});
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile6">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro6 -->
+
+                <!-- Intro7 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro7" class="page-header">Slider Effect07</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 버튼과 닷을 이용해 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect07-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home7" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile7" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home7">
+<pre class="line-numbers language-js"><code>
+const sliderWrap = $(".slider-wrap");
+const sliderImg = $(".slider-img");
+const slider = $(".slider");
+const sliderBtn = $(".slider-btn");
+const sliderDot = $(".slider-dot");
+
+let sliderCount = slider.length;
+let sliderWidth = slider.outerWidth();
+let sliderHeight = slider.outerHeight();
+let sliderTotalWidth = sliderWidth * sliderCount;
+let sliderShowNumber = 1;
+let currentIndex = 0;
+let dotIndex = "";
+
+
+sliderImg.css({ width: sliderTotalWidth, height: sliderHeight});
+
+// 이미지 움직이기
+function gotoSlider(index){
+    sliderImg.animate({ left: -sliderWidth * index }, 400);
+    currentIndex = index;
+    sliderDot.find("a").removeClass("active").eq(currentIndex).addClass("active");
+};
+
+// 이미지 갯수만큼 닷 버튼 만들기
+slider.each(function(){
+    // dotIndex += "&lt;a href='#'&gt;&lt;/a&gt;";
+    // dotIndex += "&lt;a href='#'&gt;"+ (index+1) + "&lt;/a&gt;";
+    // let name = $(this).find("img").attr("alt");
+    // dotIndex += "&lt;a href='#'&gt;"+ name + "&lt;/a&gt;";
+    let sliderName = $(this).find("img").attr("alt");
+    let sliderSrc = $(this).find("img").attr("src");
+    dotIndex += "&lt;a href='#' style='background-image:url("+sliderSrc+")'&gt;"+sliderName+"</a>";
+});
+sliderDot.html(dotIndex);
+sliderDot.find("a").eq(0).addClass("active");
+
+// 닷 버튼 클릭하기
+sliderDot.on("click","a", function(e){
+    e.preventDefault();
+    gotoSlider($(this).index());
+});
+
+// 버튼 클릭하기
+sliderBtn.on("click","a", function(e){
+    e.preventDefault();
+    let nextIndex = (currentIndex + 1) % sliderCount;
+    let prevIndex = (currentIndex - 1) % sliderCount;
+    if( currentIndex == 0 ) prevIndex = sliderCount -1;
+    
+    
+    // console.log("nextIndex :" + nextIndex);
+    console.log("prevIndex :" + prevIndex);
+
+
+    if( $(this).hasClass("prev")){
+        gotoSlider(prevIndex);
+    } else {
+        gotoSlider(nextIndex);
+    }
+});
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile7">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro7 -->
+
+                <!-- Intro8 -->
+                <div class="bs-docs-section">
+                    <h2 id="intro8" class="page-header">Slider Effect08</h2>
+                    <p class="bs-callout bs-callout-info">이미지가 가로로 슬라이드하는 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect08-jquery.html" frameborder="0"></iframe>
+                    <div>
+                        <ul class="nav nav-tabs" role="tablist">
+                            <li role="presentation" class="active"><a href="#home8" aria-controls="home" role="tab" data-toggle="tab">jQuery</a></li>
+                            <li role="presentation"><a href="#profile8" aria-controls="profile" role="tab" data-toggle="tab">JavaScript</a></li>
+                        </ul>
+                        <div class="tab-content">
+                            <div role="tabpanel" class="tab-pane active" id="home8">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                            <div role="tabpanel" class="tab-pane" id="profile8">
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //Intro8 -->
+
+                <!-- sample01 -->
+                <div class="bs-docs-section">
+                    <h2 id="sample01" class="page-header">sample01</h2>
+                    <p class="bs-callout bs-callout-info">3D 슬라이드 효과입니다.</p>
+                    <iframe width="100%" height="800" src="sliderEffect-3d.html" frameborder="0"></iframe>
+                    <h3>jQuery</h3>
+<pre class="line-numbers language-js"><code>
+</code></pre>
+                </div>
+                <!-- //sample01 -->
+                
+               
+            </div>
+            <!-- //col-md-9 -->
+
+        </div>
+        <!-- //row -->
+    </div>
+    <!-- //container -->
+
+
+    <!-- Footer -->
+    <footer class="bs-footer" role="contentinfo">
+        <div class="container">
+            <ul class="footer-links muted">
+                <li>Currently v2.0</li>
+                <li>&middot;</li>
+                <li><a href="https://webstoryboy.github.io/w9/html/">webstoryboy</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.naver.com/crossbrowsing" target="_blank">publisher cafe</a></li>
+                <li>&middot;</li>
+                <li><a href="http://cafe.daum.net/flairdesignlink" target="_blank">designer cafe</a></li>
+            </ul>
+        </div>
+    </footer>
+    <!-- //Footer -->
+    <!-- Bootstrap core JavaScript -->
+    <script src="../assets/js/jquery-1.9.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/docs.min.js"></script>
+    <script src="../assets/js/prism.js"></script>
+</body>
+</html>

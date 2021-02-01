@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parallax03 - Javascript</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap" rel="stylesheet">
+
+    <style>
+        /* reset */
+        @font-face {
+            font-family: 'RIDIBatang';
+            src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+        }
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0; padding: 0;
+        }
+        a {
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+        img {
+            width: 100%; 
+            vertical-align: top; /* 여백초기화 */
+        }
+        ul {list-style: none;}
+        a {text-decoration: none;transition: all 0.2s;}
+
+        /* 스크롤 전체 */
+        ::-webkit-scrollbar {
+            width: 10px;
+        }
+
+        /* 스크롤 막대 외부 */
+        ::-webkit-scrollbar-track {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, .1);
+        }
+
+        /* 스크롤 막대 */
+        ::-webkit-scrollbar-thumb {
+        background-color: rgba(0, 0, 50, .5);
+        border-radius: 10px;
+        box-shadow:0 0 0 1px rgba(255, 255, 255, .3);
+        }
+
+        /* info */
+        .info {position: fixed; z-index: 1000;}
+        .info h1 {font-size: 2rem; line-height: 1.4;}
+        .info p {font-size: 1rem;}
+        .info li {font-size: 1rem; line-height: 1.4;}
+        .info li a {
+            color: #fff; width: 25px; height: 25px; 
+            border: 1px dashed #fff; font-size: 0.8rem;
+            display: inline-block; border-radius: 50%;
+            text-align: center; line-height: 25px;
+            margin: 5px;
+        }
+        .info li a.active {
+            color: #000; background: #fff;
+        }
+        .info.left {left: 20px; top: 20px;}
+        .info.right {right: 20px; top: 20px;}
+        .info.bottom {right: 20px; bottom: 20px;}
+
+        @media (max-width: 800px){
+            .info h1 {display: none;}
+        }
+        /* main */
+        body {
+            --color-h1 : #dc6e25;
+            --color-tilte : #fff;
+            --color-sub : #999;
+            --color-link : #000;
+            --color-bg : #c4c4c4;
+            --font-cafe : 'RIDIBatang';
+            --font-lato : 'Lato', sans-serif;
+            --aspect-ratio : 33/17;
+            
+
+            background-color: var(--color-bg);
+            color : var(--color-tilte);
+            font-family: var(--font-cafe);
+        }
+
+        #parallax-wrap h1 {
+            color: var(--color-h1);
+            font-family: var(--font-lato);
+            font-size: 8vw;
+            font-weight: 900;
+            text-transform: uppercase;
+            padding: 10vw 8vw 0 8vw;
+        }
+        #parallax-wrap h1 em {
+            display: block;
+            font-weight: 100;
+            padding-left: 18vw;
+        }
+
+        .content {
+            margin: 0 auto 35vh;
+            width: 100%;
+            overflow: hidden;
+        }
+        .content-item {
+            position: relative;
+            width: 1200px;
+            max-width: 90vw;
+            margin: 60vh 0 60vh;
+        }
+        .content-item:nth-child(even) {
+            margin-left: auto;
+        }
+        .content-item-num {
+            font-size: 25vw; font-weight: 100;
+            font-family: var(--font-lato);
+            position: absolute; right: -5vw; top: -20vw; opacity: 0.5;
+        }
+        .content-item:nth-child(even) .content-item-num {
+            right: auto; left: -5vw;
+        }
+
+        .content-item-title {text-align: right; padding-bottom: 5px;}
+        .content-item:nth-child(even) .content-item-title {text-align: left;}
+
+        .content-item-imgWrap {
+            position: relative; 
+            --width: 100%; 
+            width: var(--width);
+            padding-bottom: calc(var(--width) / (var(--aspect-ratio)));
+            overflow: hidden;
+        }
+        .content-item-img {
+            width: var(--width);
+            --overflow: 60px; 
+            position: absolute;
+            top: calc(-1 * var(--overflow));
+            height: calc(100% + (3 * var(--overflow)));
+            background-size: cover;
+            background-position: 50% 0;
+        }
+        .content-item-desc {
+            font-size: 5vw;
+            line-height: 1.4;
+            text-align: right;
+            word-break: keep-all;
+            margin-right: -4vw;
+            margin-top: -6vw;
+            padding-left: 8vw;
+            z-index: 100;
+            position: relative;
+        }
+        .content-item:nth-child(even) .content-item-desc {
+            text-align: left;
+            margin-right: auto; padding-left: 0;
+            padding-right: 10vw; margin-left: -4vw;
+        }
+        /* position: relative;
+            1. position: absolute 기준점 역할
+            2. position: absolute를 사용하지 않고 z-index를 사용할 경우
+            3. position: absolute를 사용하지 않고 left, top을 통해서 위치를 설정할 경우
+         */
+        .content-item:nth-child(1) .content-item-img {
+            background: url(img/images01.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(2) .content-item-img {
+            background: url(img/images02.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(3) .content-item-img {
+            background: url(img/images03.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(4) .content-item-img {
+            background: url(img/images04.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(5) .content-item-img {
+            background: url(img/images05.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(6) .content-item-img {
+            background: url(img/images06.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(7) .content-item-img {
+            background: url(img/images07.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(8) .content-item-img {
+            background: url(img/images08.jpg);
+            background-size: cover;
+        }
+        .content-item:nth-child(9) .content-item-img {
+            background: url(img/images09.jpg);
+            background-size: cover;
+        }
+
+        
+    </style>
+</head>
+<body>
+
+    <!-- info -->
+    <div class="info left">
+        <h1>Parallax Effect03 - Javascript</h1>
+        <p>패랠랙스 스크로링 효과 - 이미지 기울이기</p>
+    </div>
+    <div class="info right">
+        <ul>
+            <li><a href="parallax01-jquery.html">1</a><a href="parallax01-javascript.html">1</a></li>
+            <li><a href="parallax02-jquery.html">2</a><a href="parallax02-javascript.html">2</a></li>
+            <li><a href="parallax03-jquery.html">3</a><a href="parallax03-javascript.html" class="active">3</a></li>
+            <li><a href="parallax04-jquery.html">4</a><a href="parallax04-javascript.html">4</a></li>
+            <li><a href="parallax05-jquery.html">5</a><a href="parallax05-javascript.html">5</a></li>
+            <li><a href="parallax06-jquery.html">6</a><a href="parallax06-javascript.html">6</a></li>
+            <li><a href="parallax07-jquery.html">7</a><a href="parallax07-javascript.html">7</a></li>
+            <li><a href="parallax08-jquery.html">8</a><a href="parallax08-javascript.html">8</a></li>
+            <li><a href="parallax09-jquery.html">9</a><a href="parallax09-javascript.html">9</a></li>
+        </ul>
+    </div>
+
+    <div class="info bottom">
+        <ul>
+            <li>scrollTop() : <span class="scrollTop">0</span>px</li>
+        </ul>
+    </div>
+    <!-- info -->
+
+
+    <main>
+        <section id="parallax-wrap">
+            <h1>Parallax <em>Scrolling</em></h1>
+            <div class="contents">
+                <section id="section1" class="content-item">
+                    <span class="content-item-num">01</span>
+                    <h2 class="content-item-title">Section1</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">꿈이 있다면, 그 꿈을 잡고 절대 놓아주지마라.</p>
+                </section>
+                <section id="section2" class="content-item">
+                    <span class="content-item-num">02</span>
+                    <h2 class="content-item-title">Section2</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">미래는 현재 우리가 무엇을 하는가에 달려 있다.</p>
+                </section>
+                <section id="section3" class="content-item">
+                    <span class="content-item-num">03</span>
+                    <h2 class="content-item-title">Section3</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">미래를 예측하는 최선의 방법은 미래를 창조하는 것이다.</p>
+                </section>
+                <section id="section4" class="content-item">
+                    <span class="content-item-num">04</span>
+                    <h2 class="content-item-title">Section4</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">어제로 돌아갈 수 없다. 왜냐하면 나는 어제와는 다른 사람이 되었기 때문이다.</p>
+                </section>
+                <section id="section5" class="content-item">
+                    <span class="content-item-num">05</span>
+                    <h2 class="content-item-title">Section5</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">나는 폭풍이 두렵지 않다. 나는 배로 항해 하는 법을 배우고 있으니까.</p>
+                </section>
+                <section id="section6" class="content-item">
+                    <span class="content-item-num">06</span>
+                    <h2 class="content-item-title">Section6</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">즐거움과 행복만으로도, 시간은 부족하다</p>
+                </section>
+                <section id="section7" class="content-item">
+                    <span class="content-item-num">07</span>
+                    <h2 class="content-item-title">Section7</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">우리가 실패에서 배우면, 실패는 성공이 된다.</p>
+                </section>
+                <section id="section8" class="content-item">
+                    <span class="content-item-num">08</span>
+                    <h2 class="content-item-title">Section8</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">인생의 실패자들은 포기할 때 자신이 성공에서 얼마나 가까이 있었는지 모른다.</p>
+                </section>
+                <section id="section9" class="content-item">
+                    <span class="content-item-num">09</span>
+                    <h2 class="content-item-title">Section9</h2>
+                    <figure class="content-item-imgWrap">
+                        <div class="content-item-img"></div>
+                    </figure>
+                    <p class="content-item-desc">절대 안 된다는 말은 하지 말아라. 한계는 두려움과 마찬가지로 환상일 뿐이다.</p>
+                </section>
+            </div>
+        </section>
+    </main>
+
+    <!-- script -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script>
+
+        let pageYOffset = window.pageYOffset
+        const scroll = () => {
+            const newPageYOffset = window.pageYOffset;
+            const different = newPageYOffset - pageYOffset;
+            
+            // console.log("pageYOffset :" + pageYOffset);
+            // console.log("newPageYOffset :" + newPageYOffset);
+            // console.log("different :" + different);
+
+            let target = document.querySelectorAll(".content-item-imgWrap");
+
+            //forEach
+            target.forEach((elem)=>{
+                elem.style.transform = "rotate("+different*+"deg)";
+            });
+            gsap.to(".content-item-imgWrap", {duration: .3, skewY: different*0.2, ease: Power1.out});
+            gsap.to(".content-item-num", {duration: .6, x: different*0.5, ease: Power4.out});
+            gsap.to(".content-item-desc", {duration: .6, skewX: different*0.2, ease: Power3.out});
+
+            pageYOffset = newPageYOffset
+            requestAnimationFrame(scroll);
+        }
+        scroll();
+
+        // let num = 0;
+        // function render(){
+        //     document.querySelector(".content-item-num").innerHTML = num;
+        //     num++;
+        //     //setInterval(render, 100);
+        //     requestAnimationFrame(render);  //최신 소스
+        // }
+        // render();
+
+    </script>
+</body>
+</html>
