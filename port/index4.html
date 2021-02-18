@@ -14,6 +14,7 @@
 <body>
 
     <div class="progress">
+        <div class="progressBox1"></div>
         <div class="progress-line">
             <svg xmlns="http://www.w3.org/2000/svg" 
                 width="80px" height="60px"
@@ -26,16 +27,124 @@
                 </path>
             </svg>
         </div>
+        <div class="progressBox2"></div>
     </div>
     <!-- //progress -->
  
     <header id="header">
         <h1>portfolio</h1>
-        <nav class="nav">
-            <span>menu</span>
+        <button class="nav">
+            <div class="menu-button-shape">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <!-- <div class="icon hover">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div> -->
+           <span class="text">menu</span>
+        </button>
+        <nav class="main">
+            <div class="switch-wrap">
+                <div id="switch" class="hover-target">
+                <div id="circle"></div>
+                </div>
+            </div>
+            <div class="section">
+                <ul class="case-study-wrapper">
+                <li class="case-study-name">                            	
+                    <a href="#section3" class="hover-target">about</a>
+                </li>
+                <li class="case-study-name">                                         	
+                    <a href="#section4" class="hover-target">site</a>
+                </li>
+                <li class="case-study-name">                                        	
+                    <a href="#section6" class="hover-target">animation</a>
+                </li>
+                <li class="case-study-name">                                         	
+                    <a href="#section8" class="hover-target">effect</a>
+                </li>
+                </ul>
+                <ul class="case-study-images">
+                <li>
+                    <div class="img-hero-background">
+                    <span>
+                        <img src="./assets/img/menuabout01.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuabout02.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuabout03.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuabout04.jpg" alt="이미지">
+                    </span> 
+                    </div> 
+                    <div class="hero-number-back">01</div> 
+                    <div class="hero-number">01</div> 
+                    <div class="hero-number-fixed">04</div> 
+                </li>
+                <li>
+                    <div class="img-hero-background">
+                    <span>
+                        <img src="./assets/img/menusite01.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menusite02.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menusite03.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menusite04.jpg" alt="이미지">
+                    </span> 
+                    </div> 
+                    <div class="hero-number-back">02</div> 
+                    <div class="hero-number">02</div>  
+                </li>
+                <li>
+                    <div class="img-hero-background">
+                    <span>
+                        <img src="./assets/img/menuani01.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuani02.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuani03.jpg" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/menuani04.jpg" alt="이미지">
+                    </span> 
+                    </div>
+                    <div class="hero-number-back">03</div>  
+                    <div class="hero-number">03</div> 
+                </li>
+                <li>
+                    <div class="img-hero-background">
+                    <span>
+                        <img src="./assets/img/effect01.png" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/effect02.png" alt="이미지">
+                    </span> 
+                    <span>
+                        <img src="./assets/img/effect03.png" alt="이미지">
+                    </span>
+                    </div> 
+                    <div class="hero-number-back">04</div> 
+                    <div class="hero-number">04</div> 
+                </li>
+                </ul>	
+            </div>
         </nav>
     </header>
     <!-- //header -->
+
+
 
     <footer id="footer">
         <div class="link">
@@ -45,6 +154,7 @@
             <a href="#section8" aria-hidden="true">04.</a>
         </div>
     </footer>
+    <!-- //footer -->
 
     <div id="contents">
         <section id="section1">
@@ -929,6 +1039,8 @@
         function loading() {
             let $progress = $(".progress"),
                 $progressLine = $(".progress-line");
+                $progressBox = $(".progressBox1")
+                $progressBos = $(".progressBox2")
 
             let imgLoad = imagesLoaded("body"),
                 imgToalt = imgLoad.images.length,
@@ -943,7 +1055,7 @@
             function updateProgress(){
                 let target = ( imgLoaded/imgToalt ) * 100;
                 imgCurrent += ( target - imgCurrent ) * 0.05;
-
+                
                 if( imgCurrent >= 100 ){
                     clearInterval(progressTimmer);
 
@@ -951,14 +1063,20 @@
 
                     gsap.to($progressLine, {
                         duration: 2.1,
-                        top : "53%",
+                        top : "50%",
                         height : "0%",
                         opacity: "0",
                         ease: "power1.out" 
                     });
-                    gsap.to($progress, {
+                    gsap.to($progressBos, {
                         duration: 1.5,
-                        top : "53%",
+                        bottom : "50%",
+                        height : "0%",
+                        ease: "power4.out" 
+                    })
+                    gsap.to($progressBox, {
+                        duration: 1.5,
+                        top : "50%",
                         height : "0%",
                         ease: "power4.out" 
                     });
@@ -1062,7 +1180,7 @@
 
 
             // sec4
-            if(window.matchMedia('(max-width: 380px)').matches){
+            if(window.matchMedia('(max-width: 600px)').matches){
                 if( pageYOffset > document.getElementById("section4").offsetTop - 300){
                     let tl = gsap.timeline();
                     tl.to(".sec4-right",{opacity: 1, x:0, duration: 0.3})
@@ -1088,7 +1206,7 @@
 
             // sec5
             for(let i = 1; i < 5; i++){
-                if(window.matchMedia('(max-width: 380px)').matches){
+                if(window.matchMedia('(max-width: 600px)').matches){
                     if( pageYOffset > document.getElementById("list"+i).offsetTop + 1500){
                         document.querySelector(".sec5 .bar").classList.add("show");
                         document.querySelector(".sec5 .list:nth-child("+i+")").classList.add("show");
@@ -1102,7 +1220,6 @@
             }
 
             // sec6
-            
             if( pageYOffset < document.getElementById("section6").offsetTop - 150 || pageYOffset > document.getElementById("section7").offsetTop - 150){
                 document.querySelector("#header .nav").style.backgroundColor = "#ED6061";
                 document.querySelector("#header h1").classList.remove("show")
@@ -1110,11 +1227,9 @@
                 document.querySelector("#header .nav").style.backgroundColor = "#150045";
                 document.querySelector("#header h1").classList.add("show")
             }   
-            
-            
 
             // sec6 Animation
-            if(window.matchMedia('(max-width: 380px)').matches){
+            if(window.matchMedia('(max-width: 600px)').matches){
                 if( pageYOffset > document.getElementById("section6").offsetTop - 300){
                     let tl = gsap.timeline();
                     tl.to(".sec6-right",{opacity: 1, x:0, duration: 0.3})
@@ -1137,15 +1252,21 @@
             }
 
             // sec7
-            if( pageYOffset > document.getElementById("section7").offsetTop - 969){
-                gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
-                gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (-pageYOffset * 0.03) * 2, ease: Power4.ease})
-                gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+            if(window.matchMedia('(max-width: 600px)').matches){
+                if( pageYOffset > document.getElementById("section7").offsetTop - 969){
+                    gsap.to(".content-item:nth-child(even)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+                    gsap.to(".content-item:nth-child(odd)", {duration: .3, y: (-pageYOffset * 0.03) * 1, ease: Power1.ease})
+                }
+            } else {
+                if( pageYOffset > document.getElementById("section7").offsetTop - 969){
+                    gsap.to(".content-item:nth-child(3n+1)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+                    gsap.to(".content-item:nth-child(3n+2)", {duration: .3, y: (-pageYOffset * 0.03) * 2, ease: Power4.ease})
+                    gsap.to(".content-item:nth-child(3n)", {duration: .3, y: (pageYOffset * 0.03) * 1, ease: Power1.ease})
+                }
             }
 
             // sec8 
-
-            if(window.matchMedia('(max-width: 380px)').matches){
+            if(window.matchMedia('(max-width: 600px)').matches){
                 if( pageYOffset > document.getElementById("section8").offsetTop - 300){
                     let tl = gsap.timeline();
                     tl.to(".sec8-right",{opacity: 1, x:0, duration: 0.3})
@@ -1169,7 +1290,7 @@
 
             // sec9
             for(let i = 1; i < 4; i++){
-                if( pageYOffset > document.getElementById("sec9-"+i).offsetTop - 969){
+                if( pageYOffset > document.getElementById("sec9-"+i).offsetTop - 969/2){
                     document.querySelector(".sec9 .sec9-list:nth-child("+i+")").classList.add("show");
                 }
             }
@@ -1221,8 +1342,8 @@
         pentitle="Cubic Inspired Clock";
         $(document).ready(function(){
             for (var i = 0; i < 60; i++) {
-                if(window.matchMedia('(max-width: 380px)').matches){
-                    $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-150px);\"></div>");
+                if(window.matchMedia('(max-width: 600px)').matches){
+                    $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-200px);\"></div>");
                 } else {
                     $('.clock').append("<div class=\"bit b" + i +"\" style=\"transform:rotate(" + i * 6 + "deg) translateY(-260px);\"></div>");
                 }
@@ -1246,6 +1367,89 @@
                 $('.bit').removeClass('active').removeClass('activehour').removeClass('activesec');
             }
         });
+        
+        $("nav").hide();
+        $(".nav").click(function(){				   	
+            $(".main").toggleClass("on");
+
+            if($(".main").hasClass("on")){
+                $("#footer").hide();
+                $("nav").show();
+                $("#header .nav").css("background","#fff");
+                $("#header .nav .text").css("color","#150045");
+                $(".menu-button-shape span").css("background","#150045");
+                gsap.to(".main", {duration: 0.5 , width: 100+"%", opacity: 1, left: 0})
+                gsap.to(".switch-wrap", {duration: 1 , delay: 5, opacity: 1})
+                gsap.to(".section", {duration:1 , delay:0.5, opacity: 1})
+            } else { 
+                $("#footer").show();
+                $("#header .nav").css("background","#ED6061");
+                $("#header .nav .text").css("color","#fff");
+                $(".menu-button-shape span").css("background","#fff");
+                gsap.to(".main", {duration: 0.25 , width: 0, opacity: 0, left: 50+"%"})
+                gsap.to(".switch-wrap", {duration:0.5 , opacity: 0})
+                gsap.to(".section", {duration:1 , opacity: 0})
+            }	
+        });
+
+        //메뉴
+        (function($) { "use strict";
+	
+        $(document).ready(function() {
+            $('.case-study-name:nth-child(1)').on('mouseenter', function() {
+                $('.case-study-name.actives').removeClass('actives');
+                $('.case-study-images li.show').removeClass("show");
+                $('.case-study-images li:nth-child(1)').addClass("show");
+                $('.case-study-name:nth-child(1)').addClass('actives');
+            })
+            $('.case-study-name:nth-child(2)').on('mouseenter', function() {
+                $('.case-study-name.actives').removeClass('actives');
+                $('.case-study-images li.show').removeClass("show");
+                $('.case-study-images li:nth-child(2)').addClass("show");
+                $('.case-study-name:nth-child(2)').addClass('actives');
+            })
+            $('.case-study-name:nth-child(3)').on('mouseenter', function() {
+                $('.case-study-name.actives').removeClass('actives');
+                $('.case-study-images li.show').removeClass("show");
+                $('.case-study-images li:nth-child(3)').addClass("show");
+                $('.case-study-name:nth-child(3)').addClass('actives');
+            })
+            $('.case-study-name:nth-child(4)').on('mouseenter', function() {
+                $('.case-study-name.actives').removeClass('actives');
+                $('.case-study-images li.show').removeClass("show");
+                $('.case-study-images li:nth-child(4)').addClass("show");
+                $('.case-study-name:nth-child(4)').addClass('actives');
+            })
+            for(let i = 1; i < 5; i++){
+                $('.case-study-name:nth-child('+i+')').on('click', function() {
+                    $("nav").css("display","none");
+                    $("footer").show();
+                    $("#header .nav").css("background","#ED6061");
+                    $("#header .nav .text").css("color","#fff");
+                    $(".menu-button-shape span").css("background","#fff");
+                })
+            }
+            $('.case-study-name:nth-child(1)').trigger('mouseenter')   
+       });  
+    
+        
+        //Switch dark/light
+        
+        $("#switch").on('click', function () {
+            if ($("nav").hasClass("light")) {
+                $("nav").removeClass("light");
+                $("#switch").removeClass("switched");
+            }
+            else {
+                $("nav").addClass("light");
+                $("#switch").addClass("switched");
+            }
+        }); 	
+        
+        
+      })(jQuery); 
+    
+    
     </script>
     <script>
 
