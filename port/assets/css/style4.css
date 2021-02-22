@@ -280,7 +280,7 @@ button {
 	margin-top: 10px;
 	margin-bottom: 10px;
     font-family: "GT Sectra Display Bold"; 
-	font-size: 8vh;
+	font-size: 10vh;
 	font-weight: 800;
 	line-height: 1.15;
 	letter-spacing: 3px;
@@ -371,10 +371,9 @@ button {
 	opacity: 0;
 	font-size: 45vw;
 	font-family: "GT Sectra Display Bold";
-	font-weight: 900;
 	line-height: 1;
 	color: transparent;
-	-webkit-text-stroke: 5px rgba(0,0,0,.7);
+	-webkit-text-stroke: 3px rgba(0,0,0,.2);
 	z-index: 1;
 	-webkit-transition: all 300ms linear;
 	transition: all 300ms linear; 
@@ -628,6 +627,7 @@ button {
 	border-radius: 50%;
 	box-shadow: 0 4px 4px rgba(26,53,71,0.25), 0 0 0 1px rgba(26,53,71,0.07);
 	background: #fff;
+    border: 2px solid #000;
 }
 .switched {
 	border-color: #8167a9 !important;
@@ -1914,11 +1914,11 @@ nav.light .case-study-wrapper .case-study-name.actives a {
     body {overflow-x: hidden;}
     #section9,
     #section10 {overflow: hidden;}
-
+    #header .nav .text {display: none;}
     #header .nav {width: 45px; height: 45px;}
     #header .nav span {font-size: 12px;}
     #footer .link a {font-size: 12px;}
-
+    .menu-button-shape {top: -2px;}
     .about .about-imgWrap,
     .about-img .slider img {width: 80vw; height: 80vw;}
 
