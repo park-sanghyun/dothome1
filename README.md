@@ -13,6 +13,7 @@ Welcome to my project!
   <li>#반응형 사이트 만들기 <a href="https://park-sanghyun.github.io/dothome1/responsive/index.html">바로가기</a></li>
   <li>#메가박스 사이트 만들기 <a href="https://park-sanghyun.github.io/dothome1/megabox/assets/index.html">바로가기</a></li>
   <li>#개인 포트폴리오 사이트 <a href="https://park-sanghyun.github.io/dothome1/port/index4.html">바로가기</a></li>
+  <li>#닷홈 사이트 <a href="http://pasahu13.dothome.co.kr/">바로가기</a></li>
 </ul>
 
 <h4>CONTACT</h4>
