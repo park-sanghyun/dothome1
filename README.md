@@ -8,17 +8,13 @@ Welcome to my project!
 </ul>
 
 <h4>PROJECT</h4>
-#웹표준 사이트 만들기
-<a href="https://park-sanghyun.github.io/dothome1/webstandard/index.html">바로가기</a>
-<br>
-#반응형 사이트 만들기
-<a href="https://park-sanghyun.github.io/dothome1/responsive/index.html">바로가기</a>
-<br>
-#메가박스 사이트 만들기
-<a href="https://park-sanghyun.github.io/dothome1/megabox/assets/index.html">바로가기</a>
+<ul>
+  <li>#웹표준 사이트 만들기 <a href="https://park-sanghyun.github.io/dothome1/webstandard/index.html">바로가기</a></li>
+  <li>#반응형 사이트 만들기 <a href="https://park-sanghyun.github.io/dothome1/responsive/index.html">바로가기</a></li>
+  <li>#메가박스 사이트 만들기 <a href="https://park-sanghyun.github.io/dothome1/megabox/assets/index.html">바로가기</a></li>
+</ul>
 
 <h4>CONTACT</h4>
 <ul>
   <li>pasahu13@naver.com</li>
 </ul>
-
